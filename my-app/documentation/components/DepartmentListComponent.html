@@ -1,0 +1,1625 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>DepartmentListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/Departments/department-list/department-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-department-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./department-list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./department-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#brads">brads</a>
+                            </li>
+                            <li>
+                                <a href="#componentTitle">componentTitle</a>
+                            </li>
+                            <li>
+                                <a href="#dataForUpdate">dataForUpdate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#departmentLists">departmentLists</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#doFilter">doFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#form">form</a>
+                            </li>
+                            <li>
+                                <a href="#messageAfterUpdate">messageAfterUpdate</a>
+                            </li>
+                            <li>
+                                <a href="#paginator">paginator</a>
+                            </li>
+                            <li>
+                                <a href="#sort">sort</a>
+                            </li>
+                            <li>
+                                <a href="#submitButtonClickedForUpdate">submitButtonClickedForUpdate</a>
+                            </li>
+                            <li>
+                                <a href="#submitClickedForUpdate">submitClickedForUpdate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#exportAsXLSX">exportAsXLSX</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleResponse">handleResponse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleSubmitError">handleSubmitError</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleSubmitResponse">handleSubmitResponse</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSubmitForUpdate">onSubmitForUpdate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#redirectToUpdae">redirectToUpdae</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(departmentService: <a href="../injectables/DepartmentServiceService.html">DepartmentServiceService</a>, excelService: <a href="../injectables/ExcelService.html">ExcelService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>departmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DepartmentServiceService.html" target="_self" >DepartmentServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>excelService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExcelService.html" target="_self" >ExcelService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exportAsXLSX"></a>
+                    <span class="name">
+                        <b>
+                            exportAsXLSX
+                        </b>
+                        <a href="#exportAsXLSX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exportAsXLSX()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleResponse"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            handleResponse
+                        </b>
+                        <a href="#handleResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleResponse(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleSubmitError"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            handleSubmitError
+                        </b>
+                        <a href="#handleSubmitError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleSubmitError(error)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>error</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleSubmitResponse"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            handleSubmitResponse
+                        </b>
+                        <a href="#handleSubmitResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleSubmitResponse(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:44</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmitForUpdate"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onSubmitForUpdate
+                        </b>
+                        <a href="#onSubmitForUpdate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSubmitForUpdate(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="redirectToUpdae"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            redirectToUpdae
+                        </b>
+                        <a href="#redirectToUpdae"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>redirectToUpdae(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:74</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="brads"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            brads</b>
+                            <a href="#brads"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      url: &quot;/addDepartment&quot;,
+      name: &quot;Add Department&quot;
+    },
+     {
+      url: &quot;/listDepartment&quot;,
+      name: &quot;Department List&quot;
+    }
+    ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="componentTitle"></a>
+                        <span class="name">
+                            <b>
+                            componentTitle</b>
+                            <a href="#componentTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;List Department&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataForUpdate"></a>
+                        <span class="name">
+                            <b>
+                            dataForUpdate</b>
+                            <a href="#dataForUpdate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dataSource</b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new MatTableDataSource&lt;Department&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="departmentLists"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            departmentLists</b>
+                            <a href="#departmentLists"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;id&#x27;, &#x27;department&#x27;,&#x27;description&#x27;,&#x27;created_at&#x27;,&#x27;update&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doFilter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            doFilter</b>
+                            <a href="#doFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="form"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            form</b>
+                            <a href="#form"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    department:null,
+    description:null
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="messageAfterUpdate"></a>
+                        <span class="name">
+                            <b>
+                            messageAfterUpdate</b>
+                            <a href="#messageAfterUpdate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paginator"></a>
+                        <span class="name">
+                            <b>
+                            paginator</b>
+                            <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatPaginator</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatPaginator)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sort"></a>
+                        <span class="name">
+                            <b>
+                            sort</b>
+                            <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatSort</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatSort)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitButtonClickedForUpdate"></a>
+                        <span class="name">
+                            <b>
+                            submitButtonClickedForUpdate</b>
+                            <a href="#submitButtonClickedForUpdate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submitClickedForUpdate"></a>
+                        <span class="name">
+                            <b>
+                            submitClickedForUpdate</b>
+                            <a href="#submitClickedForUpdate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/Departments/department-list/department-list.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild, OnDestroy, AfterViewInit  } from &#x27;@angular/core&#x27;;
+import { DepartmentServiceService } from &#x27;./../../Services/department-service.service&#x27;;
+import { MatTableDataSource, MatSort, MatPaginator } from &#x27;@angular/material&#x27;;
+import { ExcelService } from &#x27;./../../Services/excel.service&#x27;;
+
+ interface Department{
+created_at: Date,
+department: string,
+description: string,
+id: number,
+};
+
+@Component({
+  selector: &#x27;app-department-list&#x27;,
+  templateUrl: &#x27;./department-list.component.html&#x27;,
+  styleUrls: [&#x27;./department-list.component.css&#x27;]
+})
+export class DepartmentListComponent implements OnInit {
+ 
+  constructor(private departmentService:DepartmentServiceService,
+    private excelService:ExcelService
+    ) { }
+  componentTitle&#x3D;&#x27;List Department&#x27;;
+  public departmentLists&#x3D;[];
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  public dataSource &#x3D; new MatTableDataSource&lt;Department&gt;();
+  @ViewChild(MatSort) sort: MatSort;
+  dataForUpdate:object&#x3D;[];
+  submitClickedForUpdate&#x3D;0;
+  submitButtonClickedForUpdate&#x3D;0;
+  messageAfterUpdate:object&#x3D;[];
+  public displayedColumns &#x3D; [&#x27;id&#x27;, &#x27;department&#x27;,&#x27;description&#x27;,&#x27;created_at&#x27;,&#x27;update&#x27;];
+  public brads &#x3D; [
+    {
+      url: &quot;/addDepartment&quot;,
+      name: &quot;Add Department&quot;
+    },
+     {
+      url: &quot;/listDepartment&quot;,
+      name: &quot;Department List&quot;
+    }
+    ]; 
+
+  ngOnInit() {
+      this.departmentService.getProductDepartment().subscribe(
+      data&#x3D;&gt;this.handleResponse(data)
+      );
+  }
+  public form &#x3D; {
+    department:null,
+    description:null
+  };
+  // generateExcel() {
+  //   this.excelService.generateExcel();
+  // }
+  exportAsXLSX():void {
+    this.excelService.exportAsExcelFile(this.departmentLists, &#x27;Department List&#x27;);
+  }
+  ngAfterViewInit(): void {
+    this.dataSource.sort &#x3D; this.sort;
+     this.dataSource.paginator &#x3D; this.paginator;
+  }
+  public doFilter &#x3D; (value: string) &#x3D;&gt; {
+    this.dataSource.filter &#x3D; value.trim().toLocaleLowerCase();
+  }
+  public handleResponse(data)
+  {
+    // consoles.log(data);
+    this.dataSource.data&#x3D; data as Department[];
+    this.departmentLists&#x3D;data;
+    // console.log( this.dataSource.data);
+    
+  }
+  public redirectToUpdae(data)
+  {
+    this.dataForUpdate&#x3D;data;
+    // console.log(data);
+  }
+ 
+  public onSubmitForUpdate(id) {
+    this.submitButtonClickedForUpdate&#x3D;1;
+    this.departmentService.update(this.dataForUpdate,id).subscribe(
+    data&#x3D;&gt;this.handleSubmitResponse(data),
+    error &#x3D;&gt;this.handleSubmitError(error)
+    );
+  }
+  public handleSubmitResponse(data)
+  {
+    this.submitButtonClickedForUpdate&#x3D;0;
+    this.messageAfterUpdate&#x3D;data;
+  }
+  public handleSubmitError(error)
+  {
+    this.submitButtonClickedForUpdate&#x3D;0;
+    this.messageAfterUpdate&#x3D;error;
+    //   console.log(this.messageAfterUpdate);
+    // console.log(this.messageAfterUpdate.error.errors.department[0]);
+    // console.log(this.messageAfterUpdate.error.message)
+  }
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;page-heading &quot;&gt;
+    &lt;h1 class&#x3D;&quot;page-title&quot;&gt;{{ componentTitle }}&lt;/h1&gt;
+   &lt;!--  &lt;ol class&#x3D;&quot;breadcrumb&quot;&gt;
+      &lt;li *ngFor&#x3D;&quot;let brad of brads&quot;  class&#x3D;&quot;breadcrumb-item&quot;&gt;&lt;a routerLink&#x3D;&quot;{{ brad.url }}&quot;&gt;{{ brad.name }}&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt; --&gt;
+&lt;/div&gt;
+&lt;!-- &lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+  &lt;table class&#x3D;&quot;table&quot;&gt;
+    &lt;thead&gt; 
+      &lt;th&gt;Department Id&lt;/th&gt;
+      &lt;th&gt;Department Name&lt;/th&gt;
+      &lt;th&gt;Discription&lt;/th&gt;
+      &lt;th&gt;Created Time&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr *ngFor&#x3D;&quot;let department of departmentLists&quot;&gt;
+        &lt;td&gt;{{ department.id }}&lt;/td&gt;
+        &lt;td&gt;{{ department.department }}&lt;/td&gt;
+        &lt;td&gt;{{ department.description }}&lt;/td&gt;
+        &lt;td&gt;{{ department.created_at }}&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt; --&gt;
+&lt;!-- &lt;button (click)&#x3D;&quot;generateExcel()&quot;&gt; Generate Excel&lt;/button&gt; --&gt;
+&lt;div class&#x3D;&quot;text-center&quot;&gt; 
+    &lt;button (click)&#x3D;&quot;exportAsXLSX()&quot; class&#x3D;&quot;btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon&quot;&gt;
+        &lt;span class&#x3D;&quot;btn-label&quot;&gt;&lt;i class&#x3D;&quot;fa fa-file-excel-o&quot; &gt;&lt;/i&gt;&lt;/span&gt;Download&lt;/button&gt; 
+  &lt;!-- &lt;button (click)&#x3D;&quot;exportAsXLSX()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-file-excel-o&quot; style&#x3D;&quot;font-size:48px;color:blue&quot;&gt;&lt;/i&gt;&lt;/button&gt; --&gt;
+&lt;/div&gt;
+ &lt;div class&#x3D;&quot;table-responsive &quot;&gt;
+  
+&lt;div fxLayout fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+  &lt;mat-form-field fxFlex&#x3D;&quot;40%&quot;&gt;
+    &lt;input matInput type&#x3D;&quot;text&quot; (keyup)&#x3D;&quot;doFilter($event.target.value)&quot; placeholder&#x3D;&quot;Filter&quot;&gt;
+  &lt;/mat-form-field&gt;
+&lt;/div&gt;
+&lt;table mat-table [dataSource]&#x3D;&quot;dataSource&quot; matSort matSortStart&#x3D;&quot;desc&quot;&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;id&quot;&gt;
+    &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Id &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.id}} &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;department&quot;&gt;
+    &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Department &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.department}} &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;description&quot;&gt;
+    &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Description &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.description}} &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;created_at&quot;&gt;
+    &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Created Date &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.created_at}} &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;!-- &lt;ng-container matColumnDef&#x3D;&quot;update&quot;&gt;
+      &lt;th mat-header-cell *matHeaderCellDef&gt; Update &lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+        &lt;button mat-icon-button color&#x3D;&quot;accent&quot; (click)&#x3D;&quot;redirectToUpdate(element.id)&quot;&gt;
+          update
+        &lt;/button&gt;
+      &lt;/td&gt;
+    &lt;/ng-container&gt; --&gt;
+ 
+    &lt;ng-container matColumnDef&#x3D;&quot;update&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef&gt; Update&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+          &lt;!-- &lt;button mat-icon-button color&#x3D;&quot;warn&quot; (click)&#x3D;&quot;redirectToDelete(element.id)&quot;&gt; --&gt;
+              &lt;!-- &lt;mat-icon class&#x3D;&quot;mat-18&quot;&gt;delete&lt;/mat-icon&gt; --&gt;
+              &lt;!-- &lt;input type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; value&#x3D;&quot;click&quot;&gt; --&gt;
+          &lt;!-- &lt;/button&gt; --&gt;
+          &lt;!-- Button to Open the Modal --&gt;
+&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-gradient-peach&quot; (click)&#x3D;&quot;redirectToUpdae(element)&quot;  data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#myModal&quot;&gt;
+  &lt;i class&#x3D;&quot;fa fa-pencil-square-o&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+        &lt;/td&gt;
+      &lt;/ng-container&gt; 
+ 
+  &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+  &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns;&quot;&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;mat-paginator [pageSize]&#x3D;&quot;4&quot; [pageSizeOptions]&#x3D;&quot;[4, 6, 10, 20,30,50,75,100]&quot;&gt;
+&lt;/mat-paginator&gt;
+&lt;/div&gt;
+&lt;div style&#x3D;&quot;height: 30px&quot;&gt;
+  &amp;nbsp;
+&lt;/div&gt;
+
+&lt;!-- The Modal --&gt;
+&lt;div *ngIf&#x3D;&quot;dataForUpdate&quot; class&#x3D;&quot;modal&quot; id&#x3D;&quot;myModal&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+
+      &lt;!-- Modal Header --&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h4 class&#x3D;&quot;modal-title&quot;&gt;Update Will Done For Department Id: {{ dataForUpdate.id }}&lt;/h4&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;&amp;times;&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Modal body --&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+        &lt;!-- &lt;form class&#x3D;&quot;form-horizontal&quot; #departmentAddForm&#x3D;ngForm (ngSubmit)&#x3D;&quot;onSubmitForUpdate()&quot;&gt; --&gt;
+          &lt;div class&#x3D;&quot;card&quot;&gt; 
+            &lt;div class&#x3D;&quot;card-header text-center&quot;&gt;Please Fill Up Department Details&lt;/div&gt;
+            &lt;div *ngIf&#x3D;&quot;submitButtonClickedForUpdate&#x3D;&#x3D;1&quot; class&#x3D;&quot;row text-center&quot;&gt;
+              &lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+              &lt;div&gt;&lt;i class&#x3D;&quot;fa fa-spinner fa-5x  fa-spin&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;/div&gt;
+      &lt;/div&gt;
+            &lt;div  *ngIf&#x3D;&quot;submitClickedForUpdate&#x3D;&#x3D;0&quot; class&#x3D;&quot;card-body text-center&quot;&gt; 
+                  &lt;div *ngIf&#x3D;&quot;messageAfterUpdate.error&quot; class&#x3D;&quot;row&quot;&gt;
+                          &lt;div class&#x3D;&quot;col-sm-12 col-lg-12&quot;&gt;
+                              &lt;div class&#x3D;&quot;alert alert-pink alert-dismissable fade show has-icon&quot;&gt;&lt;i class&#x3D;&quot;la la-info-circle alert-icon&quot;&gt;&lt;/i&gt;
+                                &lt;button class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;alert&quot; aria-label&#x3D;&quot;Close&quot;&gt;&lt;/button&gt;&lt;strong&gt;Warning!&lt;/strong&gt;&lt;br&gt;{{ messageAfterUpdate.error.message }}. {{ messageAfterUpdate.error.errors.department[0] }}.&lt;/div&gt;                              
+                          &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;row&quot;&gt;
+                          &lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+                                  &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                  &lt;label for&#x3D;&quot;input-1&quot;&gt;Department Name &lt;/label&gt;
+                                  &lt;input  class&#x3D;&quot;form-control &quot; required  [(ngModel)]&#x3D;&quot;dataForUpdate.department&quot;  id&#x3D;&quot;&quot;  placeholder&#x3D;&quot;Department Name&quot; autocomplete&#x3D;&quot;off&quot;  name&#x3D;&quot;department&quot; type&#x3D;&quot;text&quot; value&#x3D;&quot;{{dataForUpdate.department}}&quot;&gt;
+                                  &lt;/div&gt;
+                                  &lt;input  class&#x3D;&quot;form-control &quot; required  [(ngModel)]&#x3D;&quot;dataForUpdate.id&quot;  id&#x3D;&quot;&quot;  placeholder&#x3D;&quot;Department Name&quot; autocomplete&#x3D;&quot;off&quot;  name&#x3D;&quot;id&quot; type&#x3D;&quot;hidden&quot; value&#x3D;&quot;{{dataForUpdate.id}}&quot;&gt;
+                          &lt;/div&gt;
+                  &lt;/div&gt; 
+                  &lt;div class&#x3D;&quot;row&quot;&gt;     
+                          &lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+                                  &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                                  &lt;label for&#x3D;&quot;input-1&quot;&gt;Discription&lt;/label&gt;
+                                  &lt;textarea class&#x3D;&quot;form-control &quot; id&#x3D;&quot;&quot; required [(ngModel)]&#x3D;&quot;dataForUpdate.description&quot;  placeholder&#x3D;&quot;Discription&quot; autocomplete&#x3D;&quot;off&quot;  name&#x3D;&quot;description&quot; value&#x3D;&quot;{{dataForUpdate.description}}&quot; &gt;&lt;/textarea&gt;
+                                  &lt;/div&gt;
+                          &lt;/div&gt;
+                                                                       
+                  &lt;/div&gt;                                                         
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;card-footer text-center&quot;&gt;
+              &lt;input   type&#x3D;&quot;button&quot;  (click)&#x3D;&quot;onSubmitForUpdate(dataForUpdate.id)&quot;  class&#x3D;&quot;btn btn-gradient-peach btn-fix&quot; value&#x3D;&quot;Update Department&quot;&gt;
+        &lt;/div&gt;
+            &lt;div *ngIf&#x3D;&quot;messageAfterUpdate.id&quot; class&#x3D;&quot;row&quot; &gt;
+              &lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+                  &lt;div class&#x3D;&quot;ibox alert alert-warning alert-dismissable fade show alert-bordered&quot;&gt;
+                      &lt;div class&#x3D;&quot;ibox-head text-center&quot;&gt;                           
+                                    &lt;h5 class&#x3D;&quot;text-center&quot;&gt; Updated Department&lt;/h5&gt; 
+                      &lt;/div&gt;
+                      &lt;div class&#x3D;&quot;ibox-body&quot;&gt;
+                          &lt;div class&#x3D;&quot;ibox-fullwidth-block table-responsive&quot;&gt;
+                              &lt;table class&#x3D;&quot;table table-hover&quot;&gt;
+                                  &lt;tbody&gt;
+                                      &lt;tr class&#x3D;&quot;warning&quot;&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;                                     
+                                          &lt;td&gt;Department ID&lt;/td&gt;
+                                          &lt;td&gt;:&lt;/td&gt;
+                                          &lt;td&gt;{{ messageAfterUpdate.id }}&lt;/td&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;                                     
+                                          &lt;td&gt;Department Name&lt;/td&gt;
+                                          &lt;td&gt;:&lt;/td&gt;
+                                          &lt;td&gt;{{ messageAfterUpdate.department }}&lt;/td&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+                                      &lt;/tr&gt;
+                                      &lt;tr class&#x3D;&quot;success&quot;&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;                                     
+                                          &lt;td&gt; Discription&lt;/td&gt;
+                                          &lt;td&gt;:&lt;/td&gt;
+                                          &lt;td&gt;{{ messageAfterUpdate.description }}&lt;/td&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;                                     
+                                          &lt;td&gt;Created Date&lt;/td&gt;
+                                          &lt;td&gt;:&lt;/td&gt;
+                                          &lt;td&gt;{{ messageAfterUpdate.created_at }}&lt;/td&gt;
+                                          &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+                                      &lt;/tr&gt;
+                                  &lt;/tbody&gt;
+                                  &lt;tfoot&gt;
+                                      &lt;tr&gt;
+                                          &lt;th colspan&#x3D;&quot;4&quot;&gt;&lt;/th&gt;
+                                      &lt;/tr&gt;
+                                  &lt;/tfoot&gt;
+                              &lt;/table&gt;
+                          &lt;/div&gt;
+                         
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+           
+          &lt;/div&gt;
+          &lt;!-- &lt;/form&gt; --&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Modal footer --&gt;
+      &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-danger&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;Close&lt;/button&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./department-list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+ 
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+}
+td.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+}
+.mat-column-update{
+  width: 70px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="page-heading ">    <h1 class="page-title">{{ componentTitle }}</h1>   <!--  <ol class="breadcrumb">      <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>    </ol> --></div><!-- <div class="table-responsive">  <table class="table">    <thead>       <th>Department Id</th>      <th>Department Name</th>      <th>Discription</th>      <th>Created Time</th>    </thead>    <tbody>      <tr *ngFor="let department of departmentLists">        <td>{{ department.id }}</td>        <td>{{ department.department }}</td>        <td>{{ department.description }}</td>        <td>{{ department.created_at }}</td>      </tr>    </tbody>  </table></div> --><!-- <button (click)="generateExcel()"> Generate Excel</button> --><div class="text-center">     <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">        <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button>   <!-- <button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> --></div> <div class="table-responsive ">  <div fxLayout fxLayoutAlign="center center">  <mat-form-field fxFlex="40%">    <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">  </mat-form-field></div><table mat-table [dataSource]="dataSource" matSort matSortStart="desc">  <ng-container matColumnDef="id">    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>    <td mat-cell *matCellDef="let element"> {{element.id}} </td>  </ng-container>  <ng-container matColumnDef="department">    <th mat-header-cell *matHeaderCellDef mat-sort-header> Department </th>    <td mat-cell *matCellDef="let element"> {{element.department}} </td>  </ng-container>  <ng-container matColumnDef="description">    <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>    <td mat-cell *matCellDef="let element"> {{element.description}} </td>  </ng-container>  <ng-container matColumnDef="created_at">    <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>    <td mat-cell *matCellDef="let element"> {{element.created_at}} </td>  </ng-container>  <!-- <ng-container matColumnDef="update">      <th mat-header-cell *matHeaderCellDef> Update </th>      <td mat-cell *matCellDef="let element">        <button mat-icon-button color="accent" (click)="redirectToUpdate(element.id)">          update        </button>      </td>    </ng-container> -->     <ng-container matColumnDef="update">        <th mat-header-cell *matHeaderCellDef> Update&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>        <td mat-cell *matCellDef="let element">          <!-- <button mat-icon-button color="warn" (click)="redirectToDelete(element.id)"> -->              <!-- <mat-icon class="mat-18">delete</mat-icon> -->              <!-- <input type="button" class="btn btn-primary" value="click"> -->          <!-- </button> -->          <!-- Button to Open the Modal --><button type="button" class="btn btn-gradient-peach" (click)="redirectToUpdae(element)"  data-toggle="modal" data-target="#myModal">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>        </td>      </ng-container>    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr></table><mat-paginator [pageSize]="4" [pageSizeOptions]="[4, 6, 10, 20,30,50,75,100]"></mat-paginator></div><div style="height: 30px">  &nbsp;</div><!-- The Modal --><div *ngIf="dataForUpdate" class="modal" id="myModal">  <div class="modal-dialog modal-lg">    <div class="modal-content">      <!-- Modal Header -->      <div class="modal-header">        <h4 class="modal-title">Update Will Done For Department Id: {{ dataForUpdate.id }}</h4>        <button type="button" class="close" data-dismiss="modal">&times;</button>      </div>      <!-- Modal body -->      <div class="modal-body">        <!-- <form class="form-horizontal" #departmentAddForm=ngForm (ngSubmit)="onSubmitForUpdate()"> -->          <div class="card">             <div class="card-header text-center">Please Fill Up Department Details</div>            <div *ngIf="submitButtonClickedForUpdate==1" class="row text-center">              <div class="col-sm-12">              <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>              </div>      </div>            <div  *ngIf="submitClickedForUpdate==0" class="card-body text-center">                   <div *ngIf="messageAfterUpdate.error" class="row">                          <div class="col-sm-12 col-lg-12">                              <div class="alert alert-pink alert-dismissable fade show has-icon"><i class="la la-info-circle alert-icon"></i>                                <button class="close" data-dismiss="alert" aria-label="Close"></button><strong>Warning!</strong><br>{{ messageAfterUpdate.error.message }}. {{ messageAfterUpdate.error.errors.department[0] }}.</div>                                                        </div>                  </div>                  <div class="row">                          <div class="col-lg-12">                                  <div class="form-group">                                  <label for="input-1">Department Name </label>                                  <input  class="form-control " required  [(ngModel)]="dataForUpdate.department"  id=""  placeholder="Department Name" autocomplete="off"  name="department" type="text" value="{{dataForUpdate.department}}">                                  </div>                                  <input  class="form-control " required  [(ngModel)]="dataForUpdate.id"  id=""  placeholder="Department Name" autocomplete="off"  name="id" type="hidden" value="{{dataForUpdate.id}}">                          </div>                  </div>                   <div class="row">                               <div class="col-lg-12">                                  <div class="form-group">                                  <label for="input-1">Discription</label>                                  <textarea class="form-control " id="" required [(ngModel)]="dataForUpdate.description"  placeholder="Discription" autocomplete="off"  name="description" value="{{dataForUpdate.description}}" ></textarea>                                  </div>                          </div>                                                                                         </div>                                                                     </div>            <div class="card-footer text-center">              <input   type="button"  (click)="onSubmitForUpdate(dataForUpdate.id)"  class="btn btn-gradient-peach btn-fix" value="Update Department">        </div>            <div *ngIf="messageAfterUpdate.id" class="row" >              <div class="col-sm-12">                  <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">                      <div class="ibox-head text-center">                                                               <h5 class="text-center"> Updated Department</h5>                       </div>                      <div class="ibox-body">                          <div class="ibox-fullwidth-block table-responsive">                              <table class="table table-hover">                                  <tbody>                                      <tr class="warning">                                          <td>&nbsp;</td>                                                                               <td>Department ID</td>                                          <td>:</td>                                          <td>{{ messageAfterUpdate.id }}</td>                                          <td>&nbsp;</td>                                          <td>&nbsp;</td>                                                                               <td>Department Name</td>                                          <td>:</td>                                          <td>{{ messageAfterUpdate.department }}</td>                                          <td>&nbsp;</td>                                      </tr>                                      <tr class="success">                                          <td>&nbsp;</td>                                                                               <td> Discription</td>                                          <td>:</td>                                          <td>{{ messageAfterUpdate.description }}</td>                                          <td>&nbsp;</td>                                          <td>&nbsp;</td>                                                                               <td>Created Date</td>                                          <td>:</td>                                          <td>{{ messageAfterUpdate.created_at }}</td>                                          <td>&nbsp;</td>                                      </tr>                                  </tbody>                                  <tfoot>                                      <tr>                                          <th colspan="4"></th>                                      </tr>                                  </tfoot>                              </table>                          </div>                                               </div>                  </div>              </div>          </div>                     </div>          <!-- </form> -->      </div>      <!-- Modal footer -->      <div class="modal-footer">        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AddIndentDetailComponent', 'selector': 'app-add-indent-detail'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BradComponent', 'selector': 'app-brad'},{'name': 'ConfigPanelComponent', 'selector': 'app-config-panel'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DepartmentComponent', 'selector': 'app-department'},{'name': 'DepartmentListComponent', 'selector': 'app-department-list'},{'name': 'DirectPurchaseComponent', 'selector': 'app-direct-purchase'},{'name': 'DivideTwoScreenComponent', 'selector': 'app-divide-two-screen'},{'name': 'DownloadIndentComponent', 'selector': 'app-download-indent'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IndentComponent', 'selector': 'app-indent'},{'name': 'IndentListComponent', 'selector': 'app-indent-list'},{'name': 'IndentReportComponent', 'selector': 'app-indent-report'},{'name': 'InsertedProductComponent', 'selector': 'app-inserted-product'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductAvailibilityComponent', 'selector': 'app-product-availibility'},{'name': 'ProductComponent', 'selector': 'app-product'},{'name': 'ProductConsumptionComponent', 'selector': 'app-product-consumption'},{'name': 'ProductPriceComponent', 'selector': 'app-product-price'},{'name': 'ProductSearchComponent', 'selector': 'app-product-search'},{'name': 'ProductStockComponent', 'selector': 'app-product-stock'},{'name': 'ProductUseComponent', 'selector': 'app-product-use'},{'name': 'ProductUseSearchComponent', 'selector': 'app-product-use-search'},{'name': 'PurchaseComponent', 'selector': 'app-purchase'},{'name': 'PurchaseInvoiceComponent', 'selector': 'app-purchase-invoice'},{'name': 'PurchaseReportComponent', 'selector': 'app-purchase-report'},{'name': 'RefreshComponent', 'selector': 'app-refresh'},{'name': 'ReportByDepartmentComponent', 'selector': 'app-report-by-department'},{'name': 'RequisitionComponent', 'selector': 'app-requisition'},{'name': 'RequisitionListComponent', 'selector': 'app-requisition-list'},{'name': 'RequisitionReportsComponent', 'selector': 'app-requisition-reports'},{'name': 'ReturnPurchaseComponent', 'selector': 'app-return-purchase'},{'name': 'SearchPurchaseComponent', 'selector': 'app-search-purchase'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'StockHistoryComponent', 'selector': 'app-stock-history'},{'name': 'StockHistoryViewComponent', 'selector': 'app-stock-history-view'},{'name': 'StockValuationComponent', 'selector': 'app-stock-valuation'},{'name': 'SupplierAddComponent', 'selector': 'app-supplier-add'},{'name': 'SupplierSearchComponent', 'selector': 'app-supplier-search'},{'name': 'UpdateIndentComponent', 'selector': 'app-update-indent'},{'name': 'UpdateRequisitionComponent', 'selector': 'app-update-requisition'},{'name': 'ViewProductComponent', 'selector': 'app-view-product'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'DepartmentListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'DepartmentListComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

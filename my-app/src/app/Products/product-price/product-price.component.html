@@ -1,0 +1,195 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+  <app-brad ></app-brad>
+ <!--  <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+ 
+<div class="row">
+  <div class="col-lg-12" *ngIf="exporterButton==1">
+    <div class="text-center"> 
+    <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+      <div class="card-body">
+        <div class="table-responsive">
+        <table id="example" class="table table-bordered table-sm table-striped">        
+                <thead class="table-dark">
+                    <tr>
+                      <th>Product Name</th>
+                      <th>Product Code</th>
+                      <th>Department Name</th>
+                      <th><small>IGST %</small></th>
+                      <th><small>SGST%</small></th> 
+                      <th><small>CGST%</small></th> 
+                      <th><small>GST%</small></th> 
+                      <th><small>Current Price</small></th>                     
+                      <th><small>Previous/Last Price</small></th> 
+                      <th>Qnt.</th> 
+                      <th>Tax Price</th>
+                      <th>Price With Tax</th>
+                      <th>Grand Total</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of indentListFromDatabase">
+                      <td>{{ data.product_name }}</td>
+                      <td>{{ data.product_code }}</td>
+                      <td>{{ data.product_department_Name }}</td>
+                      <td>{{ data.product_igst }}</td>
+                      <td>{{ data.product_sgst }}</td>
+                      <td>{{ data.product_cgst }}</td>
+                      <td>{{ data.product_gst }}</td>
+                      <td>{{ data.opening_stock }}</td>
+                      <td>{{ data.closing_stok }}</td>
+                       <td>{{ data.available_stock }}</td>
+                      <td>{{  (data.opening_stock*data.product_gst)/100 }}</td>
+                      <td>{{  data.opening_stock+ (data.opening_stock*data.product_gst)/100 }}</td>
+                       <td>{{  (data.opening_stock+ (data.opening_stock*data.product_gst)/100)*data.available_stock }}</td>
+                    </tr>
+                </tbody>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Row-->
+
+
+
+<!-- <div class="text-center"> 
+  <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+      <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button> 
+
+</div> -->
+<!-- <div class="table-responsive ">
+<div fxLayout fxLayoutAlign="center center">
+<mat-form-field fxFlex="40%">
+  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+</div>
+<table mat-table [dataSource]="dataSource" matSort matSortStart="desc">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+   <ng-container matColumnDef="available_stock">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Available Stock&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.available_stock}} </td>
+  </ng-container>
+   <ng-container matColumnDef="stock_in">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Stock In&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.stock_in}} </td>
+  </ng-container>
+   <ng-container matColumnDef="stock_out">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Stock Out&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.stock_out}} </td>
+  </ng-container>
+   <ng-container matColumnDef="opening_stock">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Current Price&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.opening_stock}} </td>
+  </ng-container>
+  <ng-container matColumnDef="closing_stok">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Price&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.closing_stok}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_code">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Code &emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;.</th>
+    <td mat-cell *matCellDef="let element"> {{element.product_code}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="place">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Place&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.place}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_department_Name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Department&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_department_Name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_hsn">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product HSN&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_hsn}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_specification">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Specification&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_specification}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_unit">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Unit &emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;.</th>
+    <td mat-cell *matCellDef="let element"> {{element.product_unit}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_type">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Type&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_type}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_igst">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product IGST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_igst}} </td>
+  </ng-container>
+   <ng-container matColumnDef="product_sgst">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product SGST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_sgst}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_cgst">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product CGST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_cgst}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_gst">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Product GST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_gst}} </td>
+  </ng-container>
+   <ng-container matColumnDef="created_at">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.created_at}} </td>
+  </ng-container>
+   <ng-container matColumnDef="product_specimen">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Speciamen&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_specimen}} </td>
+  </ng-container>
+   <ng-container matColumnDef="product_make">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Make&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+    <td mat-cell *matCellDef="let element"> {{element.product_make}} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_tax_price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Tax Price</th>
+    <td mat-cell *matCellDef="let element"> {{ ((element.opening_stock)*(element.product_gst)/100) }} </td>
+  </ng-container>
+  <ng-container matColumnDef="Total_price_with_tax">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Price with tax</th>
+    <td mat-cell *matCellDef="let element"> {{ (element.opening_stock)+((element.opening_stock)*(element.product_gst)/100) }} </td>
+  </ng-container>
+  <ng-container matColumnDef="product_Grand_total_price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Grand Total Price</th>
+    <td mat-cell *matCellDef="let element"> {{ ((element.opening_stock)+((element.opening_stock)*(element.product_gst)/100))*element.available_stock }} </td>
+  </ng-container>
+ 
+ 
+  <ng-container matColumnDef="update">
+      <th mat-header-cell *matHeaderCellDef> Update&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;.</th>
+      <td mat-cell *matCellDef="let element">
+        <button type="button" class="btn btn-gradient-peach" (click)="redirectToUpdae(element)"  data-toggle="modal" data-target="#myModal">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+      </td>
+    </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSize]="2" [pageSizeOptions]="[2, 4, 6, 10, 20]">
+</mat-paginator>
+</div> -->
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

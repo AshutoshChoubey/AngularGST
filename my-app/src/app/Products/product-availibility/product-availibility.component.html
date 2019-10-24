@@ -1,0 +1,74 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+ <!--  <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div class="row">
+  <div class="col-lg-12" *ngIf="exporterButton==1">
+    <div class="text-center"> 
+    <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+      <div class="card-body">
+        <div class="table-responsive">
+        <table id="example" class="table table-bordered table-sm table-striped">        
+                <thead class="table-dark">
+                    <tr>
+                      <th>Prod. Name</th>
+                      <th>Prod. Code</th>
+                      <th>Dep. Name</th>
+                     <!--  <th><small>IGST %</small></th>
+                      <th><small>SGST%</small></th> 
+                      <th><small>CGST%</small></th> 
+                      <th><small>GST%</small></th>  -->
+                      <th><small>Current Price</small></th>
+                       <th><small>Stock In</small></th>
+                       <th><small>Stock Out</small></th>
+                       <!-- <th><small>Current Price</small></th> -->
+                      <th><small>Available Stock</small></th>                     
+                      <!-- <th><small>Previous/Last Price</small></th>  -->
+                      <!-- <th>Qnt.</th>  -->
+                      <!-- <th>Tax Price</th> -->
+                      <!-- <th>Price With Tax</th> -->
+                      <!-- <th>Grand Total</th>  -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productData">
+                      <td>{{ data.product_name }}</td>
+                      <td>{{ data.product_code }}</td>
+                      <td>{{ data.product_department_Name }}</td>
+                      <!-- <td>{{ data.product_igst }}</td>
+                      <td>{{ data.product_sgst }}</td>
+                      <td>{{ data.product_cgst }}</td>
+                      <td>{{ data.product_gst }}</td> -->
+                      <td>{{ data.opening_stock }}</td>
+                      <!-- <td>{{ data.closing_stok }}</td> -->
+                       <td>{{ data.stock_in }}</td>
+                        <td>{{ data.stock_out }}</td>
+                       <td>{{ data.available_stock }}</td>
+                     <!--  <td>{{  (data.opening_stock*data.product_gst)/100 }}</td>
+                      <td>{{  data.opening_stock+ (data.opening_stock*data.product_gst)/100 }}</td>
+                       <td>{{  (data.opening_stock+ (data.opening_stock*data.product_gst)/100)*data.available_stock }}</td> -->
+                    </tr>
+                </tbody>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Row-->
+
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

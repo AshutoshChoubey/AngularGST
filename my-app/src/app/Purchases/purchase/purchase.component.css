@@ -1,0 +1,15 @@
+.smart-table-container{
+    overflow-x: scroll;
+}
+.ng2-smart-table  {
+    min-width: 1500px;
+}
+:host  ng2-smart-table table tr td{
+    font-size:0.9em;
+    word-break: break-all;
+    }
+
+    .required-field::before {
+  content: "*";
+  color: red;
+}

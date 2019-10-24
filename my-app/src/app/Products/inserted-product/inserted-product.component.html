@@ -1,0 +1,118 @@
+<div *ngIf="submitResponse.length!=0" class="row" >
+      <div class="col-sm-12">
+          <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">
+              <div class="ibox-head text-center">
+                 <h2 class="text-center"> Inserted Products</h2> 
+                  <!-- <button class="close-warning"  data-dismiss="alert" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button> -->
+              </div>
+              <div class="ibox-body">
+                  <div class="d-flex justify-content-between mb-5 pb-4">
+                      <div class="d-flex align-items-center">
+                          <span class="mr-4 static-badge badge-pink"><small>BCM</small></span>
+                          <div>
+                              <h5 class="font-strong">{{ submitResponse.product_name }}</h5>
+                              <div class="text-light"> {{ submitResponse.product_department_Name }}</div>
+                          </div>
+                      </div>                     
+                  </div>
+                  <div class="ibox-fullwidth-block table-responsive">
+                      <table class="table table-hover">
+                          <tbody>
+                              <tr>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product ID</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.id }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Code</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_code }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                              <tr class="success">
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Name</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_name }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Departments</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_department_Name }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Specification</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_specification }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Type</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_type }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                              <tr class="warning">
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Unit</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_unit }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Place</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.place }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product HSN</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_hsn }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product IGST</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_igst }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                              <tr class="danger">
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product SGST</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_sgst }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product CGST</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_cgst }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product GST</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.product_gst }}</td>
+                                  <td>&nbsp;</td>
+                                  <td>&nbsp;</td>                                     
+                                  <td>Product Creaed At</td>
+                                  <td>:</td>
+                                  <td>{{ submitResponse.created_at }}</td>
+                                  <td>&nbsp;</td>
+                              </tr>
+                             
+                          </tbody>
+                          <tfoot>
+                              <tr>
+                                  <th colspan="4"></th>
+                              </tr>
+                          </tfoot>
+                      </table>
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+  </div>

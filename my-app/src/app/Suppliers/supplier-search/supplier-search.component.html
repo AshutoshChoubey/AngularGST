@@ -1,0 +1,237 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+ <!--  <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div class="text-center"> 
+  <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+      <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button> 
+
+</div>
+<div class="table-responsive ">
+
+<div fxLayout fxLayoutAlign="center center">
+<mat-form-field fxFlex="40%">
+  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+</div>
+<table mat-table [dataSource]="dataSource" matSort matSortStart="desc">
+<ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+</ng-container>
+<ng-container matColumnDef="supplier_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Supplier Name </th>
+  <td mat-cell *matCellDef="let element"> {{element.supplier_name}} </td>
+</ng-container>
+<ng-container matColumnDef="mob_num">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Mobile Number</th>
+  <td mat-cell *matCellDef="let element"> {{element.mob_num}} </td>
+</ng-container>
+<ng-container matColumnDef="email">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Email Id</th>
+  <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+</ng-container>
+<ng-container matColumnDef="gstin">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>GSTIN</th>
+  <td mat-cell *matCellDef="let element"> {{element.gstin}} </td>
+</ng-container>
+<ng-container matColumnDef="address">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+  <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+</ng-container>
+<ng-container matColumnDef="created_at">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>
+  <td mat-cell *matCellDef="let element"> {{element.created_at}} </td>
+</ng-container>
+
+<ng-container matColumnDef="update">
+  <th mat-header-cell *matHeaderCellDef> Update&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>
+  <td mat-cell *matCellDef="let element">
+  <button type="button" class="btn btn-gradient-peach" (click)="redirectToUpdae(element)"  data-toggle="modal" data-target="#myModal">
+  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+  </button>
+  </td>
+</ng-container> 
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSize]="4" [pageSizeOptions]="[4, 6, 10, 20,30,50,75,100]">
+</mat-paginator>
+</div>
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+<!-- The Modal -->
+<div *ngIf="dataForUpdate" class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+  
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Update Will Done For Supplier Id: {{ dataForUpdate.id }}</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+  
+      <!-- Modal body -->
+      <div class="modal-body">
+        <!-- <form class="form-horizontal" #departmentAddForm=ngForm (ngSubmit)="onSubmitForUpdate()"> -->
+
+
+          <div class="page-heading ">
+  <h1 class="page-title">Update Supplier</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div *ngIf="submitClicked==1" class="row text-center">
+  <div class="col-sm-12">
+  <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+
+<form class="form-purple" #supplierAddForm=ngForm (ngSubmit)="onSubmit()">
+    <div *ngIf="submitClicked==0" class="card">
+    <div class="card-header text-center">Please Fill Up Supplier Details</div>
+    <div class="card-body"> 
+      <div *ngIf="errorAfterUpdate.error" class="row">
+        <div class="col-sm-12 col-lg-12">
+            <div class="alert alert-pink alert-dismissable fade show has-icon"><i class="la la-info-circle alert-icon"></i>
+              <button class="close" data-dismiss="alert" aria-label="Close"></button><strong>Warning!</strong><br>{{ errorAfterUpdate.error.message }}. {{ errorAfterUpdate.error.errors.supplier_name[0] }}.</div>                              
+        </div>
+      </div>
+        <div class="row"> 
+                <div class="col-lg-4">
+                        <div class="form-group">
+                        <label for="input-1">Supplier Name </label>
+                        <input class="form-control form-control-air" required  [(ngModel)]="dataForUpdate.supplier_name"  placeholder="Supplier Name" autocomplete="off"  name="supplier_name" type="text" value="{{ dataForUpdate.supplier_name }}">
+                        </div>
+                </div>
+                <div class="col-lg-4">
+                        <div class="form-group">
+                        <label for="input-1">Mobile Number</label>
+                        <input class="form-control form-control-air" id="" required [(ngModel)]="dataForUpdate.mob_num"  placeholder="Mobile Number" autocomplete="off"  name="mob_num" type="text" value="{{dataForUpdate.mob_num}}">
+                        </div>
+                </div>           
+                <div class="col-lg-4">
+                <div class="form-group">
+                      <label for="input-1">Email</label>
+                      <input class="form-control form-control-air" id="" required [(ngModel)]="dataForUpdate.email"  placeholder="Email" autocomplete="off"  name="email" type="email" value="{{ dataForUpdate.email }}">
+                      </div>
+              </div>
+          </div>                        
+          <div class="row"> 
+                <div class="col-lg-4">
+                        <div class="form-group">
+                        <label for="department">Address</label> 
+                        <textarea class="form-control form-control-air"   [(ngModel)]="dataForUpdate.address"  placeholder="Product Specification" autocomplete="off"  name="address" >{{ dataForUpdate.address }}</textarea>
+                        </div>
+                </div>                                              
+                           
+            <div class="col-lg-4">
+                    <div class="form-group">
+                    <label for="input-1">GSTIN</label>
+                    <input type="text" class="form-control form-control-air" [(ngModel)]="dataForUpdate.gstin"   name="gstin" value="{{ dataForUpdate.gstin }}"/>
+                    </div>
+            </div>
+        </div>
+                                      
+    </div>
+    <div class="card-footer text-center">
+      <button type="submit" [disabled]="!supplierAddForm.valid" class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+          <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Save</span>
+          <span class="hidden-content">
+              <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+          </span>
+      </button>
+        <!-- <input  class="btn btn-gradient-peach btn-fix" value="Add Product"> -->
+    </div>
+    </div>
+    </form>
+
+
+
+<div *ngIf="messageAfterUpdate.id" class="row" >
+  <div class="col-sm-12">
+      <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">
+          <div class="ibox-head text-center">                           
+                        <h5 class="text-center"> Updated Supplier</h5> 
+          </div>
+          <div class="ibox-body">
+              <div class="ibox-fullwidth-block table-responsive">
+                  <table class="table table-hover">
+                      <tbody>
+                          <tr class="warning">
+                              <td>&nbsp;</td>                                     
+                              <td>Supplier ID</td>
+                              <td>:</td>
+                              <td>{{ messageAfterUpdate.id }}</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>                                     
+                              <td>Supplier Name</td>
+                              <td>:</td>
+                              <td>{{ messageAfterUpdate.supplier_name }}</td>
+                              <td>&nbsp;</td>
+                          </tr>
+                          <tr class="danger">
+                            <td>&nbsp;</td>                                     
+                            <td>  Address</td>
+                            <td>:</td>
+                            <td>{{ messageAfterUpdate.address }}</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>                                     
+                            <td>GSTIN</td>
+                            <td>:</td>
+                            <td>{{ messageAfterUpdate.gstin }}</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                          <tr class="success">
+                              <td>&nbsp;</td>                                     
+                              <td>  Mobile Number</td>
+                              <td>:</td>
+                              <td>{{ messageAfterUpdate.mob_num }}</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>                                     
+                              <td>Created Date</td>
+                              <td>:</td>
+                              <td>{{ messageAfterUpdate.created_at }}</td>
+                              <td>&nbsp;</td>
+                          </tr>
+                      </tbody>
+                      <tfoot>
+                          <tr>
+                              <th colspan="4"></th>
+                          </tr>
+                      </tfoot>
+                  </table>
+              </div>
+             
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+          <!-- </form> -->
+      </div>
+  
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+  
+    </div>
+  </div>
+  </div>
+
+

@@ -1,0 +1,47 @@
+<app-brad ></app-brad>
+<div class="page-heading text-center">
+      <h1 class="page-title">Update Indent</h1>
+      <!-- <ol class="breadcrumb">
+        <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+      </ol> -->
+</div>
+<div class="card">
+	<div class="card-header">
+		<div class="row text-center">
+			<div class="col-m-12 text-center">
+			<button class="btn btn-sm btn-success text-center" (click)="goBack()"><i class="fa fa-times" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+	<div class="card-body">
+			<form class="form-info" #form=ngForm (ngSubmit)="onSubmit()" >
+				<div class="row">	  
+						<div  class="col-sm-4 text-center">
+								<div class="form-group">
+						        <label for="department" >Indent For Month</label> 
+						      		<input type="text" name="indent_month" class="form-control" [(ngModel)]="indentListFromDatabase.indent_month" value="{{ indentListFromDatabase.indent_month }}" >
+						       
+						        </div>
+						</div>
+						<div  class="col-sm-4 text-center">
+								<div class="form-group">
+						        <label for="department" >Description</label> 
+						      <textarea type="text" name="indent_discription" class="form-control" [(ngModel)]="indentListFromDatabase.indent_discription"  >{{ indentListFromDatabase.indent_discription }}</textarea>                  
+						        </div>
+						</div>	
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						
+						<input type="submit" [disabled]="!form.valid"  class="btn btn-gradient-blue-pink btn-fix" value="Update" />	
+						
+					</div>
+				</div>
+			</form>
+	</div>
+</div>
+
+
+<div style="height: 30px">
+	&nbsp;
+</div>

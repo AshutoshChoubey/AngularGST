@@ -1,0 +1,176 @@
+{ 
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "my-app": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/my-app/",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css",
+              "templateRelated/assetsTemp/vendors/bootstrap/dist/css/bootstrap.min.css",
+              "templateRelated/assetsTemp/vendors/font-awesome/css/font-awesome.min.css",
+              "templateRelated/assetsTemp/vendors/themify-icons/css/themify-icons.css",
+              "templateRelated/assetsTemp/css/main.css",
+               "templateRelated/bootstrap-datatable/css/dataTables.bootstrap4.min.css" ,
+ "templateRelated/bootstrap-datatable/css/buttons.bootstrap4.min.css",
+ "node_modules/sweetalert2/dist/sweetalert2.min.css",
+ "templateRelated/assetsTemp/vendors/bootstrap-select/dist/css/bootstrap-select.min.css",
+ "templateRelated/assetsTemp/vendors/select2/dist/css/select2.min.css"
+
+            ],
+            "scripts": [
+               "templateRelated/assetsTemp/vendors/jquery/dist/jquery.min.js",
+               "templateRelated/assetsTemp/vendors/popper.js/dist/umd/popper.min.js",
+               "templateRelated/assetsTemp/vendors/bootstrap/dist/js/bootstrap.min.js",
+               "templateRelated/assetsTemp/vendors/metisMenu/dist/metisMenu.min.js",
+               "templateRelated/assetsTemp/vendors/jquery-slimscroll/jquery.slimscroll.min.js",
+               "node_modules/datatables.net/js/jquery.dataTables.js",
+  "node_modules/jszip/dist/jszip.js",
+  "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+  "node_modules/datatables.net-buttons/js/buttons.colVis.js",
+  "node_modules/datatables.net-buttons/js/buttons.flash.js",
+  "node_modules/datatables.net-buttons/js/buttons.html5.js",
+  "node_modules/datatables.net-buttons/js/buttons.print.js",
+  "node_modules/pdfmake/build/pdfmake.min.js",
+  "node_modules/pdfmake/build/vfs_fonts.js",
+               "templateRelated/assetsTemp/js/app.js",
+               "src/ourJs.js",
+               "templateRelated/bootstrap-datatable/js/jquery.dataTables.min.js",
+  "templateRelated/bootstrap-datatable/js/dataTables.bootstrap4.min.js",
+  "templateRelated/bootstrap-datatable/js/dataTables.buttons.min.js",
+  "templateRelated/bootstrap-datatable/js/buttons.bootstrap4.min.js",
+  "templateRelated/bootstrap-datatable/js/jszip.min.js",
+  "templateRelated/bootstrap-datatable/js/pdfmake.min.js",
+  "templateRelated/bootstrap-datatable/js/vfs_fonts.js",
+  "templateRelated/bootstrap-datatable/js/buttons.html5.min.js",
+  "templateRelated/bootstrap-datatable/js/buttons.print.min.js",
+  "templateRelated/bootstrap-datatable/js/buttons.colVis.min.js",
+  "node_modules/sweetalert2/dist/sweetalert2.min.js",
+  "templateRelated/assetsTemp/vendors/select2/dist/js/select2.full.min.js",
+
+            ],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "9mb",
+                  "maximumError": "9mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "my-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "my-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "my-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "my-app-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "my-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "my-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "my-app"
+}

@@ -1,0 +1,1023 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>NavbarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/core/navbar/navbar.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-navbar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./navbar.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./navbar.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loggedIn">loggedIn</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#logout">logout</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(auth: <a href="../injectables/AuthService.html">AuthService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, token: <a href="../injectables/TokenService.html">TokenService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/core/navbar/navbar.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>token</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TokenService.html" target="_self" >TokenService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="logout"></a>
+                    <span class="name">
+                        <b>
+                            logout
+                        </b>
+                        <a href="#logout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>logout(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/core/navbar/navbar.component.ts:24</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/core/navbar/navbar.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loggedIn"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loggedIn</b>
+                            <a href="#loggedIn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/core/navbar/navbar.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { AuthService } from &#x27;../../Services/auth.service&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { TokenService } from &#x27;../../Services/token.service&#x27;;
+
+@Component({
+  selector: &#x27;app-navbar&#x27;,
+  templateUrl: &#x27;./navbar.component.html&#x27;,
+  styleUrls: [&#x27;./navbar.component.css&#x27;]
+})
+export class NavbarComponent implements OnInit {
+
+  constructor( 
+    private auth :AuthService,
+    private router : Router,
+    private token :TokenService
+   ) {
+   }
+   public loggedIn :boolean;
+  ngOnInit() {
+    this.auth.authStatus.subscribe(value&#x3D;&gt;this.loggedIn&#x3D;value);
+    // console.log(this.loggedIn)
+  }
+  logout (event:MouseEvent)
+  {
+    event.preventDefault();
+    this.auth.changeAuthStatus(false);
+    this.router.navigateByUrl(&#x27;/login&#x27;);
+    this.token.remove();
+    this.auth.removeUserDetail();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html"> &lt;nav  [hidden]&#x3D;&quot;!loggedIn&quot; class&#x3D;&quot;page-sidebar&quot; id&#x3D;&quot;sidebar&quot;&gt;
+            &lt;div id&#x3D;&quot;sidebar-collapse&quot;&gt;
+                &lt;ul class&#x3D;&quot;side-menu metismenu&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-home&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Dashboards&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;#&quot; routerLink&#x3D;&quot;/dashboard&quot;&gt;DashBoard&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class&#x3D;&quot;heading&quot;&gt;Master Form&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-paint-roller&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Products&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/addProduct&quot;  href&#x3D;&quot;#&quot;&gt;Add Product&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/searchProduct&quot;  href&#x3D;&quot;#&quot;&gt;Search Product&lt;/a&gt;
+                            &lt;/li&gt;
+                             &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/productStockReport&quot;  href&#x3D;&quot;#&quot;&gt;Product Stock&lt;/a&gt;
+                            &lt;/li&gt;
+                              &lt;li&gt;
+                                 &lt;a href&#x3D;&quot;javascript:;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;nav-label&quot;&gt;Department&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                                    &lt;li&gt;
+                                         &lt;a routerLink&#x3D;&quot;/addDepartment&quot;  href&#x3D;&quot;#&quot;&gt;Add Department&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                      &lt;a routerLink&#x3D;&quot;/listDepartment&quot;  href&#x3D;&quot;#&quot;&gt;Deparement List&lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                              
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-package&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Supplier&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                         &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/addSupplier&quot;&gt;Add Supplier&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a  routerLink&#x3D;&quot;/searchSupplier&quot;&gt;Search Supplier&lt;/a&gt;
+                            &lt;/li&gt;
+                         &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class&#x3D;&quot;heading&quot;&gt;Main Form&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-layers-alt&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Purchase&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/indent&quot;&gt;Add Purchase&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/purchaseReport&quot;&gt;Search Purchase&lt;/a&gt;
+                            &lt;/li&gt;
+                             &lt;!-- &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/directPurchase&quot;&gt;Stock Add&lt;/a&gt;
+                            &lt;/li&gt; --&gt;
+                           &lt;!--  &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/purchaseReturn&quot;&gt;Purchase Return  &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/purchaseInvoice&quot;&gt;Purchase Invoice&lt;/a&gt;
+                            &lt;/li&gt; --&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                     &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-shopping-cart&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Indent Report&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/indent&quot;&gt;Add Indent&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/indentList&quot;&gt;Indent List&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                     &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-shopping-cart&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Requisition  Report&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/requisition&quot;&gt;Add Requsition&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/requisitionList&quot;&gt;Requsition List&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                     &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon fa fa-film&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Prod. Consumption&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/requisition&quot;&gt;Consumption&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a  routerLink&#x3D;&quot;/consumptionReport&quot;&gt;&lt;small&gt;Prod. Consumption Report&lt;/small&gt;&lt;/a&gt;
+                            &lt;/li&gt;
+                          &lt;!--   &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/requisition&quot;&gt;Sales Return  &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/producUseReport&quot;&gt;Sales Invoice&lt;/a&gt;
+                            &lt;/li&gt; --&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                     &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon fa fa-assistive-listening-systems&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Stock&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/stockHistory&quot;&gt;&lt;small&gt;Saved History&lt;/small&gt; &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/productvaluationByDept&quot;&gt;&lt;small&gt;Valuation By Department&lt;/small&gt; &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/productPrice&quot;&gt;Product Price &lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/productAvailibility&quot;&gt;Product Availability&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a routerLink&#x3D;&quot;/stockValuationReport&quot;&gt;&lt;small&gt;Product Valuation Report&lt;/small&gt;&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+
+                    &lt;!-- &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-heart&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Buttons&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;javascript:;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;nav-label&quot;&gt;Base Buttons&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;buttons-default.html&quot;&gt;Default style&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;buttons-rounded.html&quot;&gt;Rounded style&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;buttons-square.html&quot;&gt;Square style&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;buttons-air.html&quot;&gt;Air style&lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;button-icon.html&quot;&gt;Button Icon&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;button-labeled.html&quot;&gt;Labeled buttons&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;button-animated.html&quot;&gt;Animated buttons&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;buttons-fab.html&quot;&gt;FAB buttons&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;button-groups.html&quot;&gt;Button Groups&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;button-dropdowns.html&quot;&gt;Button dropdowns&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;buttons-social.html&quot;&gt;Social Buttons&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-layers-alt&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Widgets&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;widgets-statistics.html&quot;&gt;Statistics Widgets&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;widgets-list.html&quot;&gt;App &amp;amp; List Widgets&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;widgets-user.html&quot;&gt;User Widgets&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;widgets-blog.html&quot;&gt;Blog Widgets&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-check-box&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Forms&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;javascript:;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;nav-label&quot;&gt;Form Controls&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;form-controls.html&quot;&gt;Inputs&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;form-switch.html&quot;&gt;Switch&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;form-checkbox-radio.html&quot;&gt;Checkbox &amp;amp; Radio&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;form-input-groups.html&quot;&gt;Input Groups&lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;form_layouts.html&quot;&gt;Form Layouts&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;form_advanced.html&quot;&gt;Advanced Plugins&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;form_masks.html&quot;&gt;Form input masks&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;form_validation.html&quot;&gt;Form Validation&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;text_editors.html&quot;&gt;Text Editors&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;form_dropzone.html&quot;&gt;Dropzone File Upload&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;image_cropping.html&quot;&gt;Image Cropping&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;autocomplete.html&quot;&gt;Autocomplete&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;form_wizard.html&quot;&gt;Form Wizard&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-layout-tab-window&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Tables&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;table_basic.html&quot;&gt;Basic Tables&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;datatables.html&quot;&gt;Datatables&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-bar-chart&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Charts&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;charts_flot.html&quot;&gt;Flot Charts&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;charts_morris.html&quot;&gt;Morris Charts&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;chartjs.html&quot;&gt;Chart.js&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;c3.html&quot;&gt;C3 Charts&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;charts_peity.html&quot;&gt;Peity Charts&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;charts_sparkline.html&quot;&gt;Sparkline Charts&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;charts_rickshaw.html&quot;&gt;Rickshaw Charts&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-map-alt&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Maps&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;maps_google.html&quot;&gt;Google maps&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;datamaps.html&quot;&gt;Datamaps&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;maps_vector.html&quot;&gt;Vector maps&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;icons.html&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-comments-smiley&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Icons&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class&#x3D;&quot;heading&quot;&gt;PAGES&lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;mailbox.html&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-email&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Mailbox&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-pencil&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Blog&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;blog_list.html&quot;&gt;List&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;article.html&quot;&gt;Article&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-shopping-cart&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;E-Commerce&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;dashboard_ecommerce.html&quot;&gt;Dashboard&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;ecommerce_products_list.html&quot;&gt;Products list&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;ecommerce_add_product.html&quot;&gt;Add new product&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;ecommerce_orders_list.html&quot;&gt;Orders list&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;ecommerce_order_details.html&quot;&gt;Order details&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;invoice.html&quot;&gt;Invoice&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;ecommerce_customers.html&quot;&gt;Customers&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;calendar.html&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-calendar&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Calendar&lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-files&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;General Pages&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;faq.html&quot;&gt;FAQ&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;search.html&quot;&gt;Search&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;timeline.html&quot;&gt;Timeline&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;timeline_horizontal.html&quot;&gt;Horizontal timeline&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;pricing-table-1.html&quot;&gt;Pricing Table v1&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;pricing-table-2.html&quot;&gt;Pricing Table v2&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;pricing-table-3.html&quot;&gt;Pricing Table v3&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;pricing-table-4.html&quot;&gt;Pricing Table v4&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;pricing-table-5.html&quot;&gt;Pricing Table v5&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;pricing-table-6.html&quot;&gt;Pricing Table v6&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li class&#x3D;&quot;active&quot;&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-user&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Custom Pages&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse in&quot;&gt;
+                            &lt;li class&#x3D;&quot;active&quot;&gt;
+                                &lt;a href&#x3D;&quot;javascript:;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;nav-label&quot;&gt;User Pages&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                                    &lt;li&gt;
+                                        &lt;a class&#x3D;&quot;active&quot; href&#x3D;&quot;profile.html&quot;&gt;Profile&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;login.html&quot;&gt;Login v1&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;login-2.html&quot;&gt;Login v2&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;login-3.html&quot;&gt;Login v3&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;login-4.html&quot;&gt;Login v4&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;login-5.html&quot;&gt;Login v5&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;lockscreen.html&quot;&gt;Lockscreen&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;forgot_password.html&quot;&gt;Forgot password&lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                            &lt;li class&#x3D;&quot;active&quot;&gt;
+                                &lt;a href&#x3D;&quot;javascript:;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;nav-label&quot;&gt;Error Pages&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;error_404.html&quot;&gt;404 error&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;error_404-2.html&quot;&gt;404 error v2&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;error_403.html&quot;&gt;403 error&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;error_500.html&quot;&gt;500 error&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;maintenance.html&quot;&gt;Maintenance Mode&lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt; --&gt;
+                    &lt;!-- &lt;li&gt;
+                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;sidebar-item-icon ti-anchor&quot;&gt;&lt;/i&gt;
+                            &lt;span class&#x3D;&quot;nav-label&quot;&gt;Menu Levels&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                        &lt;ul class&#x3D;&quot;nav-2-level collapse&quot;&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;javascript:;&quot;&gt;Level 2&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href&#x3D;&quot;javascript:;&quot;&gt;
+                                    &lt;span class&#x3D;&quot;nav-label&quot;&gt;Level 2&lt;/span&gt;&lt;i class&#x3D;&quot;fa fa-angle-left arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                                &lt;ul class&#x3D;&quot;nav-3-level collapse&quot;&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;Level 3&lt;/a&gt;
+                                    &lt;/li&gt;
+                                    &lt;li&gt;
+                                        &lt;a href&#x3D;&quot;javascript:;&quot;&gt;Level 3&lt;/a&gt;
+                                    &lt;/li&gt;
+                                &lt;/ul&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt; --&gt;
+
+                &lt;/ul&gt;
+                &lt;div class&#x3D;&quot;sidebar-footer&quot;&gt;
+                    &lt;a class&#x3D;&quot;nav-link quick-sidebar-toggler&quot;&gt;&lt;span class&#x3D;&quot;ti-align-right&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+                    &lt;!-- &lt;a href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;ti-announcement&quot;&gt;&lt;/i&gt;&lt;/a&gt; --&gt;
+                    &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;ti-calendar&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;ti-comments&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;a (click)&#x3D;&quot;logout($event)&quot;  href&#x3D;&quot;#&quot;&gt;&lt;i class&#x3D;&quot;ti-power-off&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./navbar.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div> <nav  [hidden]="!loggedIn" class="page-sidebar" id="sidebar">            <div id="sidebar-collapse">                <ul class="side-menu metismenu">                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-home"></i>                            <span class="nav-label">Dashboards</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="#" routerLink="/dashboard">DashBoard</a>                            </li>                        </ul>                    </li>                    <li class="heading">Master Form</li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-paint-roller"></i>                            <span class="nav-label">Products</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a routerLink="/addProduct"  href="#">Add Product</a>                            </li>                            <li>                                <a routerLink="/searchProduct"  href="#">Search Product</a>                            </li>                             <li>                                <a routerLink="/productStockReport"  href="#">Product Stock</a>                            </li>                              <li>                                 <a href="javascript:;">                                    <span class="nav-label">Department</span><i class="fa fa-angle-left arrow"></i></a>                                <ul class="nav-3-level collapse">                                    <li>                                         <a routerLink="/addDepartment"  href="#">Add Department</a>                                    </li>                                    <li>                                      <a routerLink="/listDepartment"  href="#">Deparement List</a>                                    </li>                                </ul>                                                          </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-package"></i>                            <span class="nav-label">Supplier</span><i class="fa fa-angle-left arrow"></i></a>                         <ul class="nav-3-level collapse">                            <li>                                <a routerLink="/addSupplier">Add Supplier</a>                            </li>                            <li>                                <a  routerLink="/searchSupplier">Search Supplier</a>                            </li>                         </ul>                    </li>                    <li class="heading">Main Form</li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-layers-alt"></i>                            <span class="nav-label">Purchase</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a routerLink="/indent">Add Purchase</a>                            </li>                            <li>                                <a routerLink="/purchaseReport">Search Purchase</a>                            </li>                             <!-- <li>                                <a routerLink="/directPurchase">Stock Add</a>                            </li> -->                           <!--  <li>                                <a routerLink="/purchaseReturn">Purchase Return  </a>                            </li>                            <li>                                <a routerLink="/purchaseInvoice">Purchase Invoice</a>                            </li> -->                        </ul>                    </li>                     <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-shopping-cart"></i>                            <span class="nav-label">Indent Report</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a routerLink="/indent">Add Indent</a>                            </li>                            <li>                                <a routerLink="/indentList">Indent List</a>                            </li>                        </ul>                    </li>                     <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-shopping-cart"></i>                            <span class="nav-label">Requisition  Report</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a routerLink="/requisition">Add Requsition</a>                            </li>                            <li>                                <a routerLink="/requisitionList">Requsition List</a>                            </li>                        </ul>                    </li>                     <li>                        <a href="javascript:;"><i class="sidebar-item-icon fa fa-film" aria-hidden="true"></i>                            <span class="nav-label">Prod. Consumption</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a routerLink="/requisition">Consumption</a>                            </li>                            <li>                                <a  routerLink="/consumptionReport"><small>Prod. Consumption Report</small></a>                            </li>                          <!--   <li>                                <a routerLink="/requisition">Sales Return  </a>                            </li>                            <li>                                <a routerLink="/producUseReport">Sales Invoice</a>                            </li> -->                        </ul>                    </li>                     <li>                        <a href="javascript:;"><i class="sidebar-item-icon fa fa-assistive-listening-systems" aria-hidden="true"></i>                            <span class="nav-label">Stock</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a routerLink="/stockHistory"><small>Saved History</small> </a>                            </li>                            <li>                                <a routerLink="/productvaluationByDept"><small>Valuation By Department</small> </a>                            </li>                            <li>                                <a routerLink="/productPrice">Product Price </a>                            </li>                            <li>                                <a routerLink="/productAvailibility">Product Availability</a>                            </li>                            <li>                                <a routerLink="/stockValuationReport"><small>Product Valuation Report</small></a>                            </li>                        </ul>                    </li>                    <!-- <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-heart"></i>                            <span class="nav-label">Buttons</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="javascript:;">                                    <span class="nav-label">Base Buttons</span><i class="fa fa-angle-left arrow"></i></a>                                <ul class="nav-3-level collapse">                                    <li>                                        <a href="buttons-default.html">Default style</a>                                    </li>                                    <li>                                        <a href="buttons-rounded.html">Rounded style</a>                                    </li>                                    <li>                                        <a href="buttons-square.html">Square style</a>                                    </li>                                    <li>                                        <a href="buttons-air.html">Air style</a>                                    </li>                                </ul>                            </li>                            <li>                                <a href="button-icon.html">Button Icon</a>                            </li>                            <li>                                <a href="button-labeled.html">Labeled buttons</a>                            </li>                            <li>                                <a href="button-animated.html">Animated buttons</a>                            </li>                            <li>                                <a href="buttons-fab.html">FAB buttons</a>                            </li>                            <li>                                <a href="button-groups.html">Button Groups</a>                            </li>                            <li>                                <a href="button-dropdowns.html">Button dropdowns</a>                            </li>                            <li>                                <a href="buttons-social.html">Social Buttons</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-layers-alt"></i>                            <span class="nav-label">Widgets</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="widgets-statistics.html">Statistics Widgets</a>                            </li>                            <li>                                <a href="widgets-list.html">App &amp; List Widgets</a>                            </li>                            <li>                                <a href="widgets-user.html">User Widgets</a>                            </li>                            <li>                                <a href="widgets-blog.html">Blog Widgets</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-check-box"></i>                            <span class="nav-label">Forms</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="javascript:;">                                    <span class="nav-label">Form Controls</span><i class="fa fa-angle-left arrow"></i></a>                                <ul class="nav-3-level collapse">                                    <li>                                        <a href="form-controls.html">Inputs</a>                                    </li>                                    <li>                                        <a href="form-switch.html">Switch</a>                                    </li>                                    <li>                                        <a href="form-checkbox-radio.html">Checkbox &amp; Radio</a>                                    </li>                                    <li>                                        <a href="form-input-groups.html">Input Groups</a>                                    </li>                                </ul>                            </li>                            <li>                                <a href="form_layouts.html">Form Layouts</a>                            </li>                            <li>                                <a href="form_advanced.html">Advanced Plugins</a>                            </li>                            <li>                                <a href="form_masks.html">Form input masks</a>                            </li>                            <li>                                <a href="form_validation.html">Form Validation</a>                            </li>                            <li>                                <a href="text_editors.html">Text Editors</a>                            </li>                            <li>                                <a href="form_dropzone.html">Dropzone File Upload</a>                            </li>                            <li>                                <a href="image_cropping.html">Image Cropping</a>                            </li>                            <li>                                <a href="autocomplete.html">Autocomplete</a>                            </li>                            <li>                                <a href="form_wizard.html">Form Wizard</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-layout-tab-window"></i>                            <span class="nav-label">Tables</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="table_basic.html">Basic Tables</a>                            </li>                            <li>                                <a href="datatables.html">Datatables</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-bar-chart"></i>                            <span class="nav-label">Charts</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="charts_flot.html">Flot Charts</a>                            </li>                            <li>                                <a href="charts_morris.html">Morris Charts</a>                            </li>                            <li>                                <a href="chartjs.html">Chart.js</a>                            </li>                            <li>                                <a href="c3.html">C3 Charts</a>                            </li>                            <li>                                <a href="charts_peity.html">Peity Charts</a>                            </li>                            <li>                                <a href="charts_sparkline.html">Sparkline Charts</a>                            </li>                            <li>                                <a href="charts_rickshaw.html">Rickshaw Charts</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-map-alt"></i>                            <span class="nav-label">Maps</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="maps_google.html">Google maps</a>                            </li>                            <li>                                <a href="datamaps.html">Datamaps</a>                            </li>                            <li>                                <a href="maps_vector.html">Vector maps</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="icons.html"><i class="sidebar-item-icon ti-comments-smiley"></i>                            <span class="nav-label">Icons</span>                        </a>                    </li>                    <li class="heading">PAGES</li>                    <li>                        <a href="mailbox.html"><i class="sidebar-item-icon ti-email"></i>                            <span class="nav-label">Mailbox</span>                        </a>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-pencil"></i>                            <span class="nav-label">Blog</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="blog_list.html">List</a>                            </li>                            <li>                                <a href="article.html">Article</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-shopping-cart"></i>                            <span class="nav-label">E-Commerce</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="dashboard_ecommerce.html">Dashboard</a>                            </li>                            <li>                                <a href="ecommerce_products_list.html">Products list</a>                            </li>                            <li>                                <a href="ecommerce_add_product.html">Add new product</a>                            </li>                            <li>                                <a href="ecommerce_orders_list.html">Orders list</a>                            </li>                            <li>                                <a href="ecommerce_order_details.html">Order details</a>                            </li>                            <li>                                <a href="invoice.html">Invoice</a>                            </li>                            <li>                                <a href="ecommerce_customers.html">Customers</a>                            </li>                        </ul>                    </li>                    <li>                        <a href="calendar.html"><i class="sidebar-item-icon ti-calendar"></i>                            <span class="nav-label">Calendar</span>                        </a>                    </li>                    <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-files"></i>                            <span class="nav-label">General Pages</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="faq.html">FAQ</a>                            </li>                            <li>                                <a href="search.html">Search</a>                            </li>                            <li>                                <a href="timeline.html">Timeline</a>                            </li>                            <li>                                <a href="timeline_horizontal.html">Horizontal timeline</a>                            </li>                            <li>                                <a href="pricing-table-1.html">Pricing Table v1</a>                            </li>                            <li>                                <a href="pricing-table-2.html">Pricing Table v2</a>                            </li>                            <li>                                <a href="pricing-table-3.html">Pricing Table v3</a>                            </li>                            <li>                                <a href="pricing-table-4.html">Pricing Table v4</a>                            </li>                            <li>                                <a href="pricing-table-5.html">Pricing Table v5</a>                            </li>                            <li>                                <a href="pricing-table-6.html">Pricing Table v6</a>                            </li>                        </ul>                    </li>                    <li class="active">                        <a href="javascript:;"><i class="sidebar-item-icon ti-user"></i>                            <span class="nav-label">Custom Pages</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse in">                            <li class="active">                                <a href="javascript:;">                                    <span class="nav-label">User Pages</span><i class="fa fa-angle-left arrow"></i></a>                                <ul class="nav-3-level collapse">                                    <li>                                        <a class="active" href="profile.html">Profile</a>                                    </li>                                    <li>                                        <a href="login.html">Login v1</a>                                    </li>                                    <li>                                        <a href="login-2.html">Login v2</a>                                    </li>                                    <li>                                        <a href="login-3.html">Login v3</a>                                    </li>                                    <li>                                        <a href="login-4.html">Login v4</a>                                    </li>                                    <li>                                        <a href="login-5.html">Login v5</a>                                    </li>                                    <li>                                        <a href="lockscreen.html">Lockscreen</a>                                    </li>                                    <li>                                        <a href="forgot_password.html">Forgot password</a>                                    </li>                                </ul>                            </li>                            <li class="active">                                <a href="javascript:;">                                    <span class="nav-label">Error Pages</span><i class="fa fa-angle-left arrow"></i></a>                                <ul class="nav-3-level collapse">                                    <li>                                        <a href="error_404.html">404 error</a>                                    </li>                                    <li>                                        <a href="error_404-2.html">404 error v2</a>                                    </li>                                    <li>                                        <a href="error_403.html">403 error</a>                                    </li>                                    <li>                                        <a href="error_500.html">500 error</a>                                    </li>                                    <li>                                        <a href="maintenance.html">Maintenance Mode</a>                                    </li>                                </ul>                            </li>                        </ul>                    </li> -->                    <!-- <li>                        <a href="javascript:;"><i class="sidebar-item-icon ti-anchor"></i>                            <span class="nav-label">Menu Levels</span><i class="fa fa-angle-left arrow"></i></a>                        <ul class="nav-2-level collapse">                            <li>                                <a href="javascript:;">Level 2</a>                            </li>                            <li>                                <a href="javascript:;">                                    <span class="nav-label">Level 2</span><i class="fa fa-angle-left arrow"></i></a>                                <ul class="nav-3-level collapse">                                    <li>                                        <a href="javascript:;">Level 3</a>                                    </li>                                    <li>                                        <a href="javascript:;">Level 3</a>                                    </li>                                </ul>                            </li>                        </ul>                    </li> -->                </ul>                <div class="sidebar-footer">                    <a class="nav-link quick-sidebar-toggler"><span class="ti-align-right"></span></a>                    <!-- <a href="javascript:;"><i class="ti-announcement"></i></a> -->                    <a href="#"><i class="ti-calendar"></i></a>                    <a href="#"><i class="ti-comments"></i></a>                    <a (click)="logout($event)"  href="#"><i class="ti-power-off"></i></a>                </div>            </div>        </nav></div>'
+    var COMPONENTS = [{'name': 'AddIndentDetailComponent', 'selector': 'app-add-indent-detail'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BradComponent', 'selector': 'app-brad'},{'name': 'ConfigPanelComponent', 'selector': 'app-config-panel'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DepartmentComponent', 'selector': 'app-department'},{'name': 'DepartmentListComponent', 'selector': 'app-department-list'},{'name': 'DirectPurchaseComponent', 'selector': 'app-direct-purchase'},{'name': 'DivideTwoScreenComponent', 'selector': 'app-divide-two-screen'},{'name': 'DownloadIndentComponent', 'selector': 'app-download-indent'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IndentComponent', 'selector': 'app-indent'},{'name': 'IndentListComponent', 'selector': 'app-indent-list'},{'name': 'IndentReportComponent', 'selector': 'app-indent-report'},{'name': 'InsertedProductComponent', 'selector': 'app-inserted-product'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductAvailibilityComponent', 'selector': 'app-product-availibility'},{'name': 'ProductComponent', 'selector': 'app-product'},{'name': 'ProductConsumptionComponent', 'selector': 'app-product-consumption'},{'name': 'ProductPriceComponent', 'selector': 'app-product-price'},{'name': 'ProductSearchComponent', 'selector': 'app-product-search'},{'name': 'ProductStockComponent', 'selector': 'app-product-stock'},{'name': 'ProductUseComponent', 'selector': 'app-product-use'},{'name': 'ProductUseSearchComponent', 'selector': 'app-product-use-search'},{'name': 'PurchaseComponent', 'selector': 'app-purchase'},{'name': 'PurchaseInvoiceComponent', 'selector': 'app-purchase-invoice'},{'name': 'PurchaseReportComponent', 'selector': 'app-purchase-report'},{'name': 'RefreshComponent', 'selector': 'app-refresh'},{'name': 'ReportByDepartmentComponent', 'selector': 'app-report-by-department'},{'name': 'RequisitionComponent', 'selector': 'app-requisition'},{'name': 'RequisitionListComponent', 'selector': 'app-requisition-list'},{'name': 'RequisitionReportsComponent', 'selector': 'app-requisition-reports'},{'name': 'ReturnPurchaseComponent', 'selector': 'app-return-purchase'},{'name': 'SearchPurchaseComponent', 'selector': 'app-search-purchase'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'StockHistoryComponent', 'selector': 'app-stock-history'},{'name': 'StockHistoryViewComponent', 'selector': 'app-stock-history-view'},{'name': 'StockValuationComponent', 'selector': 'app-stock-valuation'},{'name': 'SupplierAddComponent', 'selector': 'app-supplier-add'},{'name': 'SupplierSearchComponent', 'selector': 'app-supplier-search'},{'name': 'UpdateIndentComponent', 'selector': 'app-update-indent'},{'name': 'UpdateRequisitionComponent', 'selector': 'app-update-requisition'},{'name': 'ViewProductComponent', 'selector': 'app-view-product'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'NavbarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'NavbarComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

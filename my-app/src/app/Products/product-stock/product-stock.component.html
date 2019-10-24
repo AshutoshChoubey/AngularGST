@@ -1,0 +1,147 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+ <!--  <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+<div class="card">
+    <div class="card-header">Search</div>
+      <div class="card-body">
+        <div class="row">
+        <!--   <div class="col-sm-3">
+            <input type="date" name="fromDate" class="form-control" placeholder="From Date (=<)" [(ngModel)]="searchFunctionality.fromDate">
+          </div>
+           <div class="col-sm-3">
+            <input type="date" name="todate" class="form-control" placeholder="To Date (=>)" [(ngModel)]="searchFunctionality.todate">
+          </div> -->
+           <div class="col-sm-3">
+            <input type="text" name="productCode" class="form-control" placeholder="Product Code" [(ngModel)]="searchFunctionality.productCode">
+          </div>
+          <div class="col-sm-3">
+         
+                       
+                        <select placeholder="Select Department"  class="form-control form-control-air" id="department"  [(ngModel)]="searchFunctionality.departmentId"   name="departmentId"><option *ngFor="let departmentList of departmentLists" value="{{ departmentList.id}}">{{ departmentList.department }}</option></select>
+                    <!--   <ng-select  [items]="departmentList" id="department" name="departmentId"
+                   bindLabel="department"
+                   [virtualScroll]="true"
+                   bindValue="id"
+                   appendTo="body"
+                   [(ngModel)]="searchFunctionality.departmentId">
+        </ng-select> -->
+                       
+              
+          </div>
+        </div>
+        
+        
+      </div>
+       <div class="card-footer">
+          <div class="row" *ngIf="exportFunctionalityAdded==0">
+          <div class="col-sm-12 text-center">
+            <input type="button"  class="btn btn-warning" (click)="Search()" value="search">
+          </div>
+        </div>
+       </div>
+</div>
+<div *ngIf="clicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12" *ngIf="exporterButton==1">
+    <div class="text-center"> 
+    <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-mean-fruit">
+        <table id="example" class="table table-bordered table-sm table-striped">        
+                <thead class="table-dark">
+                    <tr>
+                      <th>Prod. Name</th>
+                      <th>Prod. Code</th>
+                      <th>Dep. Name</th>
+                     <!--  <th><small>IGST %</small></th>
+                      <th><small>SGST%</small></th> 
+                      <th><small>CGST%</small></th> 
+                      <th><small>GST%</small></th>  -->
+                      <th><small>Unit</small></th>
+                       <th><small>Stock In</small></th>
+                       <th><small>Stock Out</small></th>
+                       <!-- <th><small>Current Price</small></th> -->
+                      <th><small>Available Stock</small></th>  
+                      <th><small>IGST %</small></th>
+                      <th><small>SGST%</small></th> 
+                      <th><small>CGST%</small></th> 
+                      <th><small>GST%</small></th> 
+                      <th><small>Current Price</small></th>                     
+                      <th><small>Previous/Last Price</small></th> 
+                      <!-- <th>Qnt.</th>  -->
+                      <th>Tax Price</th>
+                      <th>Price With Tax</th>
+                      <th>Grand Total</th>                    
+                      <!-- <th><small>Previous/Last Price</small></th>  -->
+                      <!-- <th>Qnt.</th>  -->
+                      <!-- <th>Tax Price</th> -->
+                      <!-- <th>Price With Tax</th> -->
+                      <!-- <th>Grand Total</th>  -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productData">
+                      <td>{{ data.product_name }}</td>
+                      <td>{{ data.product_code }}</td>
+                      <td>{{ data.product_department_Name }}</td>
+                      <!-- <td>{{ data.product_igst }}</td>
+                      <td>{{ data.product_sgst }}</td>
+                      <td>{{ data.product_cgst }}</td>
+                      <td>{{ data.product_gst }}</td> -->
+                      <td>{{ data.product_unit }}</td>
+                      <!-- <td>{{ data.closing_stok }}</td> -->
+                       <td>{{ data.stock_in| number : '1.3-3' }}</td>
+                       <td>{{ data.stock_out| number : '1.3-3' }}</td>
+                       <td>{{ data.available_stock| number : '1.3-3' }}</td>
+                       <td>{{ data.product_igst }}</td>
+                      <td>{{ data.product_sgst }}</td>
+                      <td>{{ data.product_cgst }}</td>
+                      <td>{{ data.product_gst }}</td>
+                      <td>{{ data.opening_stock| number : '1.2-2' }}</td>
+                      <td>{{ data.closing_stok| number : '1.2-2' }}</td>
+                       <!-- <td>{{ data.available_stock }}</td> -->
+                      <td>{{  (data.opening_stock*data.product_gst)/100| number : '1.2-2' }}</td>
+                      <td>{{  data.opening_stock+(data.opening_stock*data.product_gst)/100| number : '1.2-2' }}</td>
+                       <td>{{  (data.opening_stock+(data.opening_stock*data.product_gst)/100)*data.available_stock| number : '1.2-2' }}</td>
+                       
+                     <!--  <td>{{  (data.opening_stock*data.product_gst)/100 }}</td>
+                      <td>{{  data.opening_stock+ (data.opening_stock*data.product_gst)/100 }}</td>
+                       <td>{{  (data.opening_stock+ (data.opening_stock*data.product_gst)/100)*data.available_stock }}</td> -->
+                    </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="15"></td>
+                     <td ><b>Total:{{ Total| number : '1.2-2' }}</b></td>
+                  </tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Row-->
+<div style="height: 30px">
+<b>Note:</b>Last Updated GST will be applicable.
+</div>
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

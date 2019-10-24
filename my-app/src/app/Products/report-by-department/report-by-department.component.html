@@ -1,0 +1,158 @@
+<app-brad ></app-brad>
+<div class="card"  *ngIf="exportFunctionalityAdded==0">
+    <div class="card-header">Search</div>
+      <div class="card-body">
+        <div class="row">
+           
+          <div class="col-sm-3">
+             <label for="department" >From date</label> 
+            <input type="date" required name="fromDate" class="form-control" placeholder="From Date (=<)" [(ngModel)]="searchFunctionality.fromDate">
+          </div>
+           <div class="col-sm-3">
+             <label for="department" >To date</label> 
+            <input type="date" required name="todate" class="form-control" placeholder="To Date (=>)" [(ngModel)]="searchFunctionality.todate">
+          </div>
+        </div>
+      </div>
+       <div class="card-footer">
+          <div class="row">
+          <div class="col-sm-12 text-center">
+            <input type="button"  class="btn btn-warning" (click)="Search()" value="search">
+          </div>
+        </div>
+       </div>
+</div>
+<div class="card" >
+	<div class="card-body">
+<div class="row">
+  <div class="col-sm-6" class="text-center" >&nbsp;
+    <!-- <div >  -->
+    <button *ngIf="exporterButton==1" (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span *ngIf="exporterButton==1" class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    <!-- </div> -->
+  </div>
+  <div class="col-sm-6" class="text-center">&nbsp;
+     <!-- <mat-card>     -->
+	    <!-- <div >   -->
+	    	<button  class="btn btn-info btn-labeled btn-labeled-left btn-icon" (click)="captureScreen()" >
+	                                    <span class="btn-label"><i class="fa fa-file-pdf-o"></i></span>Download</button>&emsp;.&emsp;
+	        <button class="btn btn-success btn-labeled btn-labeled-left btn-icon" (click)="print()" >
+	        <span class="btn-label"><i class="fa fa-print"></i></span>Print </button>
+	    <!-- </div>   -->
+  <!-- </mat-card>  -->
+</div>
+  </div>
+  </div>
+</div>
+  <!-- </div> -->
+  <mat-card>
+  <div  id="contentToConvert" class="row">
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i>Current Stock</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Department Name</th>
+						<th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productByDepartmentStockvaluation">
+						<td>{{ data.product_department_Name }}</td>
+						<td>{{ data.sum| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th>&nbsp;</th>
+                		<th><b>Total: {{ Total| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i>Purchase Summary Report</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example2" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Department Name</th>
+						<th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productByDepartmentstockvaluationForPurchase">
+						<td>{{ data.product_department_Name }}</td>
+						<td>{{ data.sum| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th>&nbsp;</th>
+                		<th><b>Total: {{ Total2| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i>Consume Summary Report</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example3" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Department Name</th>
+						<th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productByDepartmentstockvaluationForConsume">
+						<td>{{ data.product_department_Name }}</td>
+						<td>{{ data.sum| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th>&nbsp;</th>
+                		<th><b>Total: {{ Total3| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</mat-card>
+<div class="card">
+	<div class="card-body">
+<div class="row">
+	<div class="col-sm-4 text-center"><input type="text" name="report_name" placeholder="Report Name" class="form-control" [(ngModel)]="saveValuation" value="{{saveValuation}}"></div>
+	<div class="col-sm-4 text-center"><textarea name="report_description" class="form-control" [(ngModel)]="report_description">{{report_description}}</textarea></div>
+	<div class="col-sm-4 text-center"> 
+		<button (click)="saveValuationData()" class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+          <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Save</span>
+          <span class="hidden-content">
+              <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+          </span>
+      </button>
+  </div>
+</div>
+</div>
+</div>
+<!-- </div> End Row -->

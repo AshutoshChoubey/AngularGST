@@ -1,0 +1,249 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+    <li>Modules</li>
+    <li>AppRoutingModule</li>
+</ol>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li  class="active" >
+        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li >
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/app-routing.module.ts</code>
+        </p>
+
+
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { DashboardComponent } from &#x27;./components/dashboard/dashboard.component&#x27;;
+import { LoginComponent } from &#x27;./components/login/login.component&#x27;;
+import { SignupComponent } from &#x27;./components/signup/signup.component&#x27;;
+import { ProductComponent } from &#x27;./Products/product/product.component&#x27;;
+import { PurchaseComponent } from &#x27;./Purchases/purchase/purchase.component&#x27;;
+import { BeforeloginService } from &#x27;./Services/beforelogin.service&#x27;;
+import { AfterloginService } from &#x27;./Services/afterlogin.service&#x27;;
+import { DepartmentComponent } from &#x27;./Departments/department/department.component&#x27;;
+import { DepartmentListComponent } from &#x27;./Departments/department-list/department-list.component&#x27;;
+import { SupplierAddComponent } from &#x27;./Suppliers/supplier-add/supplier-add.component&#x27;;
+import { SupplierSearchComponent } from &#x27;./Suppliers/supplier-search/supplier-search.component&#x27;;
+import { ProductSearchComponent } from &#x27;./Products/product-search/product-search.component&#x27;;
+import { SearchPurchaseComponent } from &#x27;./Purchases/search-purchase/search-purchase.component&#x27;;
+import { ReturnPurchaseComponent } from &#x27;./Purchases/return-purchase/return-purchase.component&#x27;;
+import { PurchaseInvoiceComponent } from &#x27;./Purchases/purchase-invoice/purchase-invoice.component&#x27;;
+import { IndentComponent } from &#x27;./Indent/indent/indent.component&#x27;;
+import { IndentListComponent } from &#x27;./Indent/indent-list/indent-list.component&#x27;;
+import { RequisitionComponent } from &#x27;./Requisition/requisition/requisition.component&#x27;;
+import { RequisitionListComponent } from &#x27;./Requisition/requisition-list/requisition-list.component&#x27;;
+import { IndentReportComponent } from &#x27;./Indent/indent-report/indent-report.component&#x27;;
+import { RequisitionReportsComponent } from &#x27;./Requisition/requisition-reports/requisition-reports.component&#x27;;
+import { ProductUseComponent } from &#x27;./ProductUse/product-use/product-use.component&#x27;;
+import { ProductUseSearchComponent } from &#x27;./ProductUse/product-use-search/product-use-search.component&#x27;;
+import { StockValuationComponent } from &#x27;./Products/stock-valuation/stock-valuation.component&#x27;;
+import { ProductPriceComponent } from &#x27;./Products/product-price/product-price.component&#x27;;
+import { ProductAvailibilityComponent } from &#x27;./Products/product-availibility/product-availibility.component&#x27;;
+import { ProductStockComponent } from &#x27;./Products/product-stock/product-stock.component&#x27;;
+import { PurchaseReportComponent } from &#x27;./Purchases/purchase-report/purchase-report.component&#x27;;
+import { ProductConsumptionComponent } from &#x27;./Consumption/product-consumption/product-consumption.component&#x27;;
+import { UpdateIndentComponent } from &#x27;./Indent/update-indent/update-indent.component&#x27;;
+import { DirectPurchaseComponent } from &#x27;./Purchases/direct-purchase/direct-purchase.component&#x27;;
+import { RefreshComponent } from &#x27;./components/refresh/refresh.component&#x27;;
+import { DivideTwoScreenComponent } from &#x27;./core/divide-two-screen/divide-two-screen.component&#x27;;
+import { UpdateRequisitionComponent } from &#x27;./Requisition/update-requisition/update-requisition.component&#x27;;
+import { DownloadIndentComponent } from &#x27;./Indent/download-indent/download-indent.component&#x27;;
+import { ViewProductComponent } from &#x27;./Products/view-product/view-product.component&#x27;;
+import { ReportByDepartmentComponent } from &#x27;./Products/report-by-department/report-by-department.component&#x27;;
+import { StockHistoryComponent } from &#x27;./Products/stock-history/stock-history.component&#x27;;
+import { StockHistoryViewComponent } from &#x27;./Products/stock-history-view/stock-history-view.component&#x27;;
+
+// const routes: Routes &#x3D; []; 
+const routes: Routes &#x3D; [
+  {
+    path: &#x27;&#x27;,
+    component : LoginComponent,
+    canActivate : [BeforeloginService]
+  },
+  {
+    path: &#x27;&#x27;,
+    component : DashboardComponent,
+    // redirectTo: &#x27;/dashboard&#x27;, pathMatch: &#x27;full&#x27;,
+    canActivate : [AfterloginService]
+  },
+  {
+  path: &#x27;login&#x27;,
+  component : LoginComponent,
+  canActivate : [BeforeloginService]
+  },
+  {
+  path: &#x27;signup&#x27;,
+  component : SignupComponent,
+  canActivate : [BeforeloginService]
+  },
+  {
+  path: &#x27;dashboard&#x27;,
+  component : DashboardComponent,
+  canActivate : [AfterloginService]
+  },
+  {path: &#x27;addProduct&#x27;,component : ProductComponent,canActivate : [AfterloginService] },
+  {path: &#x27;searchProduct&#x27;,component : ProductSearchComponent,canActivate : [AfterloginService] },
+  {path: &#x27;add-stock/:id&#x27;,component : PurchaseComponent,canActivate : [AfterloginService] },
+  {path: &#x27;searchPurchase&#x27;,component : SearchPurchaseComponent,canActivate : [AfterloginService] },
+  {path: &#x27;purchaseReturn&#x27;,component : ReturnPurchaseComponent,canActivate : [AfterloginService] },
+  {path: &#x27;purchaseInvoice&#x27;,component : PurchaseInvoiceComponent,canActivate : [AfterloginService] },
+  {path: &#x27;addDepartment&#x27;,component : DepartmentComponent,canActivate : [AfterloginService] },
+  {path: &#x27;listDepartment&#x27;,component : DepartmentListComponent,canActivate : [AfterloginService] },
+  {path: &#x27;addSupplier&#x27;,component : SupplierAddComponent,canActivate : [AfterloginService] },
+  {path: &#x27;searchSupplier&#x27;,component : SupplierSearchComponent,canActivate : [AfterloginService] },
+  {path: &#x27;indent&#x27;,component : IndentComponent,canActivate : [AfterloginService] },
+  {path: &#x27;indentList&#x27;,component : IndentListComponent,canActivate : [AfterloginService] },
+  {path: &#x27;requisition&#x27;,component : RequisitionComponent,canActivate : [AfterloginService] },
+  {path: &#x27;requisitionList&#x27;,component : RequisitionListComponent,canActivate : [AfterloginService] },
+  {path: &#x27;requisitionReport/:id&#x27;,component : RequisitionReportsComponent,canActivate : [AfterloginService] },
+  {path: &#x27;indent-report/:id&#x27;,component : IndentReportComponent,canActivate : [AfterloginService] },
+  {path: &#x27;useStock/:id&#x27;,component : ProductUseComponent,canActivate : [AfterloginService] },
+  {path: &#x27;producUseReport&#x27;,component : ProductUseSearchComponent,canActivate : [AfterloginService] },
+  {path: &#x27;stockValuationReport&#x27;,component : StockValuationComponent,canActivate : [AfterloginService] },
+  {path: &#x27;productPrice&#x27;,component : ProductPriceComponent,canActivate : [AfterloginService] },
+  {path: &#x27;productAvailibility&#x27;,component : ProductAvailibilityComponent,canActivate : [AfterloginService] },
+  {path: &#x27;productStockReport&#x27;,component : ProductStockComponent,canActivate : [AfterloginService] },
+  {path: &#x27;purchaseReport&#x27;,component : PurchaseReportComponent,canActivate : [AfterloginService] },
+  {path: &#x27;consumptionReport&#x27;,component : ProductConsumptionComponent,canActivate : [AfterloginService] },
+  {path: &#x27;UpdateIndentComponent/:id&#x27;,component : UpdateIndentComponent,canActivate : [AfterloginService] },
+  {path: &#x27;directPurchase&#x27;,component : DirectPurchaseComponent,canActivate : [AfterloginService] },
+  {path: &#x27;refresh&#x27;,component : RefreshComponent,canActivate : [AfterloginService] },
+  {path: &#x27;divideTwoScreen&#x27;,component : DivideTwoScreenComponent,canActivate : [AfterloginService] },
+  {path: &#x27;UpdateRequisitionComponent/:id&#x27;,component : UpdateRequisitionComponent,canActivate : [AfterloginService] },
+  {path: &#x27;indent-download/:id&#x27;,component : DownloadIndentComponent,canActivate : [AfterloginService] },
+  {path: &#x27;view-product/:id&#x27;,component : ViewProductComponent,canActivate : [AfterloginService] },
+  {path: &#x27;productvaluationByDept&#x27;,component : ReportByDepartmentComponent,canActivate : [AfterloginService] },
+  {path: &#x27;stockHistory&#x27;,component : StockHistoryComponent,canActivate : [AfterloginService] },
+  {path: &#x27;StockHistoryView/:id&#x27;,component : StockHistoryViewComponent,canActivate : [AfterloginService] }
+   
+];
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

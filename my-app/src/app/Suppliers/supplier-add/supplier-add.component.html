@@ -1,0 +1,137 @@
+<div class="page-heading ">
+  <h1 class="page-title">Add Supplier</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div *ngIf="submitClicked==1" class="row text-center">
+  <div class="col-sm-12">
+  <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+<form class="form-purple" #supplierAddForm=ngForm (ngSubmit)="onSubmit()">
+<div *ngIf="submitClicked==0" class="card">
+<div class="card-header text-center">Please Fill Up Supplier Details</div>
+<div class="card-body"> 
+  <div *ngIf="errorAfterAdd.error" class="row">
+    <div class="col-sm-12 col-lg-12">
+        <div class="alert alert-pink alert-dismissable fade show has-icon"><i class="la la-info-circle alert-icon"></i>
+          <button class="close" data-dismiss="alert" aria-label="Close"></button><strong>Warning!</strong><br>{{ errorAfterAdd.error.message }}. {{ errorAfterAdd.error.errors.supplier_name[0] }}.</div>                              
+    </div>
+  </div>
+    <div class="row"> 
+            <div class="col-lg-4">
+                    <div class="form-group">
+                    <label for="input-1">Supplier Name </label>
+                    <input class="form-control form-control-air" required  [(ngModel)]="form.supplier_name"  placeholder="Supplier Name" autocomplete="off"  name="supplier_name" type="text" value="">
+                    </div>
+            </div>
+            <div class="col-lg-4">
+                    <div class="form-group">
+                    <label for="input-1">Mobile Number</label>
+                    <input class="form-control form-control-air" id="" required [(ngModel)]="form.mob_num"  placeholder="Mobile Number" autocomplete="off"  name="mob_num" type="number" >
+                    </div>
+            </div>           
+            <div class="col-lg-4">
+            <div class="form-group">
+                  <label for="input-1">Email</label>
+                  <input class="form-control form-control-air" id="" required [(ngModel)]="form.email"  placeholder="Email" autocomplete="off"  name="email" type="email" >
+                  </div>
+          </div>
+      </div>                        
+      <div class="row"> 
+            <div class="col-lg-4">
+                    <div class="form-group">
+                    <label for="department">Address</label> 
+                    <textarea class="form-control form-control-air"   [(ngModel)]="form.address"  placeholder="Product Specification" autocomplete="off"  name="address" ></textarea>
+                    </div>
+            </div>                                              
+                       
+        <div class="col-lg-4">
+                <div class="form-group">
+                <label for="input-1">GSTIN</label>
+                <input type="text" class="form-control form-control-air" [(ngModel)]="form.gstin"   name="gstin"/>
+                </div>
+        </div>
+    </div>
+                                  
+</div>
+<div class="card-footer text-center">
+  <button type="submit" [disabled]="!supplierAddForm.valid" class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+      <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Save</span>
+      <span class="hidden-content">
+          <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+      </span>
+  </button>
+    <!-- <input  class="btn btn-gradient-peach btn-fix" value="Add Product"> -->
+</div>
+</div>
+</form>
+<div *ngIf="messageAfterAdd.id" class="row" >
+  <div class="col-sm-12">
+      <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">
+          <div class="ibox-head text-center">                           
+                        <h5 class="text-center"> Added Supplier</h5> 
+          </div>
+          <div class="ibox-body">
+              <div class="ibox-fullwidth-block table-responsive">
+                  <table class="table table-hover table-sm">
+                      <tbody>
+                          <tr class="warning">
+                              <td>&nbsp;</td>                                     
+                              <td>Supplier ID</td>
+                              <td>:</td>
+                              <td>{{ messageAfterAdd.id }}</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>                                     
+                              <td>Supplier Name</td>
+                              <td>:</td>
+                              <td>{{ messageAfterAdd.supplier_name }}</td>
+                              <td>&nbsp;</td>
+                          </tr>
+                          <tr class="danger">
+                            <td>&nbsp;</td>                                     
+                            <td>  Address</td>
+                            <td>:</td>
+                            <td>{{ messageAfterAdd.address }}</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>                                     
+                            <td>GSTIN</td>
+                            <td>:</td>
+                            <td>{{ messageAfterAdd.gstin }}</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                          <tr class="success">
+                              <td>&nbsp;</td>                                     
+                              <td>  Mobile Number</td>
+                              <td>:</td>
+                              <td>{{ messageAfterAdd.mob_num }}</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>                                     
+                              <td>Created Date</td>
+                              <td>:</td>
+                              <td>{{ messageAfterAdd.created_at }}</td>
+                              <td>&nbsp;</td>
+                          </tr>
+                      </tbody>
+                      <tfoot>
+                          <tr>
+                              <th colspan="4"></th>
+                          </tr>
+                      </tfoot>
+                  </table>
+              </div>
+             
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div style="height: 30px">
+&nbsp;
+</div>

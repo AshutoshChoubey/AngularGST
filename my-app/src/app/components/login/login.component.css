@@ -1,0 +1,27 @@
+/* input.ng-invalid 
+{
+    border-left:5px solid red;
+}
+input.ng-valid 
+{
+    border-left:5px solid green;
+} */
+/* input[class="ng-invalid"] :not(form) {
+    border-left:5px solid red;
+  } */
+
+  a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}

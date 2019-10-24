@@ -1,0 +1,106 @@
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-right-menu></app-right-menu>
+<aside id="leftsidebar" class="sidebar">
+    <div class="navbar-brand">
+        <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
+    </div>
+    <div class="menu">
+      <ul class="list">
+          <li class="active open"><a routerLink="/login"><i class="zmdi zmdi-home"></i><span>Login</span></a></li>
+      </ul>
+    </div>
+</aside> -->
+<!-- <app-right></app-right> -->
+<!-- <section class="content">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Sign Up</h2>
+                <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">                
+                <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div> -->
+     <div class="page-heading text-center">
+                    <h1 class="page-title">Sign Up Form</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a  routerLink="/login">Login</a> </li>
+                    </ol>
+            </div>
+            <div class="page-content fade-in-up">
+                  <div *ngIf="submitClicked==1" class="row">
+            
+                                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                        &nbsp;
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                                        <i class="fa fa-cog fa-spin fa-5x" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                                        &nbsp;
+                                </div>
+                                
+                            </div>
+   
+        <div *ngIf="submitClicked==0" class="row clearfix text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                    &nbsp;
+                </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                    <form class="card auth_form" #signForm=ngForm (ngSubmit)="onSubmit()" >
+                            <div class="card-header">
+                                <h5>Please Fill Up Details</h5>
+                            </div> 
+                            
+                            <div class="card-body text-center">
+                            <div class="input-group mb-3">
+                                <input type="text" name="name" required [(ngModel)]="form.name" class="form-control" placeholder="Name">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" name="email" required [(ngModel)]="form.email"  class="form-control" placeholder="E-Mail Address">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                                </div>
+                                <div class="alert-danger" [hidden]="!error.email">{{ error.email }}</div>
+                            </div>
+                                <!-- <div class="input-group mb-3">
+                                    <input type="password" required name="password" [(ngModel)]="form.password" class="form-control" placeholder="Email">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="zmdi zmdi-account-circle"></i></span>
+                                    </div>
+                                </div> -->
+                                <div class="input-group mb-3">
+                                    <input type="password" required [(ngModel)]="form.password" class="form-control" name="password" placeholder="Password">
+                                    <div class="input-group-append">                                
+                                        <span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                    </div>  
+                                    <div class="alert-danger" [hidden]="!error.password">{{ error.password }}</div>                          
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="password" required class="form-control"  [(ngModel)]="form.password_confirmation" name="password_confirmation" placeholder="Confirm Password">
+                                    <div class="input-group-append">                                
+                                        <span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                    </div>                            
+                                </div>
+                                <input type="submit" [disabled]="!signForm.valid"  class="btn btn-gradient-aqua btn-fix" value="Sign Up" />             
+                                                 
+                                <!-- <div class="signin_with mt-3">
+                                    <p class="mb-0">or Sign Up using</p>
+                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round facebook"><i class="zmdi zmdi-facebook"></i></button>
+                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round twitter"><i class="zmdi zmdi-twitter"></i></button>
+                                    <button class="btn btn-primary btn-icon btn-icon-mini btn-round google"><i class="zmdi zmdi-google-plus"></i></button>
+                                </div> -->
+                            </div>
+                        </form>
+                          <a  routerLink="/login" >Login</a>     
+              
+            </div>
+          </div>  
+
+<!-- </section> -->

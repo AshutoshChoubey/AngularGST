@@ -1,0 +1,37 @@
+w2d27edrjkru
+Gq@w3e4r%67890
+
+
+Sai Auto care
+166.62.27.173
+ca7zaoly6g7y
+Gq@w3e4r%67890
+ cd /public_html/saiautocare.in/saiautocare/SaiAutoCare
+
+
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+
+
+or create a new repository on the command line
+echo "# queckpaycash" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/AshutoshChoubey/queckpaycash.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/AshutoshChoubey/queckpaycash.git
+git push -u origin master
+
+
+DB::enableQueryLog();
+
+$user = DB::table("users")->get();
+
+$query = DB::getQueryLog();
+
+$query = end($query);
+
+dd($query);

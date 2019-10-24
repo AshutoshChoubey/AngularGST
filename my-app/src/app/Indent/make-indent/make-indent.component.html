@@ -1,0 +1,342 @@
+<div class="page-heading text-center">
+      <h1 class="page-title">Add Indent</h1>
+      <ol class="breadcrumb">
+        <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+      </ol>
+</div>
+
+<div *ngIf="submitClicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+<!-- <hello name="{{ name }}"></hello> --> 
+    <!-- <h3 class="page-header">Add Invoice</h3> -->
+   
+    <!-- <form [formGroup]="addmore">
+      <div formArrayName="itemRows"> -->
+      
+<!--
+In the template we are iterating this formarray, 
+    and that is just the path to the formarray, which is:
+    
+    addmore.controls.itemRows.controls
+    
+    'addmore' being the complete form object, 'controls' being the content of the form object,
+    'itemRows' being the (form)array in the form, 'controls' being the content of the formarray.
+
+-->
+      
+        <!-- <div *ngFor="let itemrow of addmore.controls.itemRows.controls; let i=index"  [formGroupName]="i">
+          <h4>Invoice Row #{{ i + 1 }}</h4>
+          <div class="form-group">
+            <label>Item Name</label>
+            <input formControlName="itemname" class="form-control">
+          </div>
+          <button *ngIf="addmore.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger">Delete Button</button>
+        </div>
+      </div> -->
+
+    <!-- </form> -->
+    <!-- <pre>{{addmore.value | json}}<br>{{product_department}}</pre> -->
+<!-- <form class="form-purple" #indentAddForm=ngForm (ngSubmit)="onSubmit()"> -->
+	<!-- <div *ngIf="submitClicked==0" class="card">
+	  <div class="card-header text-center">Please Fill Up Indent Details</div>
+	  <div class="card-body"> 
+	    <div *ngIf="error" class="row">
+	      <div class="col-sm-12 col-lg-12">
+	          <div class="alert alert-warning alert-dismissable fade show alert-bordered">
+	              <button class="close-warning"  data-dismiss="alert" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button><strong>Warning!</strong><br>{{ error }}. 
+	          </div>
+	      </div>
+	    </div>-->
+	    <div *ngIf="submitClicked==0" class="card">
+	    	 <div class="card-header">
+	    	 		 <div class="row">
+			        	<div  class="col-sm-4 text-center">
+			        			<div class="form-group">
+		                        <label for="department"><span class="required-field"></span>Department</label> 
+		                        <select  placeholder="Select Department" (change)="onDepartmentChange($event.target.value)" class="form-control form-control-air   select2" id="department" required [(ngModel)]="form.indent_department"   name="indent_department"><option *ngFor="let departmentList of departmentLists" value="{{ departmentList.id}}">{{ departmentList.department }}</option>
+		                        </select>
+		                        </div>
+			        	</div>
+			        	<div  class="col-sm-4 text-center">
+			        			<div class="form-group">
+		                        <label for="department" >Indent For Month</label> 
+		                        <select  name="indent_month" class="form-control" [(ngModel)]="form.indent_month">
+		                        			<option value="January">January</option> 
+											<option value="February">February</option>
+											<option value="March">March</option> 
+											<option value="April">April</option> 
+											<option value="May">May</option> 
+											<option value="June">June</option> 
+											<option value="July">July</option> 
+											<option value="August">August</option> 
+											<option value="September">September</option> 
+											<option value="October">October</option> 
+											<option value="November">November</option> 
+											<option value="December">December</option> 
+		                        </select>		                      		
+		                        </div>
+			        	</div>
+			        	<div  class="col-sm-4 text-center">
+			        			<div class="form-group">
+		                        <label for="department" >Description</label> 
+		                      <textarea type="text" name="indent_discription" class="form-control" [(ngModel)]="form.indent_discription"  > </textarea>                  
+		                        </div>
+			        	</div>
+			        </div>
+	    	 </div>
+	    	 <div class="row">
+	    	   		 <div class="col-sm-4 text-center">
+	    	   		 	<div class="form-group">
+		    	   		 	<select style="line-height: 0px;" class="form-control select2" id="select2ProName" placeholder="Select Product" [(ngModel)]="ProductId" name="ProductId">
+	    						   <option value="NA" selected>Select</option>
+									<option *ngFor="let product of productListFiltered" [value]="product.id">{{product.product_name}}</option>
+							</select>
+						</div>
+						<div class="form-group">
+				        	<input type="button" class="btn btn-primary" (click)="addInArray1()" value="Add Product">
+				        </div>
+				        </div> 
+				        <div class="col-sm-4 text-center">
+				        	 	<div class="form-group">
+	    	   		 	<select style="line-height: 0px;" class="form-control select2" id="select2ProId" placeholder="Select Product"  [(ngModel)]="ProductId" name="ProductId">
+    						   <option value="NA" selected>Select</option>
+								<option *ngFor="let product of productListFiltered" [value]="product.id">{{product.product_code}}</option>
+						</select>
+					</div>
+					 	<div class="form-group">
+				        	<input type="button" class="btn btn-primary" (click)="addInArray2()" value="Add Product">
+				        </div>
+				        </div> 
+	    	   	</div>
+	    	   	<div class="row">
+	    	   		<div class="col-sm-12">
+	    	   			<div class="card">
+					    	<div class="card-body table-responsive">
+					    		<table class="table table-sm">
+					    			<thead>
+					        			<tr>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Product Name </th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Code Number </th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Specimen</th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Make </th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Unit</th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Quantity</th>
+					        				
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Purpose</th>
+					        				<th>Remarks</th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><small>B/F(Available) Stock</small></th>
+					        				
+					        				<th>Action</th>
+					        			</tr>
+					        		</thead>
+									<tbody>
+										<tr *ngFor="let indent of mainArray; index as i">
+											<td>{{ indent.product_name  }}</td>
+											<td>{{ indent.product_code }}</td>
+											<td>{{ indent.product_specimen  }}</td>
+											<td>{{ indent.product_make  }}</td>
+											<td>{{ indent.unit  }}</td>
+											<td><input type="text" class="form-control" [(ngModel)]="indent.quantity" name="quantity" value="{{ indent.quantity  }}"></td>
+
+											<td><input type="text" class="form-control" [(ngModel)]="indent.purpose" name="purpose" value="{{ indent.purpose  }}"></td>
+											<td><textarea type="text" class="form-control" [(ngModel)]="indent.remark" name="remark">{{ indent.remark  }}</textarea>
+											<td>{{ indent.available_stock }}</td>
+											
+											<td>  <button type="button" (click)="onItemDeleted(i)" class="btn btn-gradient-purple btn-icon-only btn-circle btn-lg btn-air"><i class="fa fa-minus"></i></button> </td>
+											
+										</tr>
+									</tbody>
+					    		</table>
+					    	</div>
+					    </div>
+	    	   		</div>
+	    	   	</div>
+	    	 <!--  <div class="card-body">
+	    	  		<form [formGroup]="addmore" #indentAddForm=ngForm  (ngSubmit)="onSubmit()" >
+				        <div class="row">
+				        	
+				        	<div class="col-sm-12 table-responsive" formArrayName="itemRows">
+				        		<table class="table">
+					        		<thead>
+					        			<tr>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Product Name </th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Code Number </th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Specimen</th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Make </th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><span class="required-field"></span>Quantity</th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center">Purpose</th>
+					        				<th style="white-space: nowrap;padding-right: 4em;float:center"><small>B/F(Available) Stock</small></th>
+					        				<th>Remarks</th>
+					        				<th>Action</th>
+					        			</tr>
+					        		</thead>
+					        		<tbody> 
+					        			<tr *ngFor="let itemrow of addmore.controls.itemRows['controls']; let i=index"  [formGroupName]="i">
+					        				
+					        				<td style="white-space: nowrap;"> 
+					        					<select class="form-control reset1" id="productName{{i}}" required="true"  (change)="onProductCodeChange($event.target.value,i)"   formControlName="product_name">
+					        						   <option value="NA" selected>Select</option>
+												<option *ngFor="let product of productListFiltered" [value]="product.id">{{product.product_name}}</option>
+												</select>
+					        					
+					        				</td>
+					        				<td style="white-space: nowrap;">
+												<select class="form-control reset"  id="{{i}}" (change)="onProductCode($event.target.value,i)"  formControlName="product_code">
+													   <option value="NA" selected>Select</option>
+												<option *ngFor="let productList of productListFiltered" [value]="productList.product_code">{{productList.product_code}}</option>
+												</select>
+					        				</td>
+					        				<td style="white-space: nowrap;"> <input readonly id="speciaman{{i}}" formControlName="speciaman" class="form-control reset"></td>
+					        				<td style="white-space: nowrap;"> <input readonly id="make{{i}}" formControlName="make" class="form-control reset"></td>
+					        				<td style="white-space: nowrap;"> <input formControlName="quantity" type="number" required="true" class="form-control reset"></td>
+					        				<td style="white-space: nowrap;"> <input formControlName="purpose" class="form-control reset"></td>
+					        				<td> <input formControlName="bf_stock" readonly id="bfStock{{i}}" class="form-control reset"></td>
+					        				<td> <textarea formControlName="remarks" class="form-control reset"></textarea></td>
+					        				<td> <button *ngIf="addmore.controls.itemRows.controls.length > 1" (click)="deleteRow(i)" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button></td>
+					        			</tr> 
+					        		</tbody>
+					        		<tfoot>
+					        			<tr><td> <button type="button" (click)="addNewRow()" class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i></button></td></tr>
+					        			<tr *ngIf="productDetailForProductId[0]">
+					        				<td colspan="2"><b>Product Code: </b>{{productDetailForProductId[0].product_code}}</td>
+					        				<td  colspan="2"><b>Product Name: </b>{{productDetailForProductId[0].product_name}}</td>
+					        				<td  colspan="3"><b>Available Stock: </b>{{productDetailForProductId[0].available_stock}}</td>
+					        				<td  colspan="2"><b>Product Specification: </b>{{productDetailForProductId[0].product_specification}}</td>
+					        					
+					        				
+					        			</tr>
+					        		</tfoot>	        			
+				        		</table>                                                           
+				        </div> 
+				          
+			        </div>
+			        </form>        
+	    	  	
+	    	  </div> -->
+	    	   <div class="card-footer">
+	    	   	 <div class="card-footer">
+	    	   	<div class="row">
+	    	   		 <div class="col-sm-12 text-center">
+				        	<button type="submit" (click)="onSubmit()" class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+				          <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Save</span>
+				          <span class="hidden-content">
+				              <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+				          </span>
+				      </button>
+				        </div> 
+	    	   	</div>
+	    	   	
+	    	   </div>
+	    	   	
+	    	   	
+	    	   </div>
+	    </div>
+
+
+
+					        					
+												
+					        					<!-- <input formControlName="product_name" required="true" class="form-control"> -->
+					        			
+	    
+
+
+	    
+
+	    <div *ngIf="indentReport[0]"  class="row" >
+                  <div class="col-sm-12">
+                      <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">
+                          <div class="ibox-head text-center">                             
+                               
+                                        <h2 class="text-center">Added Indent</h2>
+                                                            
+                          </div>
+                          <div class="ibox-body">
+                              <div class="ibox-fullwidth-block table-responsive">
+                                  <div class="card">
+	<div class="card-header">
+		<div class="row">
+			<div  class="col-sm-12">
+				<table class="table table-borderd">
+					<tr>
+						<td>&nbsp;</td>
+						<td>Indent Id</td>
+						<td>:</td>
+						<td>{{ indentReport[0].indentId }}</td>
+						<td>&nbsp;</td>
+						<td>Indent Month</td>
+						<td>:</td>
+						<td>{{ indentReport[0].indentMonth }}</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>Indent Discription</td>
+						<td>:</td>
+						<td>{{ indentReport[0].indentDiscription }}</td>
+						<td>&nbsp;</td>
+						<td>Department Name</td>
+						<td>:</td>
+						<td>{{ indentReport[0].departmentName }}</td>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="card-header">
+		<div class="row">
+			<div *ngIf="indentReport[0]" class="col-sm-12">
+				<table class="table table-borderd">
+					<thead>
+						<tr>
+							<th>Indent Serial No.</th>
+							<th>Product Code</th>
+							<th>Product Name</th>
+							<th>Specimen</th>
+							<th>Make</th>
+							<th>Quantity</th>
+							<th>Purpose</th>
+							<th><small>B/F(Available) Stock</small></th>
+							<th>Remarks</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let indent of indentReport">
+							<td>{{ indent.id }}</td>
+							<td>{{ indent.product_code }}</td>
+							<td>{{ indent.product_name }}</td>
+							<td>{{ indent.speciaman  }}</td>
+							<td>{{ indent.make  }}</td>
+							<td>{{ indent.quantity  }}</td>
+							<td>{{ indent.purpose }}</td>
+							<td>{{ indent.bf_stock }}</td>
+							<td>{{ indent.remarks }}</td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>		
+	</div>
+	<div style="height: 30px">
+<span class="required-field"></span><b>Symbol:</b>Represents Reuired Field.
+</div>
+	<div class="card-header"></div>
+</div>
+
+                              </div>
+                             
+                          </div>
+                      </div>
+                  </div>
+              </div>
+	   
+	                          
+	
+<div style="height: 30px">
+  &nbsp;
+</div>

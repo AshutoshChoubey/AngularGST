@@ -1,0 +1,128 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div> 
+<div class="card">
+    <div class="card-header">Search</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <input type="date" name="fromDate" class="form-control" placeholder="From Date (=<)" [(ngModel)]="searchFunctionality.fromDate">
+          </div>
+           <div class="col-sm-3">
+            <input type="date" name="todate" class="form-control" placeholder="To Date (=>)" [(ngModel)]="searchFunctionality.todate">
+          </div>
+           <div class="col-sm-3">
+            <input type="text" name="productCode" class="form-control" placeholder="Product Code" [(ngModel)]="searchFunctionality.productCode">
+          </div>
+          <div class="col-sm-3">
+         
+                       
+                       <!--  <select placeholder="Select Department"  class="form-control form-control-air" id="department"  [(ngModel)]="searchFunctionality.departmentId"   name="departmentId"><option *ngFor="let departmentList of departmentLists" value="{{ departmentList.id}}">{{ departmentList.department }}</option></select> -->
+                         <ng-select [items]="departmentLists"
+                   bindLabel="department"
+                    bindValue="id"
+                   placeholder="Select "
+                   [(ngModel)]="searchFunctionality.departmentId">
+        </ng-select>
+                       
+              
+          </div>
+        </div>
+        
+        
+      </div>
+       <div class="card-footer">
+          <div class="row" *ngIf="exporterButton==1" >
+          <div class="col-sm-12 text-center">
+            <input type="button"  class="btn btn-warning" (click)="Search()" value="search">
+          </div>
+        </div>
+       </div>
+</div>
+<div *ngIf="clicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12" *ngIf="exporterButton==1">
+    <div class="text-center"> 
+    <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-deep-blue">
+        <table id="example" class="table table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Purchase Id</th>
+						<th>Prod. Name</th>
+						<th>Prod. Code</th>
+						<th>Consume Date</th>
+						<th>Dep. Name</th>
+						<th>Requisition Id</th>
+						<th>Requisition Description</th>
+						<th>Requisition Month</th>
+						<!-- <th><small>Previous/Last Price After Consumption</small></th> -->
+						<th>Unit</th>
+            <th>Product Price</th>
+						<th>Product Place</th>					
+						<th><small>Quantity After Consumption</small></th>
+            <th>Comsumed Quantity</th>
+						<th>Consumption Specification</th>
+						<th>Product Type</th>
+            <th> GST %</th>
+            <th><small>Total Price After Consumption (with GST)</small></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productData">
+                    	<td>{{ data.id }}</td>
+						<td>{{ data.use_product_name }}</td>
+						<td>{{ data.use_product_code }}</td>
+						<td>{{ datepipe.transform(data.use_date, 'yyyy-MM-dd') }}</td>
+						<td>{{ data.use_dep_name }}</td>
+						<td><a routerLink="/requisitionReport/{{ data.use_requisition_id }}">{{ data.use_requisition_id }}</a></td>
+						<td>{{ data.use_requisition_discription }}</td>
+						<td>{{ data.use_requisition_month }}</td>
+						<!-- <td>{{ data.use_pro_closing }}</td> -->
+						<td>{{ data.product_unit }}</td> 
+            <td>{{ data.use_pro_price }}</td>
+						<td>{{ data.use_pro_place }}</td>						
+						<td>{{ data.use_pro_quanity }}</td>
+            <td>{{ data.use_quanity }}</td>
+            
+						<td>{{ data.use_pro_specif }}</td>
+						<td>{{ data.use_pro_type }}</td>
+            <td>{{ data.product_gst }}</td>
+            <td>{{ data.use_quanity*(data.use_pro_price+(data.use_pro_price*data.product_gst)/100)| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th colspan="16"></th>
+                    <th><b>Total: {{ Total| number : '1.2-2' }}</b></th>
+                  </tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Row-->
+
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

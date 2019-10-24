@@ -1,0 +1,131 @@
+<div class="page-heading ">
+  <h1 class="page-title">Consume Stock</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+<div *ngIf="submited==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+<!-- <pre>{{ data | json }}</pre> -->
+<div *ngIf="submited==0" class="animated fadeIn">
+
+  <!-- Tabellenstruktur für die Report-Daten  -->
+
+  <div class="row">
+
+  </div>
+   <div class="row" style="overflow: auto;">
+    <!-- <form #AddStockForm=ngForm style="overflow: auto;"> -->
+     <div class="col-md-12">
+       <div class="card" id="cardbg-second">
+        <div class="card-header text-center" data-background-color="blue">
+          <h4 class="title-second ">Stock Consumption</h4>
+        </div>
+        <div class="card-content" >
+        <div class=" table-responsive" style="overflow: auto;">
+           <table class="table table-borderd table-sm">
+          <thead>
+            <tr>
+              <th style="white-space: nowrap;">Requisition  Id</th>
+              <!-- <th style="white-space: nowrap;">Product Id</th> -->
+              <th style="white-space: nowrap;">Product Code</th>
+              <th style="white-space: nowrap;">Product Name</th>
+              <th style="white-space: nowrap;">Quantity</th>
+              <th style="white-space: nowrap;">Product Unit</th>
+              <th style="white-space: nowrap;">product CGST</th>
+              <th style="white-space: nowrap;">product SGST</th>
+              <th style="white-space: nowrap;">product IGST</th>
+              <th style="white-space: nowrap;">product GST</th>
+              <!-- <th style="white-space: nowrap;">Used Quantity</th> -->
+              <th style="white-space: nowrap;">Date</th>
+              <th style="white-space: nowrap;"><small>Product Price</small></th>
+             
+              <th style="white-space: nowrap;"><small>Available Product Stock</small></th>
+              <th style="white-space: nowrap;">Product Type</th>
+              <th style="white-space: nowrap;">Product Place</th>
+              <th style="white-space: nowrap;">Requisition Month</th>
+              <th style="white-space: nowrap;">Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stock of data">
+              <td>{{ stock.requisition_id }}</td>             
+              <!-- <td>{{ stock.product_name }}</td>                     -->
+              <td>{{ stock.product_code }}</td>                       
+              <td>{{ stock.productName }}</td>                   
+              <td>{{ stock.quantity }}</td>  
+              <td>{{ stock.productUnit }}</td>                      
+             <!--  <td><input  type="number" required class="form-control" [(ngModel)]="stock.productCgst" value="{{ stock.productCgst }}" /></td> -->
+              <td>{{ stock.productCgst }}
+              	<!-- <input type="number" required class="form-control" [(ngModel)]="stock.productSgst" value="{{ stock.productSgst }}" /> -->
+              </td>                     
+              <td>{{ stock.productSgst }}
+              	 <!-- <input  type="number" required class="form-control" [(ngModel)]="stock.productIgst" value="{{ stock.productIgst }}" /> -->
+              	</td> 
+              <td>{{ stock.productIgst }}
+              	<!-- <input  type="number" required class="form-control" [(ngModel)]="stock.productGst" value="{{ stock.productGst }}" /></td> -->
+              <!-- <td><input  type="number" required class="form-control" [(ngModel)]="stock.product_use" value="{{ stock.product_use }}" />-->
+              </td> 
+              <td>{{ stock.productGst }}
+              	<!-- <input  type="date" required class="form-control" [(ngModel)]="stock.created_at" value="{{ stock.created_at }}" /> -->
+              </td>
+              <td><!-- {{ stock.created_at }} -->
+               	<input  type="date" required class="form-control" [(ngModel)]="stock.created_at" value="{{ stock.created_at }}" />
+               </td>
+              <td>{{ stock.openingStock }}</td>              
+              <td>{{ stock.product_available_stock }}</td>    
+              <td>{{ stock.productType }}</td>    
+              <td>{{ stock.productPlace }}</td>    
+              <td>{{ stock.requisition_month }}</td>    
+              <td>{{ stock.departmentName }}</td>    
+                           
+               <!--  <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.departmentName }}" /></td>                      
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.id }}" /></td>                    
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentDepartmentId }}" /></td>                   
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentDiscription }}" /></td>                     
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentId }}" /></td>                     
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentMonth }}" /></td>                     
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indent_id }}" /></td>                  
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.make }}" /></td>                     
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productCgst }}" /></td>                  
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productColor }}" /></td>                 
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productGst }}" /></td>              
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productIgst }}" /></td>                
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productName }}" /></td>                    
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productSgst }}" /></td>                   
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productType }}" /></td>                       
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productUnit }}" /></td>                     
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.product_code }}" /></td>                   
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.product_name }}" /></td>                     
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.product_type }}" /></td>                       
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.purpose }}" /></td>                      
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.quantity }}" /></td>                    
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.remarks }}" /></td>                       
+                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.speciaman }}" /></td>    -->                   
+              
+            </tr>
+          </tbody>
+        </table>
+            </div>
+         
+        </div>
+       </div>
+     </div>
+     <div class="col-md-12 text-center" *ngIf="is_issued==0">
+         <button *ngIf="!addstockConfirmation" type="submit" (click)="submit()"    class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+          <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Consume</span>
+          <span class="hidden-content">
+              <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+          </span>
+      </button>
+     </div>
+     <div class="col-md-12 text-center" *ngIf="is_issued==1">
+         You Are Allready Completed Your  purchase
+     </div>
+   <!-- </form> -->
+  </div>
+</div>
+<!-- <app-indent-report></app-indent-report> -->

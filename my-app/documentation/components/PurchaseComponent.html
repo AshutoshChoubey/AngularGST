@@ -1,0 +1,2059 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>PurchaseComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/Purchases/purchase/purchase.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-purchase</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./purchase.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./purchase.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addstockConfirmation">addstockConfirmation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addstockerror">addstockerror</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#brads">brads</a>
+                            </li>
+                            <li>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#error">error</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#IndentDetailData">IndentDetailData</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#is_purchase">is_purchase</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#overConsume">overConsume</a>
+                            </li>
+                            <li>
+                                <a href="#settings">settings</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#submited">submited</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#supplierListFromDatabase">supplierListFromDatabase</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addStock">addStock</a>
+                            </li>
+                            <li>
+                                <a href="#handleAddStockError">handleAddStockError</a>
+                            </li>
+                            <li>
+                                <a href="#handleAddStockRequest">handleAddStockRequest</a>
+                            </li>
+                            <li>
+                                <a href="#handleError">handleError</a>
+                            </li>
+                            <li>
+                                <a href="#handleResponse">handleResponse</a>
+                            </li>
+                            <li>
+                                <a href="#handleSupplierResponse">handleSupplierResponse</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDeleteConfirm">onDeleteConfirm</a>
+                            </li>
+                            <li>
+                                <a href="#onItemDeleted">onItemDeleted</a>
+                            </li>
+                            <li>
+                                <a href="#onSaveConfirm">onSaveConfirm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(indentService: <a href="../injectables/IndentService.html">IndentService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, supplierService: <a href="../injectables/SupplierService.html">SupplierService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>indentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/IndentService.html" target="_self" >IndentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>supplierService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SupplierService.html" target="_self" >SupplierService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addStock"></a>
+                    <span class="name">
+                        <b>
+                            addStock
+                        </b>
+                        <a href="#addStock"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addStock()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="221"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:221</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleAddStockError"></a>
+                    <span class="name">
+                        <b>
+                            handleAddStockError
+                        </b>
+                        <a href="#handleAddStockError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleAddStockError(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="270"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:270</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleAddStockRequest"></a>
+                    <span class="name">
+                        <b>
+                            handleAddStockRequest
+                        </b>
+                        <a href="#handleAddStockRequest"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleAddStockRequest(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="258"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:258</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleError"></a>
+                    <span class="name">
+                        <b>
+                            handleError
+                        </b>
+                        <a href="#handleError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleError(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="215"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:215</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleResponse"></a>
+                    <span class="name">
+                        <b>
+                            handleResponse
+                        </b>
+                        <a href="#handleResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleResponse(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="198"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:198</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleSupplierResponse"></a>
+                    <span class="name">
+                        <b>
+                            handleSupplierResponse
+                        </b>
+                        <a href="#handleSupplierResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleSupplierResponse(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="193"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:193</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="136"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:136</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="181"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:181</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDeleteConfirm"></a>
+                    <span class="name">
+                        <b>
+                            onDeleteConfirm
+                        </b>
+                        <a href="#onDeleteConfirm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDeleteConfirm(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:157</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onItemDeleted"></a>
+                    <span class="name">
+                        <b>
+                            onItemDeleted
+                        </b>
+                        <a href="#onItemDeleted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onItemDeleted(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="276"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:276</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSaveConfirm"></a>
+                    <span class="name">
+                        <b>
+                            onSaveConfirm
+                        </b>
+                        <a href="#onSaveConfirm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSaveConfirm(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:145</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addstockConfirmation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addstockConfirmation</b>
+                            <a href="#addstockConfirmation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="addstockerror"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            addstockerror</b>
+                            <a href="#addstockerror"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="brads"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            brads</b>
+                            <a href="#brads"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      name: &#x27;Add Product&#x27;,
+      url: &#x27;/addProduct&#x27;
+    },
+     {
+      url: &#x27;/searchProduct&#x27;,
+      name: &#x27;Search Product&#x27;
+    },
+    {
+      url: &#x27;/addDepartment&#x27;,
+      name: &#x27;Add Department&#x27;
+    },
+    {
+      url: &#x27;/indent&#x27;,
+      name: &#x27;Indent &#x27;
+    },
+    {
+      url: &#x27;/indentList&#x27;,
+      name: &#x27;Indent List&#x27;
+    }
+    ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:133</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="error"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            error</b>
+                            <a href="#error"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="IndentDetailData"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            IndentDetailData</b>
+                            <a href="#IndentDetailData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:197</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="is_purchase"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            is_purchase</b>
+                            <a href="#is_purchase"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="overConsume"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            overConsume</b>
+                            <a href="#overConsume"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="220" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:220</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="settings"></a>
+                        <span class="name">
+                            <b>
+                            settings</b>
+                            <a href="#settings"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  // add: {
+  //     addButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-plus&quot; &gt;&lt;/i&gt;&#x27;,
+  //     createButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-check&quot;&gt;&lt;/i&gt;&#x27;,
+  //     cancelButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-close&quot; &gt;&lt;/i&gt;&#x27;,
+  //   },
+  hideSubHeader: true,
+  actions: {
+    add: false,
+    },
+
+    edit: {
+      editButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-pencil&quot; &gt;&lt;/i&gt;&#x27;,
+      saveButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-floppy-o&quot; &gt;&lt;/i&gt;&#x27;,
+      cancelButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-close&quot; &gt;&lt;/i&gt;&#x27;,
+      confirmSave: true,
+    },
+
+    delete: {
+      deleteButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-trash-o&quot;&gt;&lt;/i&gt;&#x27;,
+      confirmDelete: true,
+    },
+
+    columns: {
+      // indent_id: {
+      //   title: &#x27;Indent Id&#x27;,
+      //   type: &#x27;html&#x27;,
+      //   filter: false
+      // },
+      //  product_name: {
+      //   title: &#x27;Product Id&#x27;,
+      //   type: &#x27;html&#x27;,
+      //   filter: false
+      // }, 
+      product_code: {
+        title: &#x27;Product Code&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+      productName: {
+        title: &#x27;Product Name&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+      // departmentName: {
+      //   title: &#x27;Dept. Name&#x27;,
+      //   type: &#x27;html&#x27;,
+      //   filter: false
+      // },
+      quantity: {
+        title: &#x27;Quantity&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       productIgst: {
+        title: &#x27;Product Igst&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       productCgst: {
+        type: &#x27;html&#x27;,
+        title: &#x27;Product Cgst&#x27;,
+        filter: false
+      },
+       productSgst: {
+        title: &#x27;Product Sgst&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       productGst: {
+        title: &#x27;Product Gst&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       product_price: {
+        title: &#x27;Product Price&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+        created_at: {
+         title: &#x27;Date&#x27;,
+          type: &#x27;html&#x27;,
+          editor: {
+            type: &#x27;date&#x27;,
+          },
+          filter: false
+      },
+
+    }
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="submited"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            submited</b>
+                            <a href="#submited"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="134" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:134</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="supplierListFromDatabase"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            supplierListFromDatabase</b>
+                            <a href="#supplierListFromDatabase"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/app/Purchases/purchase/purchase.component.ts:135</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { IndentService } from &#x27;./../../Services/indent.service&#x27;;
+import { ActivatedRoute }   from &#x27;@angular/router&#x27;;
+import { SupplierService } from &#x27;src/app/Services/supplier.service&#x27;;
+import Swal from &#x27;sweetalert2&#x27;;
+declare let swal: any;
+declare const $;
+
+@Component({
+  selector: &#x27;app-purchase&#x27;,
+ templateUrl: &#x27;./purchase.component.html&#x27;,
+  styleUrls: [&#x27;./purchase.component.css&#x27;]
+})
+export class PurchaseComponent implements OnInit {
+  public brads &#x3D; [
+    {
+      name: &#x27;Add Product&#x27;,
+      url: &#x27;/addProduct&#x27;
+    },
+     {
+      url: &#x27;/searchProduct&#x27;,
+      name: &#x27;Search Product&#x27;
+    },
+    {
+      url: &#x27;/addDepartment&#x27;,
+      name: &#x27;Add Department&#x27;
+    },
+    {
+      url: &#x27;/indent&#x27;,
+      name: &#x27;Indent &#x27;
+    },
+    {
+      url: &#x27;/indentList&#x27;,
+      name: &#x27;Indent List&#x27;
+    }
+    ];
+    public error:any;
+    public addstockConfirmation:any;
+     public addstockerror:any
+     public is_purchase:any
+    
+  constructor(private indentService:IndentService,private route:ActivatedRoute,private supplierService:SupplierService) { }
+ settings &#x3D; {
+  // add: {
+  //     addButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-plus&quot; &gt;&lt;/i&gt;&#x27;,
+  //     createButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-check&quot;&gt;&lt;/i&gt;&#x27;,
+  //     cancelButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-close&quot; &gt;&lt;/i&gt;&#x27;,
+  //   },
+  hideSubHeader: true,
+  actions: {
+    add: false,
+    },
+
+    edit: {
+      editButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-pencil&quot; &gt;&lt;/i&gt;&#x27;,
+      saveButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-floppy-o&quot; &gt;&lt;/i&gt;&#x27;,
+      cancelButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-close&quot; &gt;&lt;/i&gt;&#x27;,
+      confirmSave: true,
+    },
+
+    delete: {
+      deleteButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-trash-o&quot;&gt;&lt;/i&gt;&#x27;,
+      confirmDelete: true,
+    },
+
+    columns: {
+      // indent_id: {
+      //   title: &#x27;Indent Id&#x27;,
+      //   type: &#x27;html&#x27;,
+      //   filter: false
+      // },
+      //  product_name: {
+      //   title: &#x27;Product Id&#x27;,
+      //   type: &#x27;html&#x27;,
+      //   filter: false
+      // }, 
+      product_code: {
+        title: &#x27;Product Code&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+      productName: {
+        title: &#x27;Product Name&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+      // departmentName: {
+      //   title: &#x27;Dept. Name&#x27;,
+      //   type: &#x27;html&#x27;,
+      //   filter: false
+      // },
+      quantity: {
+        title: &#x27;Quantity&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       productIgst: {
+        title: &#x27;Product Igst&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       productCgst: {
+        type: &#x27;html&#x27;,
+        title: &#x27;Product Cgst&#x27;,
+        filter: false
+      },
+       productSgst: {
+        title: &#x27;Product Sgst&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       productGst: {
+        title: &#x27;Product Gst&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+       product_price: {
+        title: &#x27;Product Price&#x27;,
+        type: &#x27;html&#x27;,
+        filter: false
+      },
+        created_at: {
+         title: &#x27;Date&#x27;,
+          type: &#x27;html&#x27;,
+          editor: {
+            type: &#x27;date&#x27;,
+          },
+          filter: false
+      },
+
+    }
+  };
+  data &#x3D; [];
+  public submited:any;
+  public supplierListFromDatabase:any;
+  ngAfterViewInit() {
+// document.getElementsByClassName(&#x27;product_name&#x27;)[&#x27;0&#x27;].style.width &#x3D; &#x27;400px&#x27;
+// document.getElementsByClassName(&#x27;product_price&#x27;)[&#x27;0&#x27;].style.width &#x3D; &#x27;400px&#x27;
+// document.getElementsByClassName(&#x27;productGst&#x27;)[&#x27;0&#x27;].style.width &#x3D; &#x27;400px&#x27;
+// document.getElementsByClassName(&#x27;productSgst&#x27;)[&#x27;0&#x27;].style.width &#x3D; &#x27;400px&#x27;
+// document.getElementsByClassName(&#x27;productCgst&#x27;)[&#x27;0&#x27;].style.width &#x3D; &#x27;400px&#x27;
+// document.getElementsByClassName(&#x27;productIgst&#x27;)[&#x27;0&#x27;].style.width &#x3D; &#x27;400px&#x27;
+}
+    
+  onSaveConfirm(event): void {
+    if (window.confirm(&#x27;Wait !!...   Are You Sure?&#x27;)) {
+      event.newData.indentId &#x3D; this.data[0].indentId;
+      event.newData.department &#x3D; this.data[0].department;
+      // console.log(event);
+      event.confirm.resolve(event.newData);
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+
+  onDeleteConfirm(event): void {
+    if (window.confirm(&#x27;Are You Serious !!.. Data will  delete&#x27;)) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  // data &#x3D; [
+  //   {
+  //     id: 1,
+  //     name: &quot;Leanne Graham&quot;,
+  //     username: &quot;Bret&quot;,
+  //     email: &quot;Sincere@april.biz&quot;
+  //   },
+  //   // ... other rows here
+  //   {
+  //     id: 11,
+  //     name: &quot;Nicholas DuBuque&quot;,
+  //     username: &quot;Nicholas.Stanton&quot;,
+  //     email: &quot;Rey.Padberg@rosamond.biz&quot;
+  //   }
+  // ];
+
+  ngOnInit() {
+     this.submited&#x3D;0;
+    this.overConsume&#x3D;0;
+    let id&#x3D;parseInt(this.route.snapshot.paramMap.get(&#x27;id&#x27;));
+     this.indentService.getIndentDetailForPurhase(id).subscribe(
+      data &#x3D;&gt; this.handleResponse(data),
+      error &#x3D;&gt; this.handleError(error)
+      );
+     this.supplierService.get().subscribe(
+      data&#x3D;&gt;this.handleSupplierResponse(data)
+      );
+  }
+  handleSupplierResponse(data)
+  {
+    this.supplierListFromDatabase&#x3D;data;
+  }
+  public IndentDetailData:any;
+  handleResponse(data)
+  {
+    this.data&#x3D;data;
+    for(let stock of this.data)
+      {
+        stock.Indentquantity&#x3D;stock.quantity;
+        stock.quantity&#x3D;stock.quantity-stock.purchase_quantity;
+         stock.quantity1&#x3D;stock.quantity;
+         // this.IndentDetailData.push(stock);
+      }
+    // console.log(this.data);
+    this.is_purchase&#x3D;this.data[0].is_purchase;
+    // if(this.is_purchase &#x3D;&#x3D; null)
+    // {
+    //   alert(&quot;Please Create another Indent and update this indent as   awrong Indent, Because In this Indent There are no any product &quot;);
+    // }
+  }
+  handleError(data)
+  {
+    this.error&#x3D;data;
+    // console.log(this.error);
+  }
+  public overConsume:number;
+  addStock()
+  {
+     this.submited&#x3D;1;
+     this.overConsume&#x3D;0;
+     console.log(this.data);
+     for(let stock of this.data){
+      // console.log(stock.supplier);
+      // console.log(stock.purchaseInvoie);
+      // console.log(stock.quantity);
+
+       if(stock.supplier&#x3D;&#x3D;&#x27;&#x27;|| typeof(stock.supplier) &#x3D;&#x3D; &quot;undefined&quot;  || typeof(stock.purchaseInvoie) &#x3D;&#x3D; &quot;undefined&quot; || typeof(stock.quantity) &#x3D;&#x3D; &quot;undefined&quot; || stock.quantity&#x3D;&#x3D;&#x27;&#x27; || stock.purchaseInvoie&#x3D;&#x3D;&#x27;&#x27;)
+        {
+         this.overConsume&#x3D;1;
+        }
+        if(stock.quantity&gt;stock.quantity1)
+        {
+         this.overConsume&#x3D;2;
+        }
+      }
+
+      if(this.overConsume&#x3D;&#x3D;0)
+      {
+         this.indentService.addStock(this.data).subscribe(
+      data &#x3D;&gt; this.handleAddStockRequest(data),
+      error &#x3D;&gt; this.handleAddStockError(error)
+        );
+      }else if(this.overConsume&#x3D;&#x3D;2)
+      {
+        Swal.fire(&#x27;error&#x27;, &#x27;You cant Purchase More Than Indent Quantity&#x27;, &#x27;error&#x27;);
+        this.submited&#x3D;0;
+      }
+      else
+      {
+        Swal.fire(&#x27;Something is Missing&#x27;, &#x27;Please Contact Software Maintanance Team.&#x27;, &#x27;error&#x27;);
+        this.submited&#x3D;0;
+     }
+  }
+  handleAddStockRequest(data)
+  {
+     this.submited&#x3D;0;
+    this.addstockConfirmation&#x3D;data;
+    if(data&#x3D;&#x3D;0)
+    {
+        Swal.fire(&#x27;Something is Missing&#x27;, &#x27;Please Check Input Field&#x27;, &#x27;error&#x27;);
+    
+      //alert(&quot;Please Check Field . Something is Missing&quot;);
+    }
+    // console.log(this.data);
+  }
+  handleAddStockError(data)
+  {
+     this.submited&#x3D;0;
+    this.addstockerror&#x3D;data;
+    // console.log(this.addstockerror);
+  }
+  onItemDeleted(index: number){
+    this.data.splice(index, 1);
+    // this.fieldArray.splice(index, 1);
+    console.log(this.data);
+  }
+
+
+
+  // data &#x3D; [];
+    
+  // // Einstellungen
+
+  // settings &#x3D; {
+
+  //   // Meldung wenn keine Daten gefunden wurden oder tbody leer ist
+
+  //   noDataMessage: &#x27;Es wurden keine Daten gefunden&#x27;,
+
+  //   // Aktionen
+
+  //   actions: {
+  //     columnTitle: &#x27;Aktionen&#x27;,
+  //   },
+
+  //   // Seitenzahl
+
+  //   pager: {
+  //     display: true,
+  //     perPage: 10,
+  //   },
+
+  //   // CRUD
+
+  //   add: {
+  //     addButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-plus&quot; title&#x3D;&quot;hinzufügen&quot;&gt;&lt;/i&gt;&#x27;,
+  //     createButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-check&quot; title&#x3D;&quot;erstellen&quot;&gt;&lt;/i&gt;&#x27;,
+  //     cancelButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-close&quot; title&#x3D;&quot;abbrechen&quot;&gt;&lt;/i&gt;&#x27;,
+  //   },
+
+  //   edit: {
+  //     editButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-pencil&quot; title&#x3D;&quot;bearbeiten&quot;&gt;&lt;/i&gt;&#x27;,
+  //     saveButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-floppy-o&quot; title&#x3D;&quot;speichern&quot;&gt;&lt;/i&gt;&#x27;,
+  //     cancelButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-close&quot; title&#x3D;&quot;abbrechen&quot;&gt;&lt;/i&gt;&#x27;,
+  //     confirmSave: true,
+  //   },
+
+  //   delete: {
+  //     deleteButtonContent: &#x27;&lt;i class&#x3D;&quot;fa fa-trash-o&quot;&gt;&lt;/i&gt;&#x27;,
+  //     confirmDelete: true,
+  //   },
+
+  //   // Filter
+
+  //   filter: {
+  //     inputClass: &#x27;filter-smart-table&#x27;
+  //   },
+
+  //   // Spalten
+
+  //   columns: {
+  //     bez: {
+  //       title: &#x27;Bez&#x27;,
+  //       filter: {
+  //         type: &#x27;default&#x27;,
+  //         config: {
+  //           default: {
+  //             data: this.data,
+  //             searchFields: &#x27;bez&#x27;,
+  //             titleField: &#x27;bez&#x27;,
+  //           },
+  //         },
+  //       },
+  //     },
+  //     jan: {
+  //       title: &#x27;Jan&#x27;,
+  //       filter: false,
+  //     },
+  //     feb: {
+  //       title: &#x27;Feb&#x27;,
+  //       filter: false,
+  //     },
+  //     mrz: {
+  //       title: &#x27;Mrz&#x27;,
+  //       filter: false,
+  //     },
+  //     apr: {
+  //       title: &#x27;Apr&#x27;,
+  //       filter: false,
+  //     },
+  //     mai: {
+  //       title: &#x27;Mai&#x27;,
+  //       filter: false,
+  //     },
+  //     jun: {
+  //       title: &#x27;Jun&#x27;,
+  //       filter: false,
+  //     },
+  //     jul: {
+  //       title: &#x27;Jul&#x27;,
+  //       filter: false,
+  //     },
+  //     aug: {
+  //       title: &#x27;Aug&#x27;,
+  //       filter: false,
+  //     },
+  //     sep: {
+  //       title: &#x27;Sep&#x27;,
+  //       filter: false,
+  //     },
+  //     okt: {
+  //       title: &#x27;Okt&#x27;,
+  //       filter: false,
+  //     },
+  //     nov: {
+  //       title: &#x27;Nov&#x27;,
+  //       filter: false,
+  //     },
+  //     dez: {
+  //       title: &#x27;Dez&#x27;,
+  //       filter: false,
+  //     },
+  //   },
+  // };
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;page-heading &quot;&gt;
+  &lt;app-brad&gt;&lt;/app-brad&gt;
+  &lt;!-- &lt;h1 class&#x3D;&quot;page-title&quot;&gt;Add Product&lt;/h1&gt; --&gt;
+  &lt;!-- &lt;ol class&#x3D;&quot;breadcrumb&quot;&gt;
+    &lt;li *ngFor&#x3D;&quot;let brad of brads&quot;  class&#x3D;&quot;breadcrumb-item&quot;&gt;&lt;a routerLink&#x3D;&quot;{{ brad.url }}&quot;&gt;{{ brad.name }}&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt; --&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;submited&#x3D;&#x3D;1&quot; class&#x3D;&quot;row text-center&quot;&gt;
+  &lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+    &lt;div&gt;&lt;i class&#x3D;&quot;fa fa-spinner fa-5x  fa-spin&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- &lt;pre&gt;{{ data | json }}&lt;/pre&gt; --&gt;
+&lt;div *ngIf&#x3D;&quot;submited&#x3D;&#x3D;0&quot; class&#x3D;&quot;animated fadeIn&quot;&gt;
+
+  &lt;!-- Tabellenstruktur für die Report-Daten --&gt;
+
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+
+  &lt;/div&gt;
+   &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;overflow: auto;&quot;&gt;
+    &lt;!-- &lt;form #AddStockForm&#x3D;ngForm style&#x3D;&quot;overflow: auto;&quot;&gt; --&gt;
+     &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+       &lt;div class&#x3D;&quot;card&quot; id&#x3D;&quot;cardbg-second&quot;&gt;
+        &lt;div class&#x3D;&quot;card-header text-center&quot; data-background-color&#x3D;&quot;blue&quot;&gt;
+          &lt;h4 class&#x3D;&quot;title-second &quot;&gt;Add Stock&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;card-content&quot; &gt;
+        &lt;div class&#x3D;&quot; table-responsive scrollbar-sunny-morning&quot; style&#x3D;&quot;overflow: auto;&quot;&gt;
+           &lt;table class&#x3D;&quot;table table-borderd table-sm table-striped&quot;&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Delete&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Indent  Id&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Product Id&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Product Code&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Product Name&lt;/th&gt;
+               &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt; Indent Quantity &lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;&lt;span class&#x3D;&quot;required-field&quot;&gt;&lt;/span&gt;Quantity .&amp;emsp;.&amp;emsp;.&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Product Unit&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;product CGST %&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;product SGST %&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;product IGST %&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;product GST %&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;&lt;span class&#x3D;&quot;required-field&quot;&gt;&lt;/span&gt;Product Unit Price&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Date&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;&lt;span class&#x3D;&quot;required-field&quot;&gt;&lt;/span&gt;Supplier&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;&lt;span class&#x3D;&quot;required-field&quot;&gt;&lt;/span&gt;Purchase Invoice&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;&lt;small&gt;Current Price&lt;/small&gt;&lt;/th&gt;              
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Available Product&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Product Type&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Product Place&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Indent Month&lt;/th&gt;
+              &lt;th style&#x3D;&quot;white-space: nowrap;&quot;&gt;Department&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let stock of data; index as i&quot;&gt;
+              &lt;td  style&#x3D;&quot;white-space: nowrap;&quot;&gt;
+                &lt;button type&#x3D;&quot;button&quot; (click)&#x3D;&quot;onItemDeleted(i)&quot; class&#x3D;&quot;btn btn-gradient-purple btn-icon-only btn-circle btn-lg btn-air&quot;&gt;&lt;i class&#x3D;&quot;fa fa-minus&quot;&gt;&lt;/i&gt;&lt;/button&gt; &lt;/td&gt;
+              &lt;td&gt;{{ stock.indent_id }}&lt;/td&gt;             
+              &lt;td&gt;{{ stock.product_name }}&lt;/td&gt;                    
+              &lt;td&gt;{{ stock.product_code }}&lt;/td&gt;                       
+              &lt;td&gt;{{ stock.productName }}&lt;/td&gt;                   
+              &lt;td&gt;{{ stock.Indentquantity }}&lt;/td&gt; 
+               &lt;td&gt;&lt;input  type&#x3D;&quot;number&quot; #stock.quantity required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.quantity&quot; value&#x3D;&quot;{{ stock.quantity }}&quot; /&gt;&lt;/td&gt; 
+              &lt;td&gt;{{ stock.productUnit }}&lt;/td&gt;                      
+              &lt;td&gt;&lt;input  type&#x3D;&quot;number&quot; required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.productCgst&quot; value&#x3D;&quot;{{ stock.productCgst }}&quot; /&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input type&#x3D;&quot;number&quot; required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.productSgst&quot; value&#x3D;&quot;{{ stock.productSgst }}&quot; /&gt;&lt;/td&gt;                     
+              &lt;td&gt;&lt;input  type&#x3D;&quot;number&quot; required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.productIgst&quot; value&#x3D;&quot;{{ stock.productIgst }}&quot; /&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input  type&#x3D;&quot;number&quot; required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.productGst&quot; value&#x3D;&quot;{{ stock.productCgst+stock.productSgst+stock.productIgst }}&quot; /&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input  type&#x3D;&quot;number&quot; required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.product_price&quot; value&#x3D;&quot;{{ stock.product_price }}&quot; /&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;input  type&#x3D;&quot;date&quot; required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.created_at&quot; value&#x3D;&quot;{{ stock.created_at }}&quot; /&gt;&lt;/td&gt;
+               &lt;td&gt;&lt;select class&#x3D;&quot;form-control&quot;  [(ngModel)]&#x3D;&quot;stock.supplier&quot; &gt;&lt;option *ngFor&#x3D;&quot;let supplierListFromDatabase of supplierListFromDatabase&quot; value&#x3D;&quot;{{ supplierListFromDatabase.id}}&quot;&gt;{{ supplierListFromDatabase.supplier_name }}&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;input  type&#x3D;&quot;text&quot;  required class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.purchaseInvoie&quot; value&#x3D;&quot;{{ stock.purchaseInvoie }}&quot; /&gt;&lt;/td&gt;
+              &lt;td&gt;{{ stock.openingStock }}&lt;/td&gt; 
+              &lt;td&gt;{{ stock.product_available_stock }}&lt;/td&gt;    
+              &lt;td&gt;{{ stock.productType }}&lt;/td&gt;    
+              &lt;td&gt;{{ stock.productPlace }}&lt;/td&gt;    
+              &lt;td&gt;{{ stock.indentMonth }}&lt;/td&gt;    
+              &lt;td&gt;{{ stock.departmentName }}&lt;/td&gt;    
+                           
+               &lt;!--  &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.departmentName }}&quot; /&gt;&lt;/td&gt;                      
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.id }}&quot; /&gt;&lt;/td&gt;                    
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.indentDepartmentId }}&quot; /&gt;&lt;/td&gt;                   
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.indentDiscription }}&quot; /&gt;&lt;/td&gt;                     
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.indentId }}&quot; /&gt;&lt;/td&gt;                     
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.indentMonth }}&quot; /&gt;&lt;/td&gt;                     
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.indent_id }}&quot; /&gt;&lt;/td&gt;                  
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.make }}&quot; /&gt;&lt;/td&gt;                     
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productCgst }}&quot; /&gt;&lt;/td&gt;                  
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productColor }}&quot; /&gt;&lt;/td&gt;                 
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productGst }}&quot; /&gt;&lt;/td&gt;              
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productIgst }}&quot; /&gt;&lt;/td&gt;                
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productName }}&quot; /&gt;&lt;/td&gt;                    
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productSgst }}&quot; /&gt;&lt;/td&gt;                   
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productType }}&quot; /&gt;&lt;/td&gt;                       
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.productUnit }}&quot; /&gt;&lt;/td&gt;                     
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.product_code }}&quot; /&gt;&lt;/td&gt;                   
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.product_name }}&quot; /&gt;&lt;/td&gt;                     
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.product_type }}&quot; /&gt;&lt;/td&gt;                       
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.purpose }}&quot; /&gt;&lt;/td&gt;                      
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.quantity }}&quot; /&gt;&lt;/td&gt;                    
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.remarks }}&quot; /&gt;&lt;/td&gt;                       
+                &lt;td&gt;&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;stock.ProductDepartmentName&quot; value&#x3D;&quot;{{ stock.speciaman }}&quot; /&gt;&lt;/td&gt;    --&gt;                   
+              
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+            &lt;/div&gt;
+         
+        &lt;/div&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+     &lt;div class&#x3D;&quot;col-md-12 text-center&quot; *ngIf&#x3D;&quot;is_purchase&#x3D;&#x3D;0&quot;&gt;
+         &lt;button *ngIf&#x3D;&quot;!addstockConfirmation&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;addStock()&quot;    class&#x3D;&quot;btn btn-gradient-blue btn-lg btn-animated fade-button&quot;&gt;
+          &lt;span class&#x3D;&quot;visible-content btn-icon&quot;&gt;&lt;i class&#x3D;&quot;fa fa-hand-pointer-o&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;Add Stock&lt;/span&gt;
+          &lt;span class&#x3D;&quot;hidden-content&quot;&gt;
+              &lt;span class&#x3D;&quot;btn-icon&quot;&gt;&lt;i class&#x3D;&quot;ti-face-smile&quot;&gt;&lt;/i&gt;&lt;small&gt;Click Me!!&lt;/small&gt; &lt;/span&gt;
+          &lt;/span&gt;
+      &lt;/button&gt;
+     &lt;/div&gt;
+     &lt;div class&#x3D;&quot;col-md-12 text-center&quot; *ngIf&#x3D;&quot;is_purchase&#x3D;&#x3D;1&quot;&gt;
+         You Are Allready Completed Your  purchase
+     &lt;/div&gt;
+   &lt;!-- &lt;/form&gt; --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div style&#x3D;&quot;height: 30px&quot;&gt;
+&lt;span color&#x3D;&quot;red&quot;&gt;*&lt;/span&gt;&lt;b&gt;Note:&lt;/b&gt;Gst will be Updated with new gst and you can not purchase 0 quantity
+&lt;/div&gt;
+
+&lt;!-- &lt;app-indent-report&gt;&lt;/app-indent-report&gt; --&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./purchase.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.smart-table-container{
+    overflow-x: scroll;
+}
+.ng2-smart-table  {
+    min-width: 1500px;
+}
+:host  ng2-smart-table table tr td{
+    font-size:0.9em;
+    word-break: break-all;
+    }
+
+    .required-field::before {
+  content: &quot;*&quot;;
+  color: red;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="page-heading ">  <app-brad></app-brad>  <!-- <h1 class="page-title">Add Product</h1> -->  <!-- <ol class="breadcrumb">    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>  </ol> --></div><div *ngIf="submited==1" class="row text-center">  <div class="col-sm-12">    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>  </div></div><!-- <pre>{{ data | json }}</pre> --><div *ngIf="submited==0" class="animated fadeIn">  <!-- Tabellenstruktur für die Report-Daten -->  <div class="row">  </div>   <div class="row" style="overflow: auto;">    <!-- <form #AddStockForm=ngForm style="overflow: auto;"> -->     <div class="col-md-12">       <div class="card" id="cardbg-second">        <div class="card-header text-center" data-background-color="blue">          <h4 class="title-second ">Add Stock</h4>        </div>        <div class="card-content" >        <div class=" table-responsive scrollbar-sunny-morning" style="overflow: auto;">           <table class="table table-borderd table-sm table-striped">          <thead>            <tr>              <th>Delete</th>              <th style="white-space: nowrap;">Indent  Id</th>              <th style="white-space: nowrap;">Product Id</th>              <th style="white-space: nowrap;">Product Code</th>              <th style="white-space: nowrap;">Product Name</th>               <th style="white-space: nowrap;"> Indent Quantity </th>              <th style="white-space: nowrap;"><span class="required-field"></span>Quantity .&emsp;.&emsp;.</th>              <th style="white-space: nowrap;">Product Unit</th>              <th style="white-space: nowrap;">product CGST %</th>              <th style="white-space: nowrap;">product SGST %</th>              <th style="white-space: nowrap;">product IGST %</th>              <th style="white-space: nowrap;">product GST %</th>              <th style="white-space: nowrap;"><span class="required-field"></span>Product Unit Price</th>              <th style="white-space: nowrap;">Date</th>              <th style="white-space: nowrap;"><span class="required-field"></span>Supplier</th>              <th style="white-space: nowrap;"><span class="required-field"></span>Purchase Invoice</th>              <th style="white-space: nowrap;"><small>Current Price</small></th>                            <th style="white-space: nowrap;">Available Product</th>              <th style="white-space: nowrap;">Product Type</th>              <th style="white-space: nowrap;">Product Place</th>              <th style="white-space: nowrap;">Indent Month</th>              <th style="white-space: nowrap;">Department</th>            </tr>          </thead>          <tbody>            <tr *ngFor="let stock of data; index as i">              <td  style="white-space: nowrap;">                <button type="button" (click)="onItemDeleted(i)" class="btn btn-gradient-purple btn-icon-only btn-circle btn-lg btn-air"><i class="fa fa-minus"></i></button> </td>              <td>{{ stock.indent_id }}</td>                           <td>{{ stock.product_name }}</td>                                  <td>{{ stock.product_code }}</td>                                     <td>{{ stock.productName }}</td>                                 <td>{{ stock.Indentquantity }}</td>                <td><input  type="number" #stock.quantity required class="form-control" [(ngModel)]="stock.quantity" value="{{ stock.quantity }}" /></td>               <td>{{ stock.productUnit }}</td>                                    <td><input  type="number" required class="form-control" [(ngModel)]="stock.productCgst" value="{{ stock.productCgst }}" /></td>              <td><input type="number" required class="form-control" [(ngModel)]="stock.productSgst" value="{{ stock.productSgst }}" /></td>                                   <td><input  type="number" required class="form-control" [(ngModel)]="stock.productIgst" value="{{ stock.productIgst }}" /></td>              <td><input  type="number" required class="form-control" [(ngModel)]="stock.productGst" value="{{ stock.productCgst+stock.productSgst+stock.productIgst }}" /></td>              <td><input  type="number" required class="form-control" [(ngModel)]="stock.product_price" value="{{ stock.product_price }}" /></td>              <td><input  type="date" required class="form-control" [(ngModel)]="stock.created_at" value="{{ stock.created_at }}" /></td>               <td><select class="form-control"  [(ngModel)]="stock.supplier" ><option *ngFor="let supplierListFromDatabase of supplierListFromDatabase" value="{{ supplierListFromDatabase.id}}">{{ supplierListFromDatabase.supplier_name }}</option></select></td>                <td><input  type="text"  required class="form-control" [(ngModel)]="stock.purchaseInvoie" value="{{ stock.purchaseInvoie }}" /></td>              <td>{{ stock.openingStock }}</td>               <td>{{ stock.product_available_stock }}</td>                  <td>{{ stock.productType }}</td>                  <td>{{ stock.productPlace }}</td>                  <td>{{ stock.indentMonth }}</td>                  <td>{{ stock.departmentName }}</td>                                              <!--  <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.departmentName }}" /></td>                                      <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.id }}" /></td>                                    <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentDepartmentId }}" /></td>                                   <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentDiscription }}" /></td>                                     <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentId }}" /></td>                                     <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indentMonth }}" /></td>                                     <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.indent_id }}" /></td>                                  <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.make }}" /></td>                                     <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productCgst }}" /></td>                                  <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productColor }}" /></td>                                 <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productGst }}" /></td>                              <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productIgst }}" /></td>                                <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productName }}" /></td>                                    <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productSgst }}" /></td>                                   <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productType }}" /></td>                                       <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.productUnit }}" /></td>                                     <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.product_code }}" /></td>                                   <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.product_name }}" /></td>                                     <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.product_type }}" /></td>                                       <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.purpose }}" /></td>                                      <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.quantity }}" /></td>                                    <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.remarks }}" /></td>                                       <td><input type="text" class="form-control" [(ngModel)]="stock.ProductDepartmentName" value="{{ stock.speciaman }}" /></td>    -->                                             </tr>          </tbody>        </table>            </div>                 </div>       </div>     </div>     <div class="col-md-12 text-center" *ngIf="is_purchase==0">         <button *ngIf="!addstockConfirmation" type="submit" (click)="addStock()"    class="btn btn-gradient-blue btn-lg btn-animated fade-button">          <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Add Stock</span>          <span class="hidden-content">              <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>          </span>      </button>     </div>     <div class="col-md-12 text-center" *ngIf="is_purchase==1">         You Are Allready Completed Your  purchase     </div>   <!-- </form> -->  </div></div><div style="height: 30px"><span color="red">*</span><b>Note:</b>Gst will be Updated with new gst and you can not purchase 0 quantity</div><!-- <app-indent-report></app-indent-report> --></div>'
+    var COMPONENTS = [{'name': 'AddIndentDetailComponent', 'selector': 'app-add-indent-detail'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BradComponent', 'selector': 'app-brad'},{'name': 'ConfigPanelComponent', 'selector': 'app-config-panel'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DepartmentComponent', 'selector': 'app-department'},{'name': 'DepartmentListComponent', 'selector': 'app-department-list'},{'name': 'DirectPurchaseComponent', 'selector': 'app-direct-purchase'},{'name': 'DivideTwoScreenComponent', 'selector': 'app-divide-two-screen'},{'name': 'DownloadIndentComponent', 'selector': 'app-download-indent'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IndentComponent', 'selector': 'app-indent'},{'name': 'IndentListComponent', 'selector': 'app-indent-list'},{'name': 'IndentReportComponent', 'selector': 'app-indent-report'},{'name': 'InsertedProductComponent', 'selector': 'app-inserted-product'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductAvailibilityComponent', 'selector': 'app-product-availibility'},{'name': 'ProductComponent', 'selector': 'app-product'},{'name': 'ProductConsumptionComponent', 'selector': 'app-product-consumption'},{'name': 'ProductPriceComponent', 'selector': 'app-product-price'},{'name': 'ProductSearchComponent', 'selector': 'app-product-search'},{'name': 'ProductStockComponent', 'selector': 'app-product-stock'},{'name': 'ProductUseComponent', 'selector': 'app-product-use'},{'name': 'ProductUseSearchComponent', 'selector': 'app-product-use-search'},{'name': 'PurchaseComponent', 'selector': 'app-purchase'},{'name': 'PurchaseInvoiceComponent', 'selector': 'app-purchase-invoice'},{'name': 'PurchaseReportComponent', 'selector': 'app-purchase-report'},{'name': 'RefreshComponent', 'selector': 'app-refresh'},{'name': 'ReportByDepartmentComponent', 'selector': 'app-report-by-department'},{'name': 'RequisitionComponent', 'selector': 'app-requisition'},{'name': 'RequisitionListComponent', 'selector': 'app-requisition-list'},{'name': 'RequisitionReportsComponent', 'selector': 'app-requisition-reports'},{'name': 'ReturnPurchaseComponent', 'selector': 'app-return-purchase'},{'name': 'SearchPurchaseComponent', 'selector': 'app-search-purchase'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'StockHistoryComponent', 'selector': 'app-stock-history'},{'name': 'StockHistoryViewComponent', 'selector': 'app-stock-history-view'},{'name': 'StockValuationComponent', 'selector': 'app-stock-valuation'},{'name': 'SupplierAddComponent', 'selector': 'app-supplier-add'},{'name': 'SupplierSearchComponent', 'selector': 'app-supplier-search'},{'name': 'UpdateIndentComponent', 'selector': 'app-update-indent'},{'name': 'UpdateRequisitionComponent', 'selector': 'app-update-requisition'},{'name': 'ViewProductComponent', 'selector': 'app-view-product'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PurchaseComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PurchaseComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

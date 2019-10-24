@@ -1,0 +1,157 @@
+<div class="page-heading ">
+      <h1 class="page-title">Add Product</h1>
+     <!--  <ol class="breadcrumb">
+        <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+      </ol> -->
+</div>
+<!-- <div class="row text-center">
+  <div class="col-sm-12">
+    <div><a  (click)="refresh()"><i class="fa fa-refresh" aria-hidden="true"></i></a></div>
+  </div>
+</div> -->
+<!-- <div *ngIf="submitClicked==1" class="row text-center">
+  <div class="col-sm-4">
+    
+  </div>
+</div> -->
+<div *ngIf="submitClicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+<form class="form-purple" #productAddForm=ngForm (ngSubmit)="onSubmit()">
+<div *ngIf="submitClicked==0" class="card">
+  <div class="card-header text-center">Please Fill Up Product Details</div>
+  <div class="card-body"> 
+    <div *ngIf="error" class="row">
+      <div class="col-sm-12 col-lg-12">
+          <div class="alert alert-warning alert-dismissable fade show alert-bordered">
+              <button class="close-warning"  data-dismiss="alert" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button><strong>Warning!</strong><br>{{ error }}. 
+          </div>
+      </div>
+    </div>
+        <div class="row">
+                <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="input-1">Product Code </label>
+                        <input class="form-control form-control-air"  readonly  [(ngModel)]="form.product_code"  id=""  placeholder="Product Code" autocomplete="off"  name="product_code" type="text" value="{{ form.product_code }}">
+                        </div>
+                </div>
+                <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="input-1">Product Name</label>
+                        <input class="form-control form-control-air" readonly id="" required (change)="onProductChange()"  [(ngModel)]="form.product_name"  placeholder="Product Name" autocomplete="off"  name="product_name" type="text" >
+                        </div>
+                </div>
+                <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="department">Department</label> 
+                        <select placeholder="Select Department" readonly  class="form-control form-control-air" id="department" required [(ngModel)]="form.product_department"   name="product_department"><option *ngFor="let departmentList of departmentLists" value="{{ departmentList.id}}">{{ departmentList.department }}</option></select>
+                        </div>
+                </div>
+                <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="input-1">Specification</label>
+                        <textarea class="form-control form-control-air  " readonly id="" required [(ngModel)]="form.product_specification"  placeholder="Product Specification" autocomplete="off"  name="product_specification" ></textarea>
+                        </div>
+                </div>
+                                                             
+        </div>                        
+        <div class="row">                    
+            <div class="col-lg-3">
+                    <div class="form-group">
+                    <label for="input-1">Product Type</label>
+                    <!-- <select class="form-control form-control-air" required [(ngModel)]="form.product_type"   name="product_type"><option value="1">NA</option><option value="2">machinary</option><option value="3">tea stall</option></select> -->
+                    <input type="text" class="form-control form-control-air" readonly [(ngModel)]="form.product_type"   name="product_type"/>
+                    </div>
+            </div>                                                            
+            
+            <div class="col-lg-3">
+                  <div class="form-group">
+                  <label for="input-1">Product Unit</label>
+
+                  <!-- <select class="form-control form-control-air  "  required [(ngModel)]="form.product_unit"   name="product_unit"><option value="1">NA</option><option value="2">pic</option><option value="3">litter</option></select> -->
+                  <input type="text" class="form-control form-control-air" readonly [(ngModel)]="form.product_unit"   name="product_unit" />
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                <label for="input-1">Product Place</label>
+                <input type="text" class="form-control form-control-air" readonly [(ngModel)]="form.place"   name="place" />
+                </div>
+          </div>
+
+            <div class="col-lg-3">
+                  <div class="form-group">
+                  <label for="input-1">Product HSN</label>
+                  <input class="form-control form-control-air  " id="" readonly  required [(ngModel)]="form.product_hsn" placeholder="Product HSN" autocomplete="off" name="product_hsn" type="text" value="">
+                  </div>
+            </div>                                                                     
+        </div>
+                                     
+        <div class="row">                                                             
+          <div class="col-lg-3">
+            <div class="form-group">
+            <label for="input-1">Product Igst</label>
+            <input class="form-control form-control-air" readonly  [(ngModel)]="form.product_igst"  step="any" placeholder="Product Igst" autocomplete="off" name="product_igst" type="number" value="0">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="form-group">
+            <label for="input-1">Product Cgst</label>
+            <input class="form-control form-control-air  "  readonly [(ngModel)]="form.product_cgst"  step="any" placeholder="Product Cgst" autocomplete="off" name="product_cgst" type="number" value="0">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="form-group">
+            <label for="input-1">Product Sgst</label>
+            <input class="form-control form-control-air  " readonly  [(ngModel)]="form.product_sgst"  step="any" placeholder="Product Sgst" autocomplete="off" name="product_sgst" type="number" value="0">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="form-group">
+            <label for="input-1">Product Gst</label>
+            <input class="form-control form-control-air  " id="" readonly  [(ngModel)]="form.product_gst"  step="any" placeholder="Product Gst" autocomplete="off" name="product_gst" type="number" value="{{ form.product_sgst+form.product_cgst+form.product_igst }}">
+            </div>
+          </div>                                                    
+        </div>
+
+        <div class="row">                                                             
+          <div class="col-lg-4">
+            <div class="form-group">
+            <label for="input-1"> Color</label>
+            <input class="form-control form-control-air" readonly  [(ngModel)]="form.product_color"   placeholder="Product Color" autocomplete="off" name="product_color" type="text" value="0">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-group">
+            <label for="input-1"> Specimen</label>
+            <input class="form-control form-control-air  " readonly  [(ngModel)]="form.product_specimen"  placeholder="Product Specimen" autocomplete="off" name="product_specimen" type="text" value="0">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-group">
+            <label for="input-1"> Make</label>
+            <input class="form-control form-control-air  " readonly  [(ngModel)]="form.product_make"   placeholder="Make" autocomplete="off" name="product_make" type="text" value="0">
+            </div>
+          </div>                                                 
+        </div>
+       
+        
+                                           
+  </div>
+  <div class="card-footer text-center">
+      <button type="submit" [disabled]="!productAddForm.valid" class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+          <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Save</span>
+          <span class="hidden-content">
+              <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+          </span>
+      </button>
+        <!-- <input  class="btn btn-gradient-peach btn-fix" value="Add Product"> -->
+  </div>
+</div>
+</form>
+
+<div style="height: 30px">
+  &nbsp;
+</div>

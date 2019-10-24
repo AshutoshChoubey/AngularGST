@@ -1,0 +1,262 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+  <app-brad ></app-brad>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<!-- <div class="text-center"> 
+  <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+      <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button> 
+
+</div> -->
+<!-- <div class="table-responsive "> -->
+<!-- <div fxLayout fxLayoutAlign="center center">
+<mat-form-field fxFlex="40%">
+  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+</div> -->
+
+<!-- <table mat-table [dataSource]="dataSource" matSort matSortStart="desc">
+	<ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Id</th>
+  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+</ng-container>
+<ng-container matColumnDef="product_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Name</th>
+  <td mat-cell *matCellDef="let element"> {{element.product_name}} </td>
+</ng-container>
+<ng-container matColumnDef="product_code">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Code</th>
+  <td mat-cell *matCellDef="let element"> {{element.product_code}} </td>
+</ng-container>
+<ng-container matColumnDef="add_stock">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Add Stock</th>
+  <td mat-cell *matCellDef="let element"> {{element.add_stock}} </td>
+</ng-container>
+<ng-container matColumnDef="consume_stock">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Consume Stock</th>
+  <td mat-cell *matCellDef="let element"> {{element.consume_stock}} </td>
+</ng-container>
+<ng-container matColumnDef="available_stock">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Available Stock</th>
+  <td mat-cell *matCellDef="let element"> {{element.available_stock}} </td>
+</ng-container>
+<ng-container matColumnDef="product_cgst">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Cgst</th>
+  <td mat-cell *matCellDef="let element"> {{element.product_cgst}} </td>
+</ng-container>
+<ng-container matColumnDef="product_igst">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Igst</th>
+  <td mat-cell *matCellDef="let element"> {{element.product_igst}} </td>
+</ng-container>
+<ng-container matColumnDef="product_sgst">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Sgst</th>
+  <td mat-cell *matCellDef="let element"> {{element.product_sgst}} </td>
+</ng-container>
+<ng-container matColumnDef="product_gst">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product gst</th>
+  <td mat-cell *matCellDef="let element"> {{element.product_gst}} </td>
+</ng-container>
+<ng-container matColumnDef="opening_stock">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+  <td mat-cell *matCellDef="let element"> {{element.opening_stock}} </td>
+</ng-container>
+<ng-container matColumnDef="product_tax_price">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Tax Price</th>
+  <td mat-cell *matCellDef="let element"> {{ ((element.opening_stock)*(element.product_gst)/100) }} </td>
+</ng-container>
+<ng-container matColumnDef="product_total_price">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Price</th>
+  <td mat-cell *matCellDef="let element"> {{ (element.opening_stock)+((element.opening_stock)*(element.product_gst)/100) }} </td>
+</ng-container>
+<ng-container matColumnDef="product_Grand_total_price">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Grand Total Price</th>
+  <td mat-cell *matCellDef="let element"> {{ ((element.opening_stock)+((element.opening_stock)*(element.product_gst)/100))*element.available_stock }} </td>
+</ng-container> -->
+
+<!-- <ng-container matColumnDef="use_pro_closing">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Previous Price<small>(during Conume)</small></th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_closing}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_opening">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Opening Balance/Stock</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_opening}} </td>
+</ng-container> -->
+<!-- <ng-container matColumnDef="opening_stock">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Opening Stock</th>
+  <td mat-cell *matCellDef="let element"> {{element.available_stock-(element.add_stock+element.consume_stock)}} </td>
+</ng-container>
+<ng-container matColumnDef="use_requisition_id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition Id</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_requisition_id}} </td>
+</ng-container>
+<ng-container matColumnDef="use_requisition_detail_id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition S.N.</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_requisition_detail_id}} </td>
+</ng-container>
+<ng-container matColumnDef="use_quanity">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Consume Quantity</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_quanity}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_place">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Place</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_place}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_type">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Type</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_type}} </td>
+</ng-container> 
+<ng-container matColumnDef="use_pro_specif">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Specification</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_specif}} </td>
+</ng-container>  
+<ng-container matColumnDef="use_dep_code">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Department Code</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_dep_code}} </td>
+</ng-container>  
+<ng-container matColumnDef="use_pro_id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Id</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_id}} </td>
+</ng-container> 
+<ng-container matColumnDef="use_dep_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Department Name</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_dep_name}} </td>
+</ng-container> 
+<ng-container matColumnDef="use_product_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_product_name}} </td>
+</ng-container>   
+<ng-container matColumnDef="use_product_code">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Code</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_product_code}} </td>
+</ng-container>
+<ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+</ng-container> -->
+<!-- <ng-container matColumnDef="use_date">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+  <td mat-cell *matCellDef="let element"> {{ datepipe.transform(element.use_date, 'yyyy-MM-dd') }} </td>
+</ng-container> -->
+  
+<!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+<!-- <mat-paginator [pageSize]="4" [pageSizeOptions]="[2, 4,6, 10, 20,30,50,75,100]">
+</mat-paginator> -->
+<!-- </div> -->
+<!-- <div style="height: 30px"> -->
+  <div class="card">
+    <div class="card-header">Search</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+         
+                       
+                        <select placeholder="Select Department"  class="form-control form-control-air" id="department"  [(ngModel)]="searchFunctionality.departmentId"   name="departmentId"><option *ngFor="let departmentList of departmentLists" value="{{ departmentList.id}}">{{ departmentList.department }}</option></select>
+                       
+              
+          </div>
+           <div class="col-sm-4">
+             <input type="date" name="fromDate" class="form-control" placeholder="Date" [(ngModel)]="searchFunctionality.fromDate">
+          </div>
+           <div class="col-sm-4">
+            &nbsp;
+          </div>
+        </div>
+        
+        
+      </div>
+       <div class="card-footer">
+          <div class="row"  *ngIf="exporterButton==1">
+          <div class="col-sm-12 text-center">
+            <input type="button"  class="btn btn-warning" (click)="Search()" value="search">
+          </div>
+        </div>
+       </div>
+</div>
+<div *ngIf="clicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+      <div class="row">
+        <div class="col-lg-12" *ngIf="exporterButton==1">
+            <div class="text-center"> 
+              <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+              <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+            </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+            <div class="card-body">
+              <div class="table-responsive scrollbar-young-passion">
+              <table id="example" class="table table-bordered table-sm table-striped">
+               <thead class="table-dark">
+                  <tr>
+                  <th>Product Name</th>
+                  <th>Product Code</th>
+                  <th>Department Name</th>
+                  <th><small>{{ fromDate1 }} Added Stock</small></th>
+                  <th><small>{{ fromDate1 }} Consumed Stock</small></th> 
+                  <th>Available Stock</th>                     
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let data of indentListFromDatabase">
+                  <td>{{ data.product_name }}</td>
+                  <td>{{ data.product_code }}</td>
+                  <td>{{ data.product_department_Name }}</td>
+                  <td>{{ data.add_stock }}</td>
+                  <td>{{ data.consume_stock }}</td>
+                  <td>{{ data.available_stock }}</td>
+                  </tr>
+                </tbody>
+               <!--  available_stock: 0
+closing_stok: 100
+created_at: "2019-03-14 23:39:37"
+created_by: null
+deleted_at: null
+id: 3
+opening_stock: 150
+place: "dfg"
+product_cgst: 0
+product_code: "AER/MOB/2"
+product_color: "dfs"
+product_department: "5"
+product_department_Name: "aeronautics"
+product_gst: 0
+product_hsn: "fg34543"
+product_igst: 0
+product_make: "df"
+product_name: "mobile"
+product_sgst: 0
+product_specification: "dfgdf"
+product_specimen: "sdfs"
+product_type: "dfg"
+product_unit: "dfg"
+status: 0
+stock_in: 60
+stock_out -->
+               <!--  <tfoot>
+                    <tr>
+                        <th>id</th>
+                        <th>created_at</th>
+                       
+                    </tr>
+                </tfoot> -->
+            </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Row-->
+<!-- </div> -->
+<div style="height: 70px">&nbsp;</div>
+
+
+

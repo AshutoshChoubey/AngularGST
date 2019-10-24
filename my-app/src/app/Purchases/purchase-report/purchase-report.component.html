@@ -1,0 +1,201 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+<div class="card">
+    <div class="card-header">Search</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3">
+             <label for="department" >From date</label> 
+            <input type="date" name="fromDate" class="form-control" placeholder="From Date (=<)" [(ngModel)]="searchFunctionality.fromDate">
+          </div>
+           <div class="col-sm-3">
+             <label for="department" >To date</label> 
+            <input type="date" name="todate" class="form-control" placeholder="To Date (=>)" [(ngModel)]="searchFunctionality.todate">
+          </div>
+          <div class="col-sm-3">
+             <label for="department" >Purchase Entry From date</label> 
+            <input type="date" name="fromCreatedDate" class="form-control" placeholder="From Date (=<)" [(ngModel)]="searchFunctionality.fromCreatedDate">
+          </div>
+        </div>
+          <div class="row">
+           <div class="col-sm-3">
+             <label for="department" >Purchase Entry To date</label> 
+            <input type="date" name="toCreatedDate" class="form-control" placeholder="To Date (=>)" [(ngModel)]="searchFunctionality.toCreatedDate">
+          </div>
+           <div class="col-sm-3">
+            <label for="department" >Product Code</label> 
+            <input type="text" name="productCode" class="form-control" placeholder="Product Code" [(ngModel)]="searchFunctionality.productCode">
+          </div>
+          <div class="col-sm-3">
+         
+                        <label for="department" >Department</label> 
+                        <select placeholder="Select Department"  class="form-control form-control-air" id="department"  [(ngModel)]="searchFunctionality.departmentId"  name="departmentId">
+                          <option *ngFor="let departmentList of departmentLists" value="{{ departmentList.id}}">{{ departmentList.department }}</option></select>
+                         <!--   <ng-select [items]="departmentLists"
+                   bindLabel="department"
+                    bindValue="id"
+                   placeholder="Select "
+                   [(ngModel)]="searchFunctionality.departmentId">
+        </ng-select> -->
+          </div>
+        </div>
+         <div class="row">
+           <div class="col-sm-4">
+            <label for="department" >Purchase Invoice</label> 
+            <input type="text" name="purchaseInvoice" class="form-control" placeholder="Purchase Invoice" [(ngModel)]="searchFunctionality.purchaseInvoice">
+          </div>
+          <div class="col-sm-4">
+         
+                        <label for="department" >Supplier</label> 
+                     <!--    <select placeholder="Select Supplier"  class="form-control form-control-air"  [(ngModel)]="searchFunctionality.supplierId"  name="supplierId">
+                         <option *ngFor="let supplierListFromDatabase of supplierListFromDatabase" value="{{ supplierListFromDatabase.id}}">{{ supplierListFromDatabase.supplier_name }}</option></select> -->
+                          <ng-select [items]="supplierListFromDatabase"
+                   bindLabel="supplier_name"
+                    bindValue="id"
+                   placeholder="Select "
+                   [(ngModel)]="searchFunctionality.supplierId">
+        </ng-select>
+          </div>
+          <div class="col-sm-4">
+            <label for="department">Indent ID</label> 
+            <input type="number" name="indent" class="form-control" placeholder="Indent" [(ngModel)]="searchFunctionality.indent">
+          </div>
+        </div>
+        
+        
+      </div>
+       <div class="card-footer">
+          <div class="row" *ngIf="exporterButton==1">
+          <div class="col-sm-12 text-center">
+            <input type="button"  class="btn btn-warning" (click)="Search()" value="search">
+          </div>
+        </div>
+       </div>
+</div>
+<div *ngIf="clicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12" *ngIf="exporterButton==1">
+    <div class="text-center"> 
+    <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example" style="size: 10px" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Purchase Id</th>
+						<th>Prod. Name</th>
+						<th>Prod. Code</th>
+						<th>Purchase Date</th>
+            <th>Purchase Entry Date</th>
+						<th>Dep. Name</th>
+						<th>Indent Id</th>
+             <th>Purchase Invoice</th> 
+            <th>Supplier name</th> 
+             <th>Purpose</th> 
+						<!-- <th>Indent Detail Id</th> -->
+						<th>Indent Description</th>
+						<th>Indent Month</th>
+						<th>Previous Price</th>
+						<th>Price After Purchase</th>
+						<th>Product Place</th>
+						<th>Product Unit Price</th>
+						<th><small>Product Quantity Before Purchase</small></th>
+						<th>Purchase Specification</th>
+						<th>Product Type</th>
+						<th><small>purchase CGST%</small></th>
+						<th><small>purchase IGST %</small></th>
+						<th><small>purchase SGST%</small></th> 
+						<th><small>Current GST%</small></th> 
+            <th><small>Product Unit</small></th>
+						<th>Purchase Quantity</th> 
+						<th><small>Total Price After Purchase (without GST)</small></th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productData">
+                    	<td>{{ data.id }}</td>
+						<td>{{ data.pur_product_name }}</td>
+						<td>{{ data.pur_product_code }}</td>
+						<td>{{ datepipe.transform(data.pur_date, 'yyyy-MM-dd') }}</td>
+            <td>{{ datepipe.transform(data.created_at, 'yyyy-MM-dd') }}</td>
+						<td>{{ data.pur_dep_name }}</td>
+						<td><a routerLink="/indent-report/{{ data.pur_indent_id }}">{{ data.pur_indent_id }}</a></td>
+            <td>{{ data.pur_purchaseInvoie }}</td>
+            <td>{{ data.pur_supplierName }}</td>
+             <td>{{ data.purpose }}</td>
+						<!-- <td>{{ data.pur_indent_detail_id }}</td> -->
+						<td>{{ data.pur_indent_discription }}</td>
+						<td>{{ data.pur_indent_month }}</td>
+						<td>{{ data.pur_pro_closing }}</td>
+						<td>{{ data.pur_pro_opening }}</td>
+						<td>{{ data.pur_pro_place }}</td>
+						<td>{{ data.pur_pro_price }}</td>
+						<td>{{ data.pur_pro_quanity }}</td>
+						<td>{{ data.pur_pro_specif }}</td>
+						<td>{{ data.pur_pro_type }}</td>
+						<td>{{ data.pur_product_cgst }}</td>
+						<td>{{ data.pur_product_igst }}</td>
+						<td>{{ data.pur_product_sgst }}</td>
+						<td>{{ data.product_gst }}</td>
+            <td>{{ data.product_unit }}</td>
+						<td>{{ data.pur_quanity }}</td>
+						<td>{{ data.pur_quanity*(data.pur_pro_opening+(data.pur_pro_opening*data.product_gst)/100)| number : '1.2-2' }}</td>
+						<!-- <td>{{ data.product_igst }}</td>
+						<td>{{ data.product_sgst }}</td>
+						<td>{{ data.product_cgst }}</td>
+						<td>{{ data.product_gst }}</td> -->
+						<!-- <td>{{ data.opening_stock }}</td> -->
+						<!-- <td>{{ data.closing_stok }}</td> -->
+					<!-- 	<td>{{ data.stock_in }}</td>
+						<td>{{ data.stock_out }}</td>
+						<td>{{ data.available_stock }}</td>
+						<td>{{ data.product_igst }}</td>
+						<td>{{ data.product_sgst }}</td>
+						<td>{{ data.product_cgst }}</td>
+						<td>{{ data.product_gst }}</td>
+						<td>{{ data.opening_stock }}</td>
+						<td>{{ data.closing_stok }}</td> -->
+						<!-- <td>{{ data.available_stock }}</td> -->
+						<!-- <td>{{  (data.opening_stock*data.product_gst)/100 }}</td>
+						<td>{{  data.opening_stock+ (data.opening_stock*data.product_gst)/100 }}</td>
+						<td>{{  (data.opening_stock+ (data.opening_stock*data.product_gst)/100)*data.available_stock }}</td> -->
+                       
+                     <!--  <td>{{  (data.opening_stock*data.product_gst)/100 }}</td>
+                      <td>{{  data.opening_stock+ (data.opening_stock*data.product_gst)/100 }}</td>
+                       <td>{{  (data.opening_stock+ (data.opening_stock*data.product_gst)/100)*data.available_stock }}</td> -->
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th colspan="25"></th>
+                		<th><b>Total: {{ Total| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Row-->
+
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

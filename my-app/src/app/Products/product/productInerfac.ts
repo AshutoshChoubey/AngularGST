@@ -1,0 +1,20 @@
+export interface Product{
+created_at: Date,
+created_by: BigInteger,
+deleted_at: Date,
+id: number,
+product_cgst: number,
+product_code: string,
+place: number,
+product_department_Name: string,
+product_gst: number,
+product_hsn: string,
+product_igst: number,
+product_name: string,
+product_sgst: number,
+product_specification: string,
+product_type: string,
+product_unit: string,
+status: boolean,
+updated_at: Date
+};

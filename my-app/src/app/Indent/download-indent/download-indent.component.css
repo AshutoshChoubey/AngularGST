@@ -1,0 +1,6 @@
+@media print
+{
+body * { visibility: hidden; }
+#contentToConvert * { visibility: visible; }
+#contentToConvert { position: absolute; top: 40px; left: 30px; }
+}

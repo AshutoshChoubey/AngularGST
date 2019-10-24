@@ -1,0 +1,1764 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>my-app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">my-app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>IndentListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/Indent/indent-list/indent-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-indent-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./indent-list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./indent-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#brads">brads</a>
+                            </li>
+                            <li>
+                                <a href="#componentTitle">componentTitle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#doFilter">doFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#indentListFromDatabase">indentListFromDatabase</a>
+                            </li>
+                            <li>
+                                <a href="#paginator">paginator</a>
+                            </li>
+                            <li>
+                                <a href="#sort">sort</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addStock">addStock</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#delete">delete</a>
+                            </li>
+                            <li>
+                                <a href="#downloadIndent">downloadIndent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#editIndent">editIndent</a>
+                            </li>
+                            <li>
+                                <a href="#exportAsXLSX">exportAsXLSX</a>
+                            </li>
+                            <li>
+                                <a href="#handledeleteError">handledeleteError</a>
+                            </li>
+                            <li>
+                                <a href="#handleDeleteResponse">handleDeleteResponse</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleError">handleError</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#handleResponse">handleResponse</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit">ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showIndent">showIndent</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(excelService: <a href="../injectables/ExcelService.html">ExcelService</a>, indentService: <a href="../injectables/IndentService.html">IndentService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>excelService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExcelService.html" target="_self" >ExcelService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>indentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/IndentService.html" target="_self" >IndentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addStock"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            addStock
+                        </b>
+                        <a href="#addStock"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addStock(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            delete
+                        </b>
+                        <a href="#delete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>delete(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadIndent"></a>
+                    <span class="name">
+                        <b>
+                            downloadIndent
+                        </b>
+                        <a href="#downloadIndent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>downloadIndent(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editIndent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            editIndent
+                        </b>
+                        <a href="#editIndent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>editIndent(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:106</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exportAsXLSX"></a>
+                    <span class="name">
+                        <b>
+                            exportAsXLSX
+                        </b>
+                        <a href="#exportAsXLSX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exportAsXLSX()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handledeleteError"></a>
+                    <span class="name">
+                        <b>
+                            handledeleteError
+                        </b>
+                        <a href="#handledeleteError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handledeleteError(error)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:208</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>error</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleDeleteResponse"></a>
+                    <span class="name">
+                        <b>
+                            handleDeleteResponse
+                        </b>
+                        <a href="#handleDeleteResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleDeleteResponse(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleError"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            handleError
+                        </b>
+                        <a href="#handleError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleError(error)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="80"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:80</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>error</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleResponse"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            handleResponse
+                        </b>
+                        <a href="#handleResponse"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleResponse(data)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <b>
+                            ngAfterViewInit
+                        </b>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:85</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showIndent"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            showIndent
+                        </b>
+                        <a href="#showIndent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>showIndent(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="brads"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            brads</b>
+                            <a href="#brads"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[{
+      name: &#x27;Add Product&#x27;,
+      url: &#x27;/addProduct&#x27;
+    },
+     {
+      url: &#x27;/searchProduct&#x27;,
+      name: &#x27;Search Product&#x27;
+    },
+    {
+      url: &#x27;/addDepartment&#x27;,
+      name: &#x27;Add Department&#x27;
+    },
+    {
+      url: &#x27;/indent&#x27;,
+      name: &#x27;Indent &#x27;
+    },
+    {
+      url: &#x27;/indentList&#x27;,
+      name: &#x27;Indent List&#x27;
+    }
+    ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="componentTitle"></a>
+                        <span class="name">
+                            <b>
+                            componentTitle</b>
+                            <a href="#componentTitle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;Indent List&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dataSource</b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new MatTableDataSource&lt;Indent&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;id&#x27;, &#x27;indent_month&#x27;,&#x27;indent_discription&#x27;,&#x27;indent_department_name&#x27;,&#x27;created_at&#x27;,&#x27;show&#x27;,&#x27;download&#x27;,&#x27;edit&#x27;,&#x27;add_stock&#x27;,&#x27;delete&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doFilter"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            doFilter</b>
+                            <a href="#doFilter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:89</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="indentListFromDatabase"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            indentListFromDatabase</b>
+                            <a href="#indentListFromDatabase"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paginator"></a>
+                        <span class="name">
+                            <b>
+                            paginator</b>
+                            <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatPaginator</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatPaginator)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sort"></a>
+                        <span class="name">
+                            <b>
+                            sort</b>
+                            <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatSort</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatSort)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/Indent/indent-list/indent-list.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { MatTableDataSource, MatSort, MatPaginator } from &#x27;@angular/material&#x27;;
+import { ExcelService } from &#x27;./../../Services/excel.service&#x27;;
+import { SupplierService } from &#x27;src/app/Services/supplier.service&#x27;;
+import { IndentService } from &#x27;./../../Services/indent.service&#x27;;
+import { Router }   from &#x27;@angular/router&#x27;;
+ import Swal from &#x27;sweetalert2&#x27;;
+declare let swal: any;
+declare const $;
+// import Swal from &#x27;sweetalert2&#x27;;
+// const Swal &#x3D; require(&#x27;sweetalert2&#x27;);
+
+interface Indent{
+    created_at: Date,
+    indent_month:string,
+    indent_discription:string,
+    indent_department_name:string,
+    id:number
+  };
+
+@Component({
+  selector: &#x27;app-indent-list&#x27;,
+  templateUrl: &#x27;./indent-list.component.html&#x27;,
+  styleUrls: [&#x27;./indent-list.component.css&#x27;]
+})
+export class IndentListComponent implements OnInit {
+ 
+  constructor(private excelService:ExcelService,private indentService:IndentService,private router:Router) { }
+    public brads &#x3D; [{
+      name: &#x27;Add Product&#x27;,
+      url: &#x27;/addProduct&#x27;
+    },
+     {
+      url: &#x27;/searchProduct&#x27;,
+      name: &#x27;Search Product&#x27;
+    },
+    {
+      url: &#x27;/addDepartment&#x27;,
+      name: &#x27;Add Department&#x27;
+    },
+    {
+      url: &#x27;/indent&#x27;,
+      name: &#x27;Indent &#x27;
+    },
+    {
+      url: &#x27;/indentList&#x27;,
+      name: &#x27;Indent List&#x27;
+    }
+    ];
+    componentTitle&#x3D;&quot;Indent List&quot;;
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  public dataSource &#x3D; new MatTableDataSource&lt;Indent&gt;();
+  @ViewChild(MatSort) sort: MatSort;
+ 
+
+  public displayedColumns &#x3D; [&#x27;id&#x27;, &#x27;indent_month&#x27;,&#x27;indent_discription&#x27;,&#x27;indent_department_name&#x27;,&#x27;created_at&#x27;,&#x27;show&#x27;,&#x27;download&#x27;,&#x27;edit&#x27;,&#x27;add_stock&#x27;,&#x27;delete&#x27;];
+  public indentListFromDatabase:any&#x3D;[];
+  ngOnInit() {
+  	this.indentService.getIndent().subscribe(
+      data &#x3D;&gt; this.handleResponse(data),
+      error &#x3D;&gt; this.handleError(error)
+      );
+  	
+  }
+  exportAsXLSX():void {
+    // this.productListFromDatabase&#x3D;data;
+    let str &#x3D; JSON.stringify(this.indentListFromDatabase);
+    str &#x3D; str.replace(/\&quot;opening_stock\&quot;:/g, &quot;\&quot;Current Price\&quot;:&quot;);
+    str &#x3D; str.replace(/\&quot;closing_stok\&quot;:/g, &quot;\&quot;Previous/Last Price\&quot;:&quot;);
+    this.indentListFromDatabase &#x3D; JSON.parse(str);
+
+    this.excelService.exportAsExcelFile(this.indentListFromDatabase, &#x27;Indent_Report&#x27;);
+  }
+  public handleResponse(data)
+  {
+    this.indentListFromDatabase&#x3D;data;
+    this.dataSource.data&#x3D; data as Indent[];
+  }
+  public handleError(error)
+  {
+    // Swal.fire(&#x27;Something Went Worng&#x27;, &#x27;Please Contact Software Maintanance Team(ex:Phoenix Software)&#x27;, &#x27;error&#x27;);
+  	console.log(error);
+  }
+  ngAfterViewInit(): void {
+    this.dataSource.sort &#x3D; this.sort;
+     this.dataSource.paginator &#x3D; this.paginator;
+  }
+  public doFilter &#x3D; (value: string) &#x3D;&gt; {
+    this.dataSource.filter &#x3D; value.trim().toLocaleLowerCase();
+  }
+  public showIndent(id)
+  {
+    // console.log(id);
+    this.router.navigate([&#x27;/indent-report&#x27;,id])
+  }
+  downloadIndent(id)
+  {
+     this.router.navigate([&#x27;/indent-download&#x27;,id])
+  }
+  public addStock(id)
+  {
+    // console.log(id);
+    this.router.navigate([&#x27;/add-stock&#x27;,id])
+  }
+  public editIndent(id)
+  {
+     this.router.navigate([&#x27;/UpdateIndentComponent&#x27;,id])
+  }
+  public delete(id)
+  {
+
+
+      // swal.fire({
+      //     type:&#x27;warning&#x27;,
+      //     title: &#x27;Are you sure to Delete indent?&#x27;,
+      //     text: &#x27;You will not be able to recover the data of indent&#x27;,
+      //     showCancelButton: true,
+      //     confirmButtonColor: &#x27;#049F0C&#x27;,
+      //     cancelButtonColor:&#x27;#ff0000&#x27;,
+      //     confirmButtonText: &#x27;Yes, delete it!&#x27;,
+      //     cancelButtonText: &#x27;No, keep it&#x27;,
+      //     closeOnConfirm: false
+      //   }).then(() &#x3D;&gt; {
+      //   this.indentService.indentdelete(id).subscribe(
+      //     data &#x3D;&gt;  data &#x3D;&gt;  this.handleDeleteResponse(data),
+      // error &#x3D;&gt; this.handledeleteError(error),
+      // );
+      //   }, (dismiss) &#x3D;&gt; { 
+      //     // dismiss can be &#x27;overlay&#x27;, &#x27;cancel&#x27;, &#x27;close&#x27;, &#x27;esc&#x27;, &#x27;timer&#x27;
+      //     if (dismiss &#x3D;&#x3D;&#x3D; &#x27;cancel&#x27;) {
+      //        swal.fire({
+      //         type:&#x27;info&#x27;,
+      //         title: &#x27;Cancelled&#x27;,
+      //         text: &#x27;Your indent file is safe )&#x27;
+      //       })
+      //     }
+      //   });
+
+
+     
+    // $(function(){
+
+
+
+//       swal.fire({
+//   title: &#x27;Are you sure?&#x27;,
+//   text: &#x27;You will not be able to recover !.&#x27;,
+//   type: &#x27;warning&#x27;,
+//   showCancelButton: true,
+//   confirmButtonColor: &#x27;#DD6B55&#x27;,
+//   confirmButtonText: &#x27;Yes!&#x27;,
+//   cancelButtonText: &#x27;No.&#x27;
+// }).then(() &#x3D;&gt; {
+//   if (result.value) {
+//     this.indentService.indentdelete(id).subscribe(
+//       data &#x3D;&gt;  this.handleDeleteResponse(data),
+//       error &#x3D;&gt; this.handledeleteError(error)
+//       );
+//   } else {
+//      swal.fire(&quot;Cancelled&quot;, &quot;Your  data is safe :)&quot;, &quot;error&quot;);
+//   }
+// });
+
+
+  //   swal.fire({
+  //     title: &quot;Are you sure?&quot;,
+  //     text: &quot;You will not be able to recover !&quot;,
+  //     type: &quot;warning&quot;,
+  //     showCancelButton: true,
+  //     confirmButtonClass: &quot;btn-danger&quot;,
+  //     confirmButtonText: &quot;Yes, delete it!&quot;,
+  //     cancelButtonText: &quot;No, cancel plx!&quot;,
+  //     closeOnConfirm: false,
+  //     closeOnCancel: false
+  //   }).then(
+  //   function(isConfirm) {
+  //     // console.log(isConfirm);
+  //     if (isConfirm) {
+  //      this.indentService.indentdelete(id).subscribe(
+  //     data &#x3D;&gt;  this.handleDeleteResponse(data),
+  //     error &#x3D;&gt; this.handledeleteError(error)
+  //     );
+        
+  //     } else {
+  //       swal.fire(&quot;Cancelled&quot;, &quot;Your  data is safe :)&quot;, &quot;error&quot;);
+  //     }
+  //   });
+  //   );
+  // });
+        var result &#x3D; confirm(&quot;Want to delete?&quot;);
+        if (result) {
+             this.indentService.indentdelete(id).subscribe(
+      data &#x3D;&gt;  this.handleDeleteResponse(data),
+      error &#x3D;&gt; this.handledeleteError(error)
+      );
+        }
+        else{
+           swal.fire(&quot;Cancelled&quot;, &quot;Your  data is safe :)&quot;, &quot;error&quot;);
+        }
+    
+  }
+  handleDeleteResponse(data)
+  {
+    swal.fire(&quot;Deleted!&quot;, &quot;Your  indent has been deleted.&quot;, &quot;success&quot;);
+    this.router.navigate([&#x27;/refresh&#x27;]);
+  }
+  handledeleteError(error)
+  {
+    swal.fire(&quot;error&quot;, &quot; Sometimes you are not Lucky&quot;, &quot;error&quot;);
+  }
+  
+
+
+} 
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;page-heading &quot;&gt;
+  &lt;h1 class&#x3D;&quot;page-title&quot;&gt;{{ componentTitle }}&lt;/h1&gt;
+ &lt;!--  &lt;ol class&#x3D;&quot;breadcrumb&quot;&gt;
+    &lt;li *ngFor&#x3D;&quot;let brad of brads&quot;  class&#x3D;&quot;breadcrumb-item&quot;&gt;&lt;a routerLink&#x3D;&quot;{{ brad.url }}&quot;&gt;{{ brad.name }}&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt; --&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;div class&#x3D;&quot;text-center&quot;&gt; 
+  &lt;button (click)&#x3D;&quot;exportAsXLSX()&quot; class&#x3D;&quot;btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon&quot;&gt;
+      &lt;span class&#x3D;&quot;btn-label&quot;&gt;&lt;i class&#x3D;&quot;fa fa-file-excel-o&quot; &gt;&lt;/i&gt;&lt;/span&gt;Download&lt;/button&gt; 
+
+&lt;/div&gt; --&gt;
+&lt;div class&#x3D;&quot;table-responsive scrollbar-amy-crisp&quot;&gt;
+&lt;div fxLayout fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+&lt;mat-form-field fxFlex&#x3D;&quot;40%&quot;&gt;
+  &lt;input matInput type&#x3D;&quot;text&quot; (keyup)&#x3D;&quot;doFilter($event.target.value)&quot; placeholder&#x3D;&quot;Filter&quot;&gt;
+&lt;/mat-form-field&gt;
+&lt;/div&gt;
+&lt;table mat-table [dataSource]&#x3D;&quot;dataSource&quot; matSort matSortStart&#x3D;&quot;desc&quot;&gt;
+&lt;ng-container matColumnDef&#x3D;&quot;id&quot;&gt;
+  &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Id &lt;/th&gt;
+  &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.id}} &lt;/td&gt;
+&lt;/ng-container&gt;
+&lt;ng-container matColumnDef&#x3D;&quot;indent_month&quot;&gt;
+  &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Indent Month &lt;/th&gt;
+  &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.indent_month}} &lt;/td&gt;
+&lt;/ng-container&gt;
+&lt;ng-container matColumnDef&#x3D;&quot;indent_discription&quot;&gt;
+  &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt;Indent Description&lt;/th&gt;
+  &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.indent_discription}} &lt;/td&gt;
+&lt;/ng-container&gt;
+&lt;ng-container matColumnDef&#x3D;&quot;indent_department_name&quot;&gt;
+  &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt;Indent Depatment Id&lt;/th&gt;
+  &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.indent_department_name}} &lt;/td&gt;
+&lt;/ng-container&gt;
+
+
+&lt;ng-container matColumnDef&#x3D;&quot;created_at&quot;&gt;
+  &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Created Date &lt;/th&gt;
+  &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.created_at}} &lt;/td&gt;
+&lt;/ng-container&gt;
+&lt;ng-container matColumnDef&#x3D;&quot;how&quot;&gt;
+  &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; Created Date &lt;/th&gt;
+  &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt; {{element.i}} &lt;/td&gt;
+&lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;show&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef&gt; Show&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-gradient-peach&quot; (click)&#x3D;&quot;showIndent(element.id)&quot; &gt;
+            &lt;i class&#x3D;&quot;fa fa-eye&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/td&gt;
+  &lt;/ng-container&gt; 
+  &lt;ng-container matColumnDef&#x3D;&quot;download&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef&gt; Download&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-gradient-blue-pink btn-icon-only btn-circle btn-lg btn-air&quot; (click)&#x3D;&quot;downloadIndent(element.id)&quot; &gt;
+            &lt;i class&#x3D;&quot;fa fa-file-pdf-o&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;edit&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef&gt; Edit&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; *ngIf&#x3D;&quot;element.is_purchase&#x3D;&#x3D;0&quot; class&#x3D;&quot;btn btn-gradient-blue btn-icon-only btn-circle btn-lg btn-air&quot; (click)&#x3D;&quot;editIndent(element.id)&quot; &gt;
+            &lt;i class&#x3D;&quot;fa fa-edit&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+           &lt;div *ngIf&#x3D;&quot;element.is_purchase&#x3D;&#x3D;1&quot;&gt;&lt;i class&#x3D;&quot;fa fa-check-circle-o btn btn-info&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;add_stock&quot; &gt;
+    &lt;th mat-header-cell *matHeaderCellDef&gt; Add Stock&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+      &lt;button type&#x3D;&quot;button&quot; *ngIf&#x3D;&quot;element.is_purchase&#x3D;&#x3D;0&quot; class&#x3D;&quot;btn btn-gradient-blue-pink btn-icon-only btn-circle btn-lg btn-air&quot; (click)&#x3D;&quot;addStock(element.id)&quot; &gt;
+        &lt;i class&#x3D;&quot;fa fa-plus&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;div *ngIf&#x3D;&quot;element.is_purchase&#x3D;&#x3D;1&quot;&gt;&lt;i class&#x3D;&quot;fa fa-check-circle-o btn btn-info&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+       &lt;div *ngIf&#x3D;&quot;element.is_purchase!&#x3D;1 &amp;&amp; element.is_purchase!&#x3D;0&quot;&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/td&gt;
+&lt;/ng-container&gt; 
+ &lt;ng-container matColumnDef&#x3D;&quot;delete&quot; &gt;
+    &lt;th mat-header-cell *matHeaderCellDef&gt; Delete&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let element&quot;&gt;
+      &lt;button type&#x3D;&quot;button&quot; *ngIf&#x3D;&quot;element.is_purchase&#x3D;&#x3D;0&quot; class&#x3D;&quot;btn btn-gradient-peach btn-icon-only btn-circle btn-lg btn-air&quot; (click)&#x3D;&quot;delete(element.id)&quot; &gt;
+        &lt;i class&#x3D;&quot;fa fa-trash&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+       &lt;div *ngIf&#x3D;&quot;element.is_purchase&#x3D;&#x3D;1&quot;&gt;&lt;i class&#x3D;&quot;fa fa-check-circle-o btn btn-info&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;/td&gt;
+&lt;/ng-container&gt; 
+  
+&lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+&lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns;&quot;&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;mat-paginator [pageSize]&#x3D;&quot;4&quot; [pageSizeOptions]&#x3D;&quot;[2, 4,6, 10, 20,30,50,75,100]&quot;&gt;
+&lt;/mat-paginator&gt;
+&lt;/div&gt;
+&lt;div style&#x3D;&quot;height: 30px&quot;&gt;
+&amp;nbsp;
+&lt;/div&gt;
+
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./indent-list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+ 
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+}
+td.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+}
+.mat-column-update{
+  width: 70px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="page-heading ">  <h1 class="page-title">{{ componentTitle }}</h1> <!--  <ol class="breadcrumb">    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>  </ol> --></div><!-- <div class="text-center">   <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">      <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button> </div> --><div class="table-responsive scrollbar-amy-crisp"><div fxLayout fxLayoutAlign="center center"><mat-form-field fxFlex="40%">  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter"></mat-form-field></div><table mat-table [dataSource]="dataSource" matSort matSortStart="desc"><ng-container matColumnDef="id">  <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>  <td mat-cell *matCellDef="let element"> {{element.id}} </td></ng-container><ng-container matColumnDef="indent_month">  <th mat-header-cell *matHeaderCellDef mat-sort-header> Indent Month </th>  <td mat-cell *matCellDef="let element"> {{element.indent_month}} </td></ng-container><ng-container matColumnDef="indent_discription">  <th mat-header-cell *matHeaderCellDef mat-sort-header>Indent Description</th>  <td mat-cell *matCellDef="let element"> {{element.indent_discription}} </td></ng-container><ng-container matColumnDef="indent_department_name">  <th mat-header-cell *matHeaderCellDef mat-sort-header>Indent Depatment Id</th>  <td mat-cell *matCellDef="let element"> {{element.indent_department_name}} </td></ng-container><ng-container matColumnDef="created_at">  <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>  <td mat-cell *matCellDef="let element"> {{element.created_at}} </td></ng-container><ng-container matColumnDef="how">  <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>  <td mat-cell *matCellDef="let element"> {{element.i}} </td></ng-container>  <ng-container matColumnDef="show">        <th mat-header-cell *matHeaderCellDef> Show&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>        <td mat-cell *matCellDef="let element">          <button type="button" class="btn btn-gradient-peach" (click)="showIndent(element.id)" >            <i class="fa fa-eye" aria-hidden="true"></i>          </button>        </td>  </ng-container>   <ng-container matColumnDef="download">        <th mat-header-cell *matHeaderCellDef> Download&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>        <td mat-cell *matCellDef="let element">          <button type="button" class="btn btn-gradient-blue-pink btn-icon-only btn-circle btn-lg btn-air" (click)="downloadIndent(element.id)" >            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>          </button>        </td>  </ng-container>  <ng-container matColumnDef="edit">        <th mat-header-cell *matHeaderCellDef> Edit&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>        <td mat-cell *matCellDef="let element">          <button type="button" *ngIf="element.is_purchase==0" class="btn btn-gradient-blue btn-icon-only btn-circle btn-lg btn-air" (click)="editIndent(element.id)" >            <i class="fa fa-edit" aria-hidden="true"></i>          </button>           <div *ngIf="element.is_purchase==1"><i class="fa fa-check-circle-o btn btn-info" aria-hidden="true"></i></div>        </td>  </ng-container>  <ng-container matColumnDef="add_stock" >    <th mat-header-cell *matHeaderCellDef> Add Stock&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>    <td mat-cell *matCellDef="let element">      <button type="button" *ngIf="element.is_purchase==0" class="btn btn-gradient-blue-pink btn-icon-only btn-circle btn-lg btn-air" (click)="addStock(element.id)" >        <i class="fa fa-plus" aria-hidden="true"></i>      </button>      <div *ngIf="element.is_purchase==1"><i class="fa fa-check-circle-o btn btn-info" aria-hidden="true"></i></div>       <div *ngIf="element.is_purchase!=1 && element.is_purchase!=0">&nbsp;</div>    </td></ng-container>  <ng-container matColumnDef="delete" >    <th mat-header-cell *matHeaderCellDef> Delete&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>    <td mat-cell *matCellDef="let element">      <button type="button" *ngIf="element.is_purchase==0" class="btn btn-gradient-peach btn-icon-only btn-circle btn-lg btn-air" (click)="delete(element.id)" >        <i class="fa fa-trash" aria-hidden="true"></i>      </button>       <div *ngIf="element.is_purchase==1"><i class="fa fa-check-circle-o btn btn-info" aria-hidden="true"></i></div>    </td></ng-container>   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr><tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr></table><mat-paginator [pageSize]="4" [pageSizeOptions]="[2, 4,6, 10, 20,30,50,75,100]"></mat-paginator></div><div style="height: 30px">&nbsp;</div></div>'
+    var COMPONENTS = [{'name': 'AddIndentDetailComponent', 'selector': 'app-add-indent-detail'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BradComponent', 'selector': 'app-brad'},{'name': 'ConfigPanelComponent', 'selector': 'app-config-panel'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DepartmentComponent', 'selector': 'app-department'},{'name': 'DepartmentListComponent', 'selector': 'app-department-list'},{'name': 'DirectPurchaseComponent', 'selector': 'app-direct-purchase'},{'name': 'DivideTwoScreenComponent', 'selector': 'app-divide-two-screen'},{'name': 'DownloadIndentComponent', 'selector': 'app-download-indent'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IndentComponent', 'selector': 'app-indent'},{'name': 'IndentListComponent', 'selector': 'app-indent-list'},{'name': 'IndentReportComponent', 'selector': 'app-indent-report'},{'name': 'InsertedProductComponent', 'selector': 'app-inserted-product'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductAvailibilityComponent', 'selector': 'app-product-availibility'},{'name': 'ProductComponent', 'selector': 'app-product'},{'name': 'ProductConsumptionComponent', 'selector': 'app-product-consumption'},{'name': 'ProductPriceComponent', 'selector': 'app-product-price'},{'name': 'ProductSearchComponent', 'selector': 'app-product-search'},{'name': 'ProductStockComponent', 'selector': 'app-product-stock'},{'name': 'ProductUseComponent', 'selector': 'app-product-use'},{'name': 'ProductUseSearchComponent', 'selector': 'app-product-use-search'},{'name': 'PurchaseComponent', 'selector': 'app-purchase'},{'name': 'PurchaseInvoiceComponent', 'selector': 'app-purchase-invoice'},{'name': 'PurchaseReportComponent', 'selector': 'app-purchase-report'},{'name': 'RefreshComponent', 'selector': 'app-refresh'},{'name': 'ReportByDepartmentComponent', 'selector': 'app-report-by-department'},{'name': 'RequisitionComponent', 'selector': 'app-requisition'},{'name': 'RequisitionListComponent', 'selector': 'app-requisition-list'},{'name': 'RequisitionReportsComponent', 'selector': 'app-requisition-reports'},{'name': 'ReturnPurchaseComponent', 'selector': 'app-return-purchase'},{'name': 'SearchPurchaseComponent', 'selector': 'app-search-purchase'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'StockHistoryComponent', 'selector': 'app-stock-history'},{'name': 'StockHistoryViewComponent', 'selector': 'app-stock-history-view'},{'name': 'StockValuationComponent', 'selector': 'app-stock-valuation'},{'name': 'SupplierAddComponent', 'selector': 'app-supplier-add'},{'name': 'SupplierSearchComponent', 'selector': 'app-supplier-search'},{'name': 'UpdateIndentComponent', 'selector': 'app-update-indent'},{'name': 'UpdateRequisitionComponent', 'selector': 'app-update-requisition'},{'name': 'ViewProductComponent', 'selector': 'app-view-product'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'IndentListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'IndentListComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

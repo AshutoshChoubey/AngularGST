@@ -1,0 +1,98 @@
+<div class="page-heading ">
+      <h1 class="page-title">{{ componentTitle }}</h1>
+     <!--  <ol class="breadcrumb">
+        <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+      </ol> -->
+</div>
+<!-- <form class="form-purple" #loginForm=ngForm (ngSubmit)="onSubmit()" > -->
+<div *ngIf="submitClicked==1" class="row text-center">
+        <div class="col-sm-12">
+        <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+        </div>
+</div>
+<form class="form-horizontal" #departmentAddForm=ngForm (ngSubmit)="onSubmit()">
+<div class="card"> 
+  <div class="card-header text-center">Please Fill Up Department Details</div>
+  <div  *ngIf="submitClicked==0" class="card-body text-center"> 
+        <div *ngIf="submitError.errors" class="row">
+                <div class="col-sm-12 col-lg-12">
+                        <div class="alert alert-warning alert-dismissable fade show alert-bordered">
+                        <button class="close-warning"  data-dismiss="alert" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button><strong>Warning!</strong><br>{{ submitError }}. 
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-12">
+                        <div class="form-group">
+                        <label for="input-1">Department Name </label>
+                        <input  class="form-control " required  [(ngModel)]="form.department"  id=""  placeholder="Department Name" autocomplete="off"  name="department" type="text" value="">
+                        </div>
+                </div>
+        </div> 
+        <div class="row">     
+                <div class="col-lg-12">
+                        <div class="form-group">
+                        <label for="input-1">Description</label>
+                        <textarea class="form-control " id="" required [(ngModel)]="form.description"  placeholder="Discription" autocomplete="off"  name="description" ></textarea>
+                        </div>
+                </div>
+                                                             
+        </div>                                                         
+  </div>
+  <div class="card-footer text-center">
+        <input type="submit" [disabled]="!departmentAddForm.valid" class="btn btn-gradient-peach btn-fix" value="Add DepartMent">
+  </div>
+</div>
+</form>
+
+              <div *ngIf="submitResponse.length!=0" class="row" >
+                  <div class="col-sm-12">
+                      <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">
+                          <div class="ibox-head text-center">                             
+                               <h2 class="text-center"> Inserted Department</h2>                         
+                          </div>
+                          <div class="ibox-body">
+                              <div class="ibox-fullwidth-block table-responsive">
+                                  <table class="table table-hover">
+                                      <tbody>
+                                          <tr class="warning">
+                                              <td>&nbsp;</td>                                     
+                                              <td>Department ID</td>
+                                              <td>:</td>
+                                              <td>{{ submitResponse.id }}</td>
+                                              <td>&nbsp;</td>
+                                              <td>&nbsp;</td>                                     
+                                              <td>Department Name</td>
+                                              <td>:</td>
+                                              <td>{{ submitResponse.department }}</td>
+                                              <td>&nbsp;</td>
+                                          </tr>
+                                          <tr class="success">
+                                              <td>&nbsp;</td>                                     
+                                              <td> Description</td>
+                                              <td>:</td>
+                                              <td>{{ submitResponse.description }}</td>
+                                              <td>&nbsp;</td>
+                                              <td>&nbsp;</td>                                     
+                                              <td>Created Date</td>
+                                              <td>:</td>
+                                              <td>{{ submitResponse.created_at }}</td>
+                                              <td>&nbsp;</td>
+                                          </tr>
+                                      </tbody>
+                                      <tfoot>
+                                          <tr>
+                                              <th colspan="4"></th>
+                                          </tr>
+                                      </tfoot>
+                                  </table>
+                              </div>
+                             
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+<div style="height: 30px">
+  &nbsp;
+</div>

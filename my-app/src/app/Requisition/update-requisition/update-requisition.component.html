@@ -1,0 +1,81 @@
+<div class="page-heading text-center">
+      <h1 class="page-title">Update Requisition</h1>
+      <app-brad ></app-brad>
+      <!-- <ol class="breadcrumb">
+        <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+      </ol> -->
+</div>
+<div class="card">
+	<div class="card-header">
+		<div class="row text-center">
+			<div class="col-m-12 text-center">
+			<button class="btn btn-sm btn-success text-center" (click)="goBack()"><i class="fa fa-times" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+	<div class="card-body">
+			<form class="form-info" #form=ngForm (ngSubmit)="onSubmit()" >
+				
+				<div class="row">	  
+						<div  class="col-sm-3 text-center">
+								<div class="form-group">
+						        <label for="department" >Requisition For Month</label> 
+						      		<input type="text" name="requisition_month" class="form-control" [(ngModel)]="requisitionListFromDatabase.requisition_month" value="{{ requisitionListFromDatabase.requisition_month }}" >
+						       
+						        </div>
+						</div>
+						<div  class="col-sm-3 text-center">
+								<div class="form-group">
+						        <label for="department" >Description</label> 
+						      <textarea type="text" name="requisition_discription" class="form-control" [(ngModel)]="requisitionListFromDatabase.requisition_discription"  >{{ requisitionListFromDatabase.requisition_discription }}</textarea>                  
+						        </div>
+						</div>	
+						<div  class="col-sm-3 text-center">
+								<div class="form-group">
+						        <label for="department" >Issued Material To</label> 
+						      <input type="text" name="issued_materiaL_to" class="form-control" [(ngModel)]="requisitionListFromDatabase.issued_materiaL_to"  value="{{ requisitionListFromDatabase.issued_materiaL_to }}">                  
+						        </div>
+						</div>
+						<div  class="col-sm-3 text-center">
+								<div class="form-group">
+						        <label for="department" >Store Incharge</label> 
+						      <input type="text" name="store_incharge" class="form-control" [(ngModel)]="requisitionListFromDatabase.store_incharge"  value="{{ requisitionListFromDatabase.store_incharge }}" />                  
+						        </div>
+						</div>		
+				</div>
+				<div class="row">	  
+						<div  class="col-sm-4 text-center">
+								<div class="form-group">
+						        <label for="department" >Plant Incharge</label> 
+						      		<input type="text" name="plant_incharge" class="form-control" [(ngModel)]="requisitionListFromDatabase.plant_incharge" value="{{ requisitionListFromDatabase.plant_incharge }}" >
+						       
+						        </div>
+						</div>
+						<div  class="col-sm-4 text-center">
+								<div class="form-group">
+						        <label for="department" >Plant Name</label> 
+						      <input type="text" name="plant_name" class="form-control" [(ngModel)]="requisitionListFromDatabase.plant_name"  value="{{ requisitionListFromDatabase.plant_name }}"/>                  
+						        </div>
+						</div>	
+						<div  class="col-sm-4 text-center">
+								<div class="form-group">
+						        <label for="department" >Received By</label> 
+						      <input type="text" name="received_by" class="form-control" [(ngModel)]="requisitionListFromDatabase.received_by"  value="{{ requisitionListFromDatabase.received_by }}"/>                  
+						        </div>
+						</div>	
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						
+						<input type="submit" [disabled]="!form.valid"  class="btn btn-gradient-blue-pink btn-fix" value="Update" />	
+						
+					</div>
+				</div>
+			</form>
+	</div>
+</div>
+
+
+<div style="height: 30px">
+	&nbsp;
+</div>

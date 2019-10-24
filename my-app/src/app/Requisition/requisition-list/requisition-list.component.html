@@ -1,0 +1,110 @@
+<div class="page-heading ">
+  <h1 class="page-title">{{ componentTitle }}</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div class="text-center"> 
+<!--   <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+      <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button> 
+
+</div> -->
+<div class="table-responsive ">
+<div fxLayout fxLayoutAlign="center center">
+<mat-form-field fxFlex="40%">
+  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+</div>
+<table mat-table [dataSource]="dataSource" matSort matSortStart="desc">
+<ng-container matColumnDef="store_incharge">
+	<th mat-header-cell *matHeaderCellDef mat-sort-header>Store Incharge</th>
+	<td mat-cell *matCellDef="let element"> {{element.store_incharge}} </td>
+</ng-container>
+<ng-container matColumnDef="received_by">
+	<th mat-header-cell *matHeaderCellDef mat-sort-header>Received By</th>
+	<td mat-cell *matCellDef="let element"> {{element.received_by}} </td>
+</ng-container>
+<ng-container matColumnDef="plant_incharge">
+	<th mat-header-cell *matHeaderCellDef mat-sort-header>Plant Incharge</th>
+	<td mat-cell *matCellDef="let element"> {{element.plant_incharge}} </td>
+</ng-container>
+<ng-container matColumnDef="plant_name">
+	<th mat-header-cell *matHeaderCellDef mat-sort-header>Plant Name</th>
+	<td mat-cell *matCellDef="let element"> {{element.plant_name}} </td>
+</ng-container>
+<ng-container matColumnDef="issued_materiaL_to">
+	<th mat-header-cell *matHeaderCellDef mat-sort-header>Issued Material To </th>
+	<td mat-cell *matCellDef="let element"> {{element.issued_materiaL_to}} </td>
+</ng-container>
+<ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+</ng-container>
+<ng-container matColumnDef="requisition_month">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Requisition  Month </th>
+  <td mat-cell *matCellDef="let element"> {{element.requisition_month}} </td>
+</ng-container>
+<ng-container matColumnDef="requisition_department_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Department</th>
+  <td mat-cell *matCellDef="let element"> {{element.requisition_department_name}} </td>
+</ng-container>
+<ng-container matColumnDef="requisition_discription">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition Description</th>
+  <td mat-cell *matCellDef="let element"> {{element.requisition_discription}} </td>
+</ng-container>
+
+
+
+<ng-container matColumnDef="created_at">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date </th>
+  <td mat-cell *matCellDef="let element"> {{element.created_at}} </td>
+</ng-container>
+  <ng-container matColumnDef="show">
+        <th mat-header-cell *matHeaderCellDef style="white-space: nowrap;padding-right: 4em;float:center"> Show</th>
+        <td mat-cell *matCellDef="let element">
+          <button type="button" class="btn btn-gradient-peach" (click)="show(element.id)" >
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </button>
+        </td>
+  </ng-container> 
+   <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef> Edit&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>
+        <td mat-cell *matCellDef="let element">
+          <button type="button" *ngIf="element.is_issued==0" class="btn btn-gradient-blue btn-icon-only btn-circle btn-lg btn-air" (click)="edit(element.id)" >
+            <i class="fa fa-edit" aria-hidden="true"></i>
+          </button>
+          <div *ngIf="element.is_issued==1"><i class="fa fa-check-circle-o btn btn-info" aria-hidden="true"></i></div>
+        </td>
+  </ng-container>
+  <ng-container matColumnDef="add_stock" >
+    <th mat-header-cell *matHeaderCellDef style="white-space: nowrap;padding-right: 4em;float:center"> Consume Stock</th>
+    <td mat-cell *matCellDef="let element">
+      <button type="button" *ngIf="element.is_issued==0" class="btn btn-gradient-blue-pink btn-icon-only btn-circle btn-lg btn-air" (click)="add(element.id)" >
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+      </button>
+      <div *ngIf="element.is_issued==1"><i class="fa fa-check-circle-o btn btn-info" aria-hidden="true"></i></div>
+    </td>
+</ng-container> 
+ <ng-container matColumnDef="delete" >
+    <th mat-header-cell *matHeaderCellDef> Delete&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; </th>
+    <td mat-cell *matCellDef="let element">
+      <button type="button" *ngIf="element.is_issued==0" class="btn btn-gradient-peach btn-icon-only btn-circle btn-lg btn-air" (click)="delete(element.id)" >
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
+       <div *ngIf="element.is_issued==1"><i class="fa fa-check-circle-o btn btn-info" aria-hidden="true"></i></div>
+    </td>
+</ng-container>
+  
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSize]="4" [pageSizeOptions]="[2, 4,6, 10, 20,30,50,75,100]">
+</mat-paginator>
+</div>
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

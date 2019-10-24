@@ -1,0 +1,120 @@
+<app-brad ></app-brad>
+<div class="card" >
+	<div class="card-body">
+<div class="row">
+  <div class="col-sm-6" class="text-center" >&nbsp;
+    <!-- <div >  -->
+    <button *ngIf="exporterButton==1" (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span *ngIf="exporterButton==1" class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    <!-- </div> -->
+  </div>
+  <div class="col-sm-6" class="text-center">&nbsp;
+     <!-- <mat-card>     -->
+	    <!-- <div >   -->
+	    	<button  class="btn btn-info btn-labeled btn-labeled-left btn-icon" (click)="captureScreen()" >
+	                                    <span class="btn-label"><i class="fa fa-file-pdf-o"></i></span>Download</button>&emsp;.&emsp;
+	        <button class="btn btn-success btn-labeled btn-labeled-left btn-icon" (click)="print()" >
+	        <span class="btn-label"><i class="fa fa-print"></i></span>Print </button>
+	    <!-- </div>   -->
+  <!-- </mat-card>  -->
+</div>
+  </div>
+  </div>
+</div>
+  <!-- </div> -->
+  <mat-card>
+  <div  id="contentToConvert" class="row">
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i>Current Stock</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Department Name</th>
+						<th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productByDepartmentStockvaluation">
+						<td>{{ data.department_name }}</td>
+						<td>{{ data.price| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th>&nbsp;</th>
+                		<th><b>Total: {{ Total| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i>Purchase Summary Report</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example2" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Department Name</th>
+						<th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productByDepartmentstockvaluationForPurchase">
+						<td>{{ data.department_name }}</td>
+						<td>{{ data.price| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th>&nbsp;</th>
+                		<th><b>Total: {{ Total2| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i>Consume Summary Report</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-morpheus-den">
+        <table id="example3" class="table table-sm table-striped table-bordered">        
+                <thead class="table-dark">
+                    <tr>
+						<th>Department Name</th>
+						<th>Total Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of productByDepartmentstockvaluationForConsume">
+						<td>{{ data.department_name }}</td>
+						<td>{{ data.price| number : '1.2-2' }}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                		<th>&nbsp;</th>
+                		<th><b>Total: {{ Total3| number : '1.2-2' }}</b></th>
+                	</tr>
+                </tfoot>
+
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</mat-card>
+<div><b>Note:-</b>We are calculatating the  total with current GST</div>
+<!-- </div> End Row -->

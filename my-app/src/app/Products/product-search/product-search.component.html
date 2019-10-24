@@ -1,0 +1,406 @@
+<div class="page-heading ">
+  <h1 class="page-title">Product List</h1>
+ <!--  <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+<!-- <div class="text-center">  -->
+    <!-- <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon"> -->
+        <!-- <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button>  -->
+  <!-- <button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> -->
+<!-- </div> -->
+<div class="table-responsive">
+  <div fxLayout fxLayoutAlign="center center">
+    <mat-form-field fxFlex="40%">
+      <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>
+  </div>
+  <table mat-table [dataSource]="dataSource" matSort matSortStart="desc">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+     <ng-container matColumnDef="available_stock">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Available Stock&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.available_stock}} </td>
+    </ng-container>
+     <ng-container matColumnDef="stock_in">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Stock In&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.stock_in}} </td>
+    </ng-container>
+     <ng-container matColumnDef="stock_out">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Stock Out&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.stock_out}} </td>
+    </ng-container>
+     <ng-container matColumnDef="opening_stock">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Current Price&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.opening_stock}} </td>
+    </ng-container>
+    <ng-container matColumnDef="closing_stok">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Price&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.closing_stok}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_code">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Code &emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;.</th>
+      <td mat-cell *matCellDef="let element"> {{element.product_code}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="place">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Place&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.place}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_department_Name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Department&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_department_Name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_hsn">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product HSN&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_hsn}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_specification">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Specification&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_specification}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_unit">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Unit &emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;.</th>
+      <td mat-cell *matCellDef="let element"> {{element.product_unit}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Type&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_type}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_igst">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product IGST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_igst}} </td>
+    </ng-container>
+     <ng-container matColumnDef="product_sgst">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product SGST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_sgst}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_cgst">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product CGST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_cgst}} </td>
+    </ng-container>
+    <ng-container matColumnDef="product_gst">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product GST&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_gst}} </td>
+    </ng-container>
+     <ng-container matColumnDef="created_at">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Created Date&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.created_at}} </td>
+    </ng-container>
+     <ng-container matColumnDef="product_specimen">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Speciamen&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_specimen}} </td>
+    </ng-container>
+     <ng-container matColumnDef="product_make">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Make&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;. </th>
+      <td mat-cell *matCellDef="let element"> {{element.product_make}} </td>
+    </ng-container>
+   
+   
+    <ng-container matColumnDef="update">
+        <th mat-header-cell *matHeaderCellDef> Update&emsp; &emsp;.&emsp;.&emsp; &emsp;.&emsp;.</th>
+        <td mat-cell *matCellDef="let element">
+          <button type="button" class="btn btn-gradient-peach" (click)="redirectToUpdae(element)"  data-toggle="modal" data-target="#myModal">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+          </button>
+        </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSize]="2" [pageSizeOptions]="[4, 6, 10, 20]">
+  </mat-paginator>
+  </div>
+
+  <!-- The Modal -->
+<div *ngIf="dataForUpdate" class="modal" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Update Will Done For Product Id: {{ dataForUpdate.id }}</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <!-- <form class="form-horizontal" #departmentAddForm=ngForm (ngSubmit)="onSubmitForUpdate()"> -->
+          <div class="card"> 
+            <div class="page-heading ">
+              <h1 class="page-title">Update Product</h1>
+              <!-- <ol class="breadcrumb">
+                <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+              </ol> -->
+        </div>
+        <!-- <form class="form-purple" #loginForm=ngForm (ngSubmit)="onSubmit()" > -->
+        
+        
+        
+        <div *ngIf="submitClicked==1" class="row text-center">
+          <div class="col-sm-12">
+            <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+          </div>
+        </div>
+        <form class="form-purple" #productUpdateForm=ngForm (ngSubmit)="onSubmit()">
+        <div *ngIf="submitClicked==0" class="card">
+          <div class="card-header text-center">Please Fill Up Product Details</div>
+          <div class="card-body"> 
+            <div *ngIf="errorforProductDepartment.length!=0" class="row">
+              <div class="col-sm-12 col-lg-12">
+                  <div class="alert alert-warning alert-dismissable fade show alert-bordered">
+                      <button class="close-warning"  data-dismiss="alert" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button><strong>Warning!</strong><br>{{ errorforProductDepartment }}. 
+                  </div>
+              </div>
+            </div>
+                <div class="row">
+                        <div class="col-lg-3">
+                                <div class="form-group">
+                                <label for="input-1">Product Code </label>
+                                <input class="form-control form-control-air" readonly   [(ngModel)]="dataForUpdate.product_code"  id=""  placeholder="Product Code" autocomplete="off"  name="product_code" type="text" value="">
+                                </div>
+                        </div>
+                        <div class="col-lg-3">
+                                <div class="form-group">
+                                <label for="input-1">Product Name</label>
+                                <input class="form-control form-control-air" id="" required [(ngModel)]="dataForUpdate.product_name"  placeholder="Product Name" autocomplete="off"  name="product_name" type="text" >
+                                </div>
+                        </div>
+                        <div class="col-lg-3">
+                                <div class="form-group">
+                                <label for="department">Department</label> 
+                                <select placeholder="Select Department" class="form-control form-control-air" id="department" required [(ngModel)]="dataForUpdate.product_department"   name="product_department"><option *ngFor="let departmentList of responseforProductDepartment"  value="{{ departmentList.id}}">{{ departmentList.department }}</option></select>
+                                </div>
+                        </div>
+                        <div class="col-lg-3">
+                                <div class="form-group">
+                                <label for="input-1">Specification</label>
+                                <textarea class="form-control form-control-air  " id=""  [(ngModel)]="dataForUpdate.product_specification"  placeholder="Product Specification" autocomplete="off"  name="product_specification" ></textarea>
+                                </div>
+                        </div>
+                                                                     
+                </div>                        
+                <div class="row">                    
+                    <div class="col-lg-3">
+                            <div class="form-group">
+                            <label for="input-1">Product Type</label>
+                            <!-- <select class="form-control form-control-air" required [(ngModel)]="dataForUpdate.product_type"   name="product_type"><option value="1">NA</option><option value="2">machinary</option><option value="3">tea stall</option></select> -->
+                            <input type="text" class="form-control form-control-air" [(ngModel)]="dataForUpdate.product_type"   name="product_type"/>
+                            </div>
+                    </div>                                                            
+                    
+                    <div class="col-lg-3">
+                          <div class="form-group">
+                          <label for="input-1">Product Unit</label>
+        
+                          <!-- <select class="form-control form-control-air  "  required [(ngModel)]="dataForUpdate.product_unit"   name="product_unit"><option value="1">NA</option><option value="2">pic</option><option value="3">litter</option></select> -->
+                          <input type="text" class="form-control form-control-air" required [(ngModel)]="dataForUpdate.product_unit"   name="product_unit" />
+                          </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                        <label for="input-1">Product Place</label>
+                        <input type="text" class="form-control form-control-air" [(ngModel)]="dataForUpdate.place"   name="place" />
+                        </div>
+                  </div>
+        
+                    <div class="col-lg-3">
+                          <div class="form-group">
+                          <label for="input-1">Product HSN</label>
+                          <input class="form-control form-control-air  " id=""   [(ngModel)]="dataForUpdate.product_hsn" placeholder="Product HSN" autocomplete="off" name="product_hsn" type="text" value="">
+                          </div>
+                    </div>                                                                     
+                </div>
+                                             
+                <div class="row">                                                             
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                    <label for="input-1">Product Igst</label>
+                    <input class="form-control form-control-air"  id="" required [(ngModel)]="dataForUpdate.product_igst"  step="any" placeholder="Product Igst" autocomplete="off" name="product_igst" type="number" value="0">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                    <label for="input-1">Product Cgst</label>
+                    <input class="form-control form-control-air  " id="" required [(ngModel)]="dataForUpdate.product_cgst"  step="any" placeholder="Product Cgst" autocomplete="off" name="product_cgst" type="number" value="0">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                    <label for="input-1">Product Sgst</label>
+                    <input class="form-control form-control-air  " id="" required [(ngModel)]="dataForUpdate.product_sgst"  step="any" placeholder="Product Sgst" autocomplete="off" name="product_sgst" type="number" value="0">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                    <label for="input-1">Product Gst</label>
+                    <input class="form-control form-control-air  " id=""  [(ngModel)]="dataForUpdate.product_gst"  step="any" placeholder="Product Gst" autocomplete="off" name="product_gst" type="number" value="{{ dataForUpdate.product_sgst+dataForUpdate.product_cgst+dataForUpdate.product_igst }}">
+                    </div>
+                  </div>                                                    
+                </div>
+                <div class="row">                                                             
+          <div class="col-lg-4">
+            <div class="form-group">
+            <label for="input-1"> Color</label>
+            <input class="form-control form-control-air"  [(ngModel)]="dataForUpdate.product_color"   placeholder="Product Color" autocomplete="off" name="product_color" type="text" value="0">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-group">
+            <label for="input-1"> Specimen</label>
+            <input class="form-control form-control-air  "  [(ngModel)]="dataForUpdate.product_specimen"  placeholder="Product Specimen" autocomplete="off" name="product_specimen" type="text" value="0">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-group">
+            <label for="input-1"> Make</label>
+            <input class="form-control form-control-air  "  [(ngModel)]="dataForUpdate.product_make"   placeholder="Make" autocomplete="off" name="product_make" type="text" value="0">
+            </div>
+          </div>                                                 
+        </div>
+               
+                
+                                                   
+          </div>
+          <div class="card-footer text-center">
+              <button type="submit" [disabled]="!productUpdateForm.valid" class="btn btn-gradient-blue btn-lg btn-animated fade-button">
+                  <span class="visible-content btn-icon"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>Update</span>
+                  <span class="hidden-content">
+                      <span class="btn-icon"><i class="ti-face-smile"></i><small>Click Me!!</small> </span>
+                  </span>
+              </button>
+                <!-- <input  class="btn btn-gradient-peach btn-fix" value="Add Product"> -->
+          </div>
+        </div>
+        </form>
+        
+          <div *ngIf="messageAfterUpdate.length!=0" class="row" >
+              <div class="col-sm-12">
+                  <div class="ibox alert alert-warning alert-dismissable fade show alert-bordered">
+                      <div class="ibox-head text-center">
+                         <h2 class="text-center"> Updated Products</h2> 
+                          <!-- <button class="close-warning"  data-dismiss="alert" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button> -->
+                      </div>
+                      <div class="ibox-body">
+                          <div class="d-flex justify-content-between mb-5 pb-4">
+                              <div class="d-flex align-items-center">
+                                  <span >{{ messageAfterUpdate.product_name }}</span>
+                              </div>                     
+                          </div>
+                          <div class="ibox-fullwidth-block table-responsive">
+                              <table class="table table-hover">
+                                  <tbody>
+                                      <tr>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product ID</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.id }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Code</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_code }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr class="success">
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Name</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_name }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Departments</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_department }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Specification</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_specification }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Type</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_type }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr class="warning">
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Unit</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_unit }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product Place</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.place }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product HSN</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_hsn }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product IGST</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_igst }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr class="danger">
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product SGST</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_sgst }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product CGST</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_cgst }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Product GST</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.product_gst }}</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>                                     
+                                          <td>Created date</td>
+                                          <td>:</td>
+                                          <td>{{ messageAfterUpdate.created_at }}</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                     
+                                  </tbody>
+                                  <tfoot>
+                                      <tr>
+                                          <th colspan="4"></th>
+                                      </tr>
+                                  </tfoot>
+                              </table>
+                          </div>
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- </form> -->
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

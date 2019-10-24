@@ -1,0 +1,21 @@
+/* @import '../../../../node_modules/bootstrap/dist/css/bootstrap.css'; */
+
+
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+ 
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+}
+.mat-column-update{
+  width: 70px;
+}
+.mat-column-delete{
+  width: 70px;
+}

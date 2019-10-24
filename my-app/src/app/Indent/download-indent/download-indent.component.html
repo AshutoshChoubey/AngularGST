@@ -1,0 +1,161 @@
+<app-brad ></app-brad>
+<div class="page-heading text-center">
+      <h1 class="page-title">Indent Report</h1>
+      <!-- <ol class="breadcrumb">
+        <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+      </ol> -->
+</div>
+<div class="row">
+			<div class="col-sm-12 text-center">
+				<button class="btn btn-sm btn-success" (click)="goBack()"><i class="fa fa-times" aria-hidden="true"></i></button>
+			</div>
+			
+		</div>
+		<!-- <p id="pdf-path"></p>
+<button id="print-pdf" (click)="download()">Pdf</button> -->
+<div id="content" #content>  
+  <mat-card>    
+    <div class="text-center">  
+    	<button class="btn btn-info btn-labeled btn-labeled-left btn-icon" (click)="captureScreen()" >
+                                    <span class="btn-label"><i class="fa fa-file-pdf-o"></i></span>Download Indent</button>
+                                    <button class="btn btn-success btn-labeled btn-labeled-left btn-icon" (click)="print()" >
+                                    <span class="btn-label"><i class="fa fa-print"></i></span>Print Indent</button>
+ 
+    </div>  
+  </mat-card>  
+</div>  
+<!-- <div > -->
+	<mat-card>
+<div  id="contentToConvert" style="position: relative;display: flex;flex-direction: column;min-width: 0;word-wrap:break-word;background-color: #fff;background-clip: border-box;border-radius: .25rem;width:100%;font-family: Arial, Helvetica, sans-serif;color: black;">
+	<div  style="padding: .75rem 1.25rem;margin-bottom: 0;background-color: rgba(0,0,0,.03);border-bottom: 1px solid rgba(0,0,0,.125);width:100%">
+		<div style="text-align: center;" >
+			<div  style="font-size: 30px;">
+				<b>Indent</b>
+			</div>
+			
+		</div>
+		<div style="width: 100%">
+			<div *ngIf="indentReport[0]" >
+				  
+				<table class="table table-borderd table-sm"  style="display: table;border-collapse: separate;border-spacing: 2px;border-color: grey;width: 100%;border: 1px solid #dee2e6;" width=100%>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Indent Id</th>
+						<th>:</th>
+						<th>{{ indentReport[0].indentId }}</th>
+						<th>&nbsp;</th>
+						<th>Indent Month</th>
+						<th>:</th>
+						<th>{{ indentReport[0].indentMonth }}</th>
+						<th>&nbsp;</th>
+						<th>Created At</th>
+						<th>:</th>
+						<th>{{ indentReport[0].created_at | date: 'dd/MM/yyyy' }}</th>
+						<th>&nbsp;</th>
+					</tr>
+					<tr>
+						<th>&nbsp;</th>
+						<th>Indent Description</th>
+						<th>:</th>
+						<th>{{ indentReport[0].indentDiscription }}</th>
+						<th>&nbsp;</th>
+						<th>Department Name</th>
+						<th>:</th>
+						<th>{{ indentReport[0].departmentName }}</th>
+						<th>&nbsp;</th>
+						<th>Print Date</th>
+						<th>:</th>
+						<th>{{ currentDate | date: 'dd/MM/yyyy' }}</th>
+						<th>&nbsp;</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div >
+		<div class="row" style="display: flex;flex-wrap: wrap;width:100%">
+			<div class="col-sm-12" *ngIf="indentReport[0]" style="width: 100%" >
+				<table class="table table-borderd table-sm"  style="display: table;width: 100%;" width=100% >
+					<thead>
+						<tr>
+							<th>Indent  Key</th>
+							<th>Product Code</th>
+							<th>Product Name</th>
+							<th>Speciaman</th>
+							<th>Make</th>
+							<th>Quantity</th>
+							<th>Unit</th>
+							<!-- <th>Place</th> -->
+							<th>Purpose</th>
+							<th>B/F(Available) Stock</th>
+							<th>Remarks</th>
+							<!-- <th>Action</th> -->
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let indent of indentReport">
+							<td>{{ indent.id }}</td>
+							<td>{{ indent.product_code }}</td>
+							<td>{{ indent.productName }}</td>
+							<td>{{ indent.speciaman  }}</td>
+							<td>{{ indent.make  }}</td>
+							<td>{{ indent.quantity  }}</td>
+							<td>{{ indent.productUnit }}</td>
+							<!-- <td>{{ indent.place }}</td> -->
+							<td>{{ indent.purpose }}</td>
+							<td>{{ indent.bf_stock }}</td>
+							<td>{{ indent.remarks }}</td>
+							
+							
+						</tr>
+					</tbody>
+				</table>
+				  
+			</div>
+		</div>		
+	</div>
+	<div  style="padding: .75rem 1.25rem;background-color: rgba(0,0,0,.03);border-top: 1px solid rgba(0,0,0,.125);">
+		<div  style="text-align: right;display: flex;flex-wrap: wrap;width: 100%">
+			<div  style="text-align: right;" class="col-sm-12 text-right"><b>B. C MOHANTY & SONS PVT. LTD. </b></div>
+		</div>
+	</div>
+</div>
+</mat-card>  
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Update Indent Product</h4>
+      </div>
+      <div class="modal-body">
+
+			 <div class="form-group">
+				<label for="exampleInputEmail1">Quantity</label>
+				<input type="text" class="form-control" [(ngModel)]="indentDetailForUpdate.quantity"  placeholder="Quantity" value="{{ indentDetailForUpdate.quantity }}">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Remark</label>
+				<input type="text" class="form-control" [(ngModel)]="indentDetailForUpdate.remarks"  placeholder="Remark" value="{{ indentDetailForUpdate.remarks }}">
+			</div>
+			<button (click)="UpdateIndentDetail()" type="submit" data-dismiss="modal" class="btn btn-primary">Submit</button>
+       		
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div style="height:30px;">
+	&nbsp;
+</div>
+<!-- <app-indent-list></app-indent-list>  -->

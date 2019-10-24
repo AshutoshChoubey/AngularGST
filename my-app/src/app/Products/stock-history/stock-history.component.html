@@ -1,0 +1,80 @@
+<!-- <app-brad ></app-brad> -->
+<div class="page-heading ">
+  <h1 class="page-title">Saved Stock History</h1>
+  <app-brad ></app-brad>
+ <!--  <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div *ngIf="clicked==1" class="row text-center">
+  <div class="col-sm-12">
+    <div><i class="fa fa-spinner fa-5x  fa-spin" aria-hidden="true"></i></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12" *ngIf="exportFunctionalityAdded==0">
+    <div class="text-center"> 
+    <button (click)="exportButton()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+    <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Export Functionality</button>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header"><i class="fa fa-table"></i> Data Exporting</div>
+      <div class="card-body">
+        <div class="table-responsive scrollbar-mean-fruit">
+        <table id="example" class="table table-bordered table-sm table-striped">        
+                <thead class="table-dark">
+                    <tr>
+                      <th>Valuation Id</th>
+                      <th>Report Name</th>
+                      <th>Report Description</th>
+                      <th>Total Purchase</th>
+                      <th>Total Consumen</th>
+                      <th>Total Stock</th>
+                      <th>Report From</th>
+                      <th>Report To</th>
+                      <th>Created Date</th> 
+                      <th>Saved Current Stock</th> 
+                      <th>Action</th>                 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of stockHistory">
+                    	<td>{{ data.id }}</td>
+						<td>{{ data.report_name }}</td>
+						<td>{{ data.report_description }}</td>
+						<td>{{ data.purchaseTotal }}</td>
+						<td>{{ data.consumeTotal }}</td>
+						<td>{{ data.stockTotal }}</td>
+						<td>{{ data.fromdate }}</td>
+						<td>{{ data.todate }}</td>
+						<td>{{ data.created_at }}</td>
+            <td>
+            <button type="button" routerLink="/savedCurrentStock/{{ data.id }}" class="btn btn-gradient-green btn-icon-only btn-circle btn-lg btn-air">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            </button>
+            </td> 
+						<td>
+						<button type="button" routerLink="/StockHistoryView/{{ data.id }}" class="btn btn-primary btn-icon-only btn-circle btn-lg btn-air">
+						<i class="fa fa-eye" aria-hidden="true"></i>
+						</button>
+						</td>                      
+                    </tr>
+                </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Row-->
+
+
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+

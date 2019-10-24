@@ -1,0 +1,108 @@
+<div class="page-heading ">
+  <h1 class="page-title">Product Consume Report</h1>
+  <!-- <ol class="breadcrumb">
+    <li *ngFor="let brad of brads"  class="breadcrumb-item"><a routerLink="{{ brad.url }}">{{ brad.name }}</a></li>
+  </ol> -->
+</div>
+
+<div class="text-center"> 
+  <button (click)="exportAsXLSX()" class="btn btn-gradient-blue btn-labeled btn-labeled-left btn-icon">
+      <span class="btn-label"><i class="fa fa-file-excel-o" ></i></span>Download</button> 
+
+</div>
+<div class="table-responsive ">
+<div fxLayout fxLayoutAlign="center center">
+<mat-form-field fxFlex="40%">
+  <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+</div>
+<table mat-table [dataSource]="dataSource" matSort matSortStart="desc">
+<ng-container matColumnDef="use_requisition_month">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition Month</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_requisition_month}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_quanity">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Availabe Quantity<small>(After Consume)</small></th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_quanity}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_price">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Price<small>(during Consume)</small></th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_price}} </td>
+</ng-container>
+<!-- <ng-container matColumnDef="use_pro_closing">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Previous Price<small>(during Conume)</small></th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_closing}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_opening">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Opening Balance/Stock</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_opening}} </td>
+</ng-container> -->
+<ng-container matColumnDef="use_requisition_discription">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition Discripition</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_requisition_discription}} </td>
+</ng-container>
+<ng-container matColumnDef="use_requisition_id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition Id</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_requisition_id}} </td>
+</ng-container>
+<ng-container matColumnDef="use_requisition_detail_id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Requisition S.N.</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_requisition_detail_id}} </td>
+</ng-container>
+<ng-container matColumnDef="use_quanity">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Consume Quantity</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_quanity}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_place">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Place</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_place}} </td>
+</ng-container>
+<ng-container matColumnDef="use_pro_type">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Type</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_type}} </td>
+</ng-container> 
+<ng-container matColumnDef="use_pro_specif">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Specification</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_specif}} </td>
+</ng-container>  
+<ng-container matColumnDef="use_dep_code">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header>Department Code</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_dep_code}} </td>
+</ng-container>  
+<ng-container matColumnDef="use_pro_id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Id</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_pro_id}} </td>
+</ng-container> 
+<ng-container matColumnDef="use_dep_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Department Name</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_dep_name}} </td>
+</ng-container> 
+<ng-container matColumnDef="use_product_name">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Name</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_product_name}} </td>
+</ng-container>   
+<ng-container matColumnDef="use_product_code">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Code</th>
+  <td mat-cell *matCellDef="let element"> {{element.use_product_code}} </td>
+</ng-container>
+<ng-container matColumnDef="id">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+</ng-container>
+<ng-container matColumnDef="use_date">
+  <th mat-header-cell *matHeaderCellDef mat-sort-header> Purchase Date </th>
+  <td mat-cell *matCellDef="let element"> {{ datepipe.transform(element.use_date, 'yyyy-MM-dd') }} </td>
+</ng-container>
+  
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSize]="4" [pageSizeOptions]="[2, 4,6, 10, 20,30,50,75,100]">
+</mat-paginator>
+</div>
+<div style="height: 30px">
+&nbsp;
+</div>
+
+
+
